@@ -1,12 +1,17 @@
 from playwright.sync_api import sync_playwright
 import time
 
-# 屏幕点击实现
-def debug_click(page, x, y):
+# 屏幕点击实现及调试
+def debug_click(page, context, x, y):
     """
     在指定的 x, y 坐标模拟点击，并立即在该位置显示一个红点调试动画。
+    :param page :playwright单页面对象 : 用于控制和操作浏览器中单个页面的对象
+    :param context: 浏览器上下文
+    :param x: int : 执行点击操作的x坐标
+    :param y: int : 执行点击操作的y坐标
+    :return page对象: 点击后新刷新或新的页面
     """
-    # 1. 在浏览器前端注入 JavaScript 产生红点动画
+    #  在浏览器前端注入 JavaScript 产生红点动画
     page.evaluate(f"""
         ((x, y) => {{
             const dot = document.createElement('div');
@@ -34,13 +39,35 @@ def debug_click(page, x, y):
         }})({x}, {y})
     """)
 
-    # 2. 调用 Playwright 底层接口模拟真实鼠标移动和点击
+    #  调用 Playwright 底层接口模拟真实鼠标移动和点击
     page.mouse.move(x, y)
     page.mouse.click(x, y)
     print(f"Debug Click: Clicked at ({x}, {y})")
 
+    # 尝试捕获新打开的页面
+    with context.expect_page() as new_page_info:
+        pass  # 这里不需要额外的操作，因为点击已经在上面完成了
+
+    # 检查是否捕获到了新的页面
+    if new_page_info.value:
+        new_page = new_page_info.value
+        print("New page opened.")
+        print(new_page)
+        return new_page
+    else:
+        print("No new page opened. Returning the current page.")
+        print(page)
+        return page
+
 # 登录功能
 def login(page, username, password):
+    """
+    给定学生的用户名和密码完成登录操作,并返回登录后的页面对象
+    :param page: 页面对象
+    :param username: int : 学生用户名
+    :param password: int : 学生登录密码
+    :return:  页面对象: 返回登录后新页面的对象
+    """
     page.get_by_label("学生").click()
 
     page.fill('input[placeholder="请输入学号"]', str(username))
@@ -52,25 +79,34 @@ def login(page, username, password):
 
 # 进入实验主页面
 def enter_practice(page, context):
-    # 点击新工商实验
+    """
+     进入实验主页
+    :param page: 页面对象
+    :param context: 浏览器上下文
+    :return: 进入实验主页后的新页面
+    :param page:
+    :param context:
+    :return:
+    """
+
+    # 寻找并点击新工商实验
     page.locator('//div[@class="sch_con_left"]/button[1]').click()
     page.locator('text=新商科').click()
 
-    # 2. 定位第一个实验卡片 (使用 nth(0) 对应之前的 [1])
+    # 定位第一个实验练习卡片 (使用 nth(0) 对应之前的 [1])
     card = page.locator('xpath=(//div[@class="sch_list_item"])[1]')
     card.wait_for(state="visible", timeout=10000)
 
     btn = card.locator("button")
 
-    # 使用 evaluate 等同于 Selenium 的 execute_script("arguments[0].click();", btn)
+    # 点击进入实验主页,并且记录下新页面
     with context.expect_page() as new_page_info:
         btn.evaluate("node => node.click()")
 
     # 获取新打开的页面对象
     new_page = new_page_info.value
 
-    # 5. 【关键】等待页面内容变化
-    # 因为不是新标签页，这里等待网络空闲或特定元素消失/出现
+    #  等待页面内容变化,等待网络空闲或特定元素消失/出现
     page.wait_for_load_state("networkidle")
 
     print(f"成功进入实验主页，新窗口标题: {new_page.title()}")
@@ -79,8 +115,15 @@ def enter_practice(page, context):
 
 # 选择实验并进入
 def choose_project_task(page, context, project_number, task_number):
+    """
+    选择进入对应的实验以及实验项目
+    :param page:
+    :param context:
+    :param project_number: int: 实验编号
+    :param task_number: int: 项目编号
+    :return: 进入习题页面的网址
+    """
     # 1. 定位大的项目块 (项目一、项目二等)
-    # 使用 CSS 选择器 .class 更加稳定
     project = page.locator(".rationalism-left-item").nth(project_number - 1)
 
     # 2. 定位任务块
@@ -104,7 +147,7 @@ def choose_project_task(page, context, project_number, task_number):
 
     with context.expect_page() as new_page_info:
         print("进行点击")
-        debug_click(page, 720, 210)
+        debug_click(page, context, 720, 210)
 
     # 获取新打开的页面对象
     new_page = new_page_info.value
@@ -115,11 +158,10 @@ def choose_project_task(page, context, project_number, task_number):
     time.sleep(20)
 
     # 两个选项
-    # debug_click(new_page, 580, 680)
-    debug_click(new_page, 700, 680)
+    debug_click(new_page, context, 580, 680)
+    # debug_click(new_page, context, 700, 680)
 
     return new_page
-
 
 def run():
     with sync_playwright() as p:
