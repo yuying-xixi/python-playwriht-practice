@@ -1,4 +1,5 @@
 from playwright.sync_api import sync_playwright, Page, BrowserContext
+import question_bank as qb
 import time
 
 # 屏幕点击实现及调试
@@ -42,11 +43,11 @@ def debug_click(page: Page, context: BrowserContext, x: int, y: int) -> Page:
     #  调用 Playwright 底层接口模拟真实鼠标移动和点击
     page.mouse.move(x, y)
     page.mouse.click(x, y)
-    print(f"Debug Click: Clicked at ({x}, {y})")
+    print(f"已点击 ({x}, {y})")
 
     # 尝试捕获新打开的页面
     with context.expect_page() as new_page_info:
-        pass  # 这里不需要额外的操作，因为点击已经在上面完成了
+        pass
 
     # 检查是否捕获到了新的页面
     if new_page_info.value:
@@ -56,10 +57,9 @@ def debug_click(page: Page, context: BrowserContext, x: int, y: int) -> Page:
         return new_page
     else:
         print("No new page opened. Returning the current page.")
-        print(page)
         return page
 
-# 登录功能
+# 登录脚本实现
 def login(page: Page, username: int, password: int) -> None:
     """
     给定学生的用户名和密码完成登录操作,并返回登录后的页面对象
@@ -77,7 +77,7 @@ def login(page: Page, username: int, password: int) -> None:
     page.get_by_role("button", name="登 录").click()
     print(f"成功登录学号: {username}")
 
-# 进入实验主页面
+# 进入实验主页面脚本实现
 def enter_practice(page: Page, context: BrowserContext) -> Page:
     """
      进入实验主页
@@ -113,7 +113,7 @@ def enter_practice(page: Page, context: BrowserContext) -> Page:
 
     return new_page
 
-# 选择实验并进入
+# 实验主页面选择项目和任务脚本
 def choose_project_task(page: Page, context: BrowserContext, project_number: int, task_number: int):
     """
     选择进入对应的实验以及实验项目
@@ -153,7 +153,7 @@ def choose_project_task(page: Page, context: BrowserContext, project_number: int
         return new_page_info
     return None
 
-
+# 练习主页面选择练习模块脚本
 def start_practice(page, context, choose_practice_index, practice_number=2):
     """
     选择训练目标
@@ -161,7 +161,7 @@ def start_practice(page, context, choose_practice_index, practice_number=2):
     :param context: 上下文对象: 接收对象
     :param choose_practice_index: int: 选择第几个训练模块(1, 2, 3)
     :param practice_number: int: 页面有几个训练模块(2, 3)
-    :return:
+    :return: page对象: 进入页面的新对象
     """
 
     if practice_number not in {2, 3}:
@@ -209,10 +209,11 @@ def run():
         # 返回实验主页
         home_page = enter_practice(page, context)
 
-        lab_page = choose_project_task(home_page, context, 4, 4)
+        lab_page = choose_project_task(home_page, context, 3, 1)
 
         if lab_page is not None:
-            start_practice(lab_page, context,3, 3)
+            start_practice(lab_page, context,1, 2)
+            qb.do_question_3112(lab_page)
             print("进入实验选择成功")
         else:
             print("进入实验选择页面失败")
