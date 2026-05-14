@@ -1,6 +1,5 @@
 import time
 from Student import Student
-from playwright.async_api import Error
 
 from playwright.sync_api import sync_playwright, Page
 
@@ -29,31 +28,30 @@ class Task(Student):
         self.browser.close()
         self.playwright.stop()
 
-    # 屏幕点击实现及调试
+    # 屏幕点击调试
     @staticmethod
-    def _debug_click(page: Page, x: int, y: int) -> None:
-        """
-        在指定的 x, y 坐标模拟点击，并立即在该位置显示一个红点调试动画。
-        :param page :playwright单页面对象 : 用于控制和操作浏览器中单个页面的对象
-        :param x: int : 执行点击操作的x坐标
-        :param y: int : 执行点击操作的y坐标
-        :return page对象: 点击后新刷新或新的页面
-        """
-        #  在浏览器前端注入 JavaScript 产生红点动画
+    def screen_click(page: Page, x: int, y: int) -> None:
+
         page.evaluate(f"""
             ((x, y) => {{
                 const dot = document.createElement('div');
-                dot.style.position = 'fixed'; // 使用 fixed 确保相对于视口
+
+                dot.style.position = 'fixed';
                 dot.style.width = '20px';
                 dot.style.height = '20px';
                 dot.style.background = 'red';
                 dot.style.borderRadius = '50%';
                 dot.style.left = (x - 10) + 'px';
                 dot.style.top = (y - 10) + 'px';
+
                 dot.style.zIndex = '1000000';
+
+                // 关键
                 dot.style.pointerEvents = 'none';
+
                 dot.style.transition = 'opacity 0.6s, transform 0.6s';
                 dot.style.opacity = '0.8';
+
                 document.body.appendChild(dot);
 
                 setTimeout(() => {{
@@ -64,17 +62,92 @@ class Task(Student):
                 setTimeout(() => {{
                     dot.remove();
                 }}, 10000);
+
             }})({x}, {y})
         """)
 
-        #  调用 Playwright 底层接口模拟真实鼠标移动和点击
         page.mouse.move(x, y)
         page.mouse.click(x, y)
+
         print(f"已点击 ({x}, {y})")
 
-    # x-token抓取
     @staticmethod
-    def get_x_token(page, url_keyword="suitanglian.com", timeout=5000):
+    def _debug_click(page: Page, x: int, y: int) -> None:
+        page.evaluate(f"""
+            ((x, y) => {{
+
+                const wrapper = document.createElement('div');
+
+                wrapper.style.position = 'fixed';
+                wrapper.style.left = x + 'px';
+                wrapper.style.top = y + 'px';
+                wrapper.style.zIndex = '999999';
+                wrapper.style.pointerEvents = 'none';
+
+                // 红点
+                const dot = document.createElement('div');
+                dot.style.width = '16px';
+                dot.style.height = '16px';
+                dot.style.background = 'red';
+                dot.style.borderRadius = '50%';
+                dot.style.border = '2px solid white';
+                dot.style.boxShadow = '0 0 10px red';
+
+                // 坐标文字
+                const label = document.createElement('div');
+                label.innerText = `(${x}, ${y})`;
+
+                label.style.color = 'red';
+                label.style.fontSize = '14px';
+                label.style.fontWeight = 'bold';
+                label.style.background = 'white';
+                label.style.padding = '2px 6px';
+                label.style.borderRadius = '4px';
+                label.style.marginTop = '4px';
+
+                wrapper.appendChild(dot);
+                wrapper.appendChild(label);
+
+                document.body.appendChild(wrapper);
+
+            }})({x}, {y})
+        """)
+
+        # 坐标监听器
+        page.evaluate("""
+                      (() => {
+
+                          const box = document.createElement('div');
+
+                          box.id = '__mouse_debug_box__';
+
+                          box.style.position = 'fixed';
+                          box.style.top = '10px';
+                          box.style.right = '10px';
+                          box.style.zIndex = '999999';
+                          box.style.background = 'black';
+                          box.style.color = 'lime';
+                          box.style.padding = '8px';
+                          box.style.fontSize = '16px';
+                          box.style.fontWeight = 'bold';
+
+                          document.body.appendChild(box);
+
+                          document.addEventListener('mousemove', (e) => {
+                              box.innerText = `X: ${e.clientX}, Y: ${e.clientY}`;
+                          });
+
+                      })();
+                      """)
+
+        page.mouse.move(x, y)
+        page.mouse.click(x, y)
+
+        print(f"已点击 ({x}, {y})")
+
+    # headers获取
+    @staticmethod
+    def get_headers(page, url_keyword="suitanglian.com", timeout=20000):
         """
         通过拦截网络请求获取请求头中的 x-token
         :param page: Playwright 的 page 对象
@@ -92,11 +165,19 @@ class Task(Student):
                 page.reload()
 
             # 提取并返回 token
-            return request_info.value.headers.get('x-token')
+            return request_info.value.headers
 
         except Exception as e:
-            print(f"获取 Token 失败或超时: {e}")
+            print(f"获取 headers 失败或超时: {e}")
             return None
+
+    # 点击确认并提交
+    def submit_and_confirm(self, page):
+        page.wait_for_load_state("networkidle")
+        time.sleep(5)
+        self.screen_click(page, 860, 80)
+        time.sleep(1)
+        self.screen_click(page, 890, 180)
 
     # 登录学生账号的实现
     def login(self) -> Page|None:
@@ -186,13 +267,13 @@ class Task(Student):
         # 捕获点击"进入实验"后的新页面
         with self.context.expect_page() as new_page_info:
             print("进行点击")
-            self._debug_click(self.home, 720, 210)
+            self.screen_click(self.home, 720, 210)
         if new_page_info:
             print("进入实验选择页面成功")
             return new_page_info.value
         return None
 
-    # 练习主页面选择练习模块脚本
+    # 选择练习模块
     def start_practice(self, page, choose_practice_index, practice_number=2):
         """
         选择训练目标
@@ -201,7 +282,6 @@ class Task(Student):
         :param practice_number: int: 页面有几个训练模块(2, 3)
         :return: page对象: 进入练习模块页面的新对象
         """
-
         if practice_number not in {2, 3}:
             print(f"页面训练模块数量错误,不存在{practice_number}块")
             exit()
@@ -209,13 +289,10 @@ class Task(Student):
             print(f"不存在第{choose_practice_index}个训练模块")
             exit()
 
-        # 注意
-        # 若进入实验动画渲染时间太长可适当增加sleep时间
-        # 注意
-        page.reload(wait_until="networkidle")
+        page.wait_for_load_state("networkidle")
+
         time.sleep(10)
 
-        # 根据坐标点击，捕获新页面
         if practice_number == 2:
             if choose_practice_index == 1:
                 x, y = 580, 680
@@ -229,14 +306,24 @@ class Task(Student):
             else:
                 x, y = 780, 680
 
-    # 捕获点击后的新页面，无新页面返回None
-        with self.context.expect_page() as new_page_info:
-            self._debug_click(page, x, y)
+        # 记录点击前已有的页面
+        pages_before = self.context.pages
 
-        # 没有捕获到新页面，返回None
-        if new_page_info:
-            new_page = new_page_info.value
+        self.screen_click(page, x, y)
+        time.sleep(3)  # 等待页面响应
+
+        # 检查是否有新页面出现
+        pages_after = self.context.pages
+        new_pages = [p for p in pages_after if p not in pages_before]
+
+        if new_pages:
+            # 情况1: 打开了新标签页
+            new_page = new_pages[-1]
+            new_page.wait_for_load_state("networkidle")
+            print(f"捕获到新页面: {new_page.url}")
+            return new_page
         else:
-            new_page = None
-
-        return new_page
+            # 情况2: 在当前页面内跳转
+            page.wait_for_load_state("networkidle")
+            print(f"当前页面跳转: {page.url}")
+            return page

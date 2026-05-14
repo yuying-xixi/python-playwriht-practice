@@ -1,0 +1,20 @@
+{
+    "decision": {
+        "decision": [
+            "BALL",
+            "Stick",
+            "Cartoon",
+            "Piece",
+            "Customized Shape",
+            "Drop",
+            "Rectangle",
+            "CUBE",
+            "Block",
+            "Cartoon Rabbit Ears"
+        ]
+    },
+    "decision_key": "Decision_1",
+    "is_sure": false,
+    "record_id": "19086",
+    "step": 1
+}
