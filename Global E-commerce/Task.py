@@ -1,5 +1,6 @@
 import time
 from Student import Student
+from playwright.async_api import Error
 
 from playwright.sync_api import sync_playwright, Page
 
@@ -70,6 +71,32 @@ class Task(Student):
         page.mouse.move(x, y)
         page.mouse.click(x, y)
         print(f"已点击 ({x}, {y})")
+
+    # x-token抓取
+    @staticmethod
+    def get_x_token(page, url_keyword="suitanglian.com", timeout=5000):
+        """
+        通过拦截网络请求获取请求头中的 x-token
+        :param page: Playwright 的 page 对象
+        :param url_keyword: 过滤请求的关键词，默认为域名
+        :param timeout: 等待请求的超时时间（毫秒）
+        :return: 找到的 token 字符串，如果没找到则返回 None
+        """
+        try:
+            # 定义筛选规则：URL包含关键词 且 Header里有 x-token
+            check_func = lambda req: url_keyword in req.url and "x-token" in req.headers
+
+            # 使用 with 启动监听
+            with page.expect_request(check_func, timeout=timeout) as request_info:
+                # 触发页面刷新
+                page.reload()
+
+            # 提取并返回 token
+            return request_info.value.headers.get('x-token')
+
+        except Exception as e:
+            print(f"获取 Token 失败或超时: {e}")
+            return None
 
     # 登录学生账号的实现
     def login(self) -> Page|None:
@@ -185,7 +212,8 @@ class Task(Student):
         # 注意
         # 若进入实验动画渲染时间太长可适当增加sleep时间
         # 注意
-        time.sleep(20)
+        page.reload(wait_until="networkidle")
+        time.sleep(10)
 
         # 根据坐标点击，捕获新页面
         if practice_number == 2:
@@ -201,8 +229,14 @@ class Task(Student):
             else:
                 x, y = 780, 680
 
-        # 捕获点击后的新页面
+    # 捕获点击后的新页面，无新页面返回None
         with self.context.expect_page() as new_page_info:
             self._debug_click(page, x, y)
 
-        return new_page_info.value
+        # 没有捕获到新页面，返回None
+        if new_page_info:
+            new_page = new_page_info.value
+        else:
+            new_page = None
+
+        return new_page
