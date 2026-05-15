@@ -1,7 +1,7 @@
 import time
 from Student import Student
 
-from playwright.sync_api import sync_playwright, Page
+from playwright.sync_api import sync_playwright, Page, ViewportSize
 
 class Task(Student):
     # 登录地址
@@ -13,7 +13,7 @@ class Task(Student):
         super().__init__(student_name, student_password)
         self.playwright = sync_playwright().start()
         self.browser = self.playwright.firefox.launch(headless=False)
-        self.context = self.browser.new_context()
+        self.context = self.browser.new_context(viewport=ViewportSize(width=1280, height=720))
 
         login_page = self.login()
         if not login_page:
@@ -22,11 +22,33 @@ class Task(Student):
         # 存储实验主页
         self.home = self.enter_practice(login_page)
 
-    # 退出
+    # 浏览器退出
     def close(self):
         self.context.close()
         self.browser.close()
         self.playwright.stop()
+
+    # 打印浏览器窗口信息,并设置浏览器窗口大小
+    @staticmethod
+    def browser_info(page):
+        view_size = page.viewport_size
+        print("当前浏览器视口宽：", view_size["width"])
+        print("当前浏览器视口高：", view_size["height"])
+
+    # 浏览器窗口切换
+    def close_current_and_return(self):
+        pages = self.context.pages
+        if len(pages) > 1:
+            current_page = pages[-1]
+            previous_page = pages[-2]
+
+            current_page.close()
+            # 将上一个页面升至最前（可见状态）
+            previous_page.bring_to_front()
+            return previous_page
+        else:
+            print("没有可以返回的上级页面")
+            return self.context.pages[0]
 
     # 屏幕点击调试
     @staticmethod
@@ -72,7 +94,7 @@ class Task(Student):
         print(f"已点击 ({x}, {y})")
 
     @staticmethod
-    def _debug_click(page: Page, x: int, y: int) -> None:
+    def debug_click(page: Page, x: int, y: int) -> None:
         page.evaluate(f"""
             ((x, y) => {{
 
@@ -172,14 +194,18 @@ class Task(Student):
             return None
 
     # 点击确认并提交
-    def submit_and_confirm(self, page):
+    def submit_and_confirm(self, page, *points):
         page.wait_for_load_state("networkidle")
         time.sleep(5)
-        self.screen_click(page, 860, 80)
-        time.sleep(1)
-        self.screen_click(page, 890, 180)
 
-    # 登录学生账号的实现
+        for i, (x, y) in enumerate(points):
+            self.screen_click(page, x, y)
+
+            # 最后一次点击不等待
+            if i < len(points) - 1:
+                time.sleep(1)
+
+    # 登录学生账号
     def login(self) -> Page|None:
         """
         通过学生的用户名和密码完成登录操作,并返回登录后的页面对象
@@ -204,7 +230,7 @@ class Task(Student):
         else:
             return None
 
-    # 进入实验主页面脚本实现
+    # 进入实验主页面
     def enter_practice(self, page: Page) -> Page|None:
         """
         进入实验主页
@@ -235,7 +261,7 @@ class Task(Student):
         print(f"成功进入实验主页，新窗口标题: {new_page.title()}")
         return new_page
 
-    # 实验主页面选择项目和任务脚本
+    # 实验主页面选择项目和任务,并进入练习模块
     def choose_project_task(self,  project_number: int, task_number: int) -> Page|None:
         """
         选择进入对应的实验以及实验项目
@@ -273,7 +299,7 @@ class Task(Student):
             return new_page_info.value
         return None
 
-    # 选择练习模块
+    # 选择练习模块,并进入练习
     def start_practice(self, page, choose_practice_index, practice_number=2):
         """
         选择训练目标
@@ -291,7 +317,7 @@ class Task(Student):
 
         page.wait_for_load_state("networkidle")
 
-        time.sleep(10)
+        time.sleep(8)
 
         if practice_number == 2:
             if choose_practice_index == 1:

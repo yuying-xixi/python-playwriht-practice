@@ -55,6 +55,32 @@ class Student:
         print(f"状态码: {response.status_code}")
         print(f"响应: {response.text}")
 
+    # 作答211
+    def do_question_2112(self, headers):
+        data_name = "data_2112.json"
+        aim_url = r"https://www.suitanglian.com:3018/api/traditional/financial/submitGroupData"
+        headers = {
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0",
+            "accept": "application/json, text/plain, */*",
+            "x-token": f"{headers['x-token']}",
+            "origin": f"{headers['origin']}",
+            "referer": f"{headers['referer']}"
+        }
+        self.response_post(data_name, aim_url, headers)
+
+    # 作答212 # https://bi.suitanglian.com:3012/api/bitools/apiSaveProcessNodes
+    def do_question_2212(self, headers):
+        data_name = "data_2112.json"
+        aim_url = r"https://www.suitanglian.com:3018/api/traditional/financial/submitGroupData"
+        headers = {
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0",
+            "accept": "application/json, text/plain, */*",
+            "x-token": f"{headers['x-token']}",
+            "origin": f"{headers['origin']}",
+            "referer": f"{headers['referer']}"
+        }
+        self.response_post(data_name, aim_url, headers)
+
     # 作答311
     def do_question_3112(self):
         data_name = "data_3112.json"
