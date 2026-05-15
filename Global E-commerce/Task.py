@@ -22,11 +22,32 @@ class Task(Student):
         # 存储实验主页
         self.home = self.enter_practice(login_page)
 
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc, tb):
+        self.close()
+
     # 浏览器退出
     def close(self):
-        self.context.close()
-        self.browser.close()
-        self.playwright.stop()
+        try:
+            if hasattr(self, "context"):
+                self.context.close()
+        except:
+            pass
+
+        try:
+            if hasattr(self, "browser"):
+                self.browser.close()
+        except:
+            pass
+
+        try:
+            if hasattr(self, "playwright"):
+                self.playwright.stop()
+        except:
+            pass
 
     # 打印浏览器窗口信息,并设置浏览器窗口大小
     @staticmethod
@@ -169,7 +190,7 @@ class Task(Student):
 
     # headers获取
     @staticmethod
-    def get_headers(page, url_keyword="suitanglian.com", timeout=20000):
+    def get_headers_token(page, url_keyword="suitanglian.com", timeout=20000):
         """
         通过拦截网络请求获取请求头中的 x-token
         :param page: Playwright 的 page 对象
@@ -187,6 +208,31 @@ class Task(Student):
                 page.reload()
 
             # 提取并返回 token
+            return request_info.value.headers
+
+        except Exception as e:
+            print(f"获取 headers 失败或超时: {e}")
+            return None
+
+
+    def get_headers_cookie(self, page, url_keyword="suitanglian.com", timeout=20000):
+        """
+        通过拦截网络请求获取请求头中的 cookie
+        :param page: Playwright 的 page 对象
+        :param url_keyword: 过滤请求的关键词，默认为域名
+        :param timeout: 等待请求的超时时间（毫秒）
+        :return: 找到的 cookie 字符串，如果没找到则返回 None
+        """
+        try:
+            # 定义筛选规则：URL包含关键词 且 Header里有 cookie
+            check_func = lambda req: url_keyword in req.url and "cookie" in req.headers
+
+            # 使用 with 启动监听
+            with page.expect_request(check_func, timeout=timeout) as request_info:
+                # 触发页面刷新
+                self.debug_click(page, 1120, 80)
+
+            # 提取并返回 cookie
             return request_info.value.headers
 
         except Exception as e:
@@ -317,7 +363,7 @@ class Task(Student):
 
         page.wait_for_load_state("networkidle")
 
-        time.sleep(8)
+        time.sleep(10)
 
         if practice_number == 2:
             if choose_practice_index == 1:

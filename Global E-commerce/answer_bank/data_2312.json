@@ -1,0 +1,6725 @@
+{
+	"body": {
+		"allSheets": [
+			{
+				"index": 0
+			},
+			{
+				"chart": [
+					{
+						"chart_id": "chart_GGa4x03ntca0_1778768102676",
+						"chartOptions": {
+							"chartAllType": "echarts|column|default",
+							"chartData": [],
+							"chartDataCache": {
+								"label": [
+									"Mon",
+									"Tues",
+									"Wed",
+									"Thur",
+									"Fri",
+									"Sat",
+									"Sun"
+								],
+								"series": [
+									[
+										320,
+										302,
+										301,
+										334,
+										390,
+										330,
+										320
+									],
+									[
+										120,
+										132,
+										101,
+										134,
+										90,
+										230,
+										210
+									],
+									[
+										220,
+										182,
+										191,
+										234,
+										290,
+										330,
+										310
+									],
+									[
+										820,
+										832,
+										901,
+										934,
+										1290,
+										1330,
+										1320
+									]
+								],
+								"series_tpye": {
+									"0": "num",
+									"1": "num",
+									"2": "num",
+									"3": "num",
+									"4": "num",
+									"5": "num",
+									"6": "num"
+								},
+								"xAxis": [
+									"BUS",
+									"UBER",
+									"TAXI",
+									"SUBWAY"
+								]
+							},
+							"chartDataSeriesOrder": {
+								"0": 0,
+								"1": 1,
+								"2": 2,
+								"3": 3,
+								"4": 4,
+								"5": 5,
+								"6": 6,
+								"length": 7
+							},
+							"chartPro": "echarts",
+							"chartStyle": "default",
+							"chartType": "pie",
+							"defaultOption": {
+								"axis": {
+									"axisType": "xAxisDown",
+									"xAxisDown": {
+										"data": [
+											"BUS",
+											"UBER",
+											"TAXI",
+											"SUBWAY"
+										],
+										"inverse": false,
+										"name": "显示X轴",
+										"netArea": {
+											"colorOne": "auto",
+											"colorTwo": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false
+										},
+										"netLine": {
+											"color": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false,
+											"type": "solid",
+											"width": 1
+										},
+										"show": true,
+										"tick": {
+											"color": "auto",
+											"length": 5,
+											"position": "outside",
+											"show": true,
+											"width": 1
+										},
+										"tickLabel": {
+											"digit": "auto",
+											"distance": 0,
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"max": null,
+											"min": null,
+											"optimize": 0,
+											"prefix": "",
+											"ratio": 1,
+											"rotate": 0,
+											"show": true,
+											"suffix": ""
+										},
+										"tickLine": {
+											"color": "auto",
+											"show": true,
+											"width": 1
+										},
+										"title": {
+											"fzPosition": "end",
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"nameGap": 15,
+											"rotate": 0,
+											"showTitle": false,
+											"text": ""
+										},
+										"type": "category"
+									},
+									"xAxisUp": {
+										"axisLine": {
+											"onZero": false
+										},
+										"inverse": false,
+										"name": "显示X轴",
+										"netArea": {
+											"colorOne": "auto",
+											"colorTwo": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false
+										},
+										"netLine": {
+											"color": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false,
+											"type": "solid",
+											"width": 1
+										},
+										"show": false,
+										"tick": {
+											"color": "auto",
+											"length": 5,
+											"position": "outside",
+											"show": true,
+											"width": 1
+										},
+										"tickLabel": {
+											"digit": "auto",
+											"distance": 0,
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"max": "auto",
+											"min": "auto",
+											"optimize": 0,
+											"prefix": "",
+											"ratio": 1,
+											"rotate": 0,
+											"show": true,
+											"suffix": ""
+										},
+										"tickLine": {
+											"color": "auto",
+											"show": true,
+											"width": 1
+										},
+										"title": {
+											"fzPosition": "end",
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"nameGap": 15,
+											"rotate": 0,
+											"showTitle": false,
+											"text": ""
+										}
+									},
+									"yAxisLeft": {
+										"inverse": false,
+										"name": "显示Y轴",
+										"netArea": {
+											"colorOne": "auto",
+											"colorTwo": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false
+										},
+										"netLine": {
+											"color": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false,
+											"type": "solid",
+											"width": 1
+										},
+										"show": true,
+										"tick": {
+											"color": "auto",
+											"length": 5,
+											"position": "outside",
+											"show": true,
+											"width": 1
+										},
+										"tickLabel": {
+											"digit": "auto",
+											"distance": 0,
+											"formatter": {
+												"digit": "auto",
+												"prefix": "",
+												"ratio": 1,
+												"suffix": ""
+											},
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"max": null,
+											"min": null,
+											"prefix": "",
+											"ratio": 1,
+											"rotate": 0,
+											"show": true,
+											"split": 5,
+											"suffix": ""
+										},
+										"tickLine": {
+											"color": "auto",
+											"show": true,
+											"width": 1
+										},
+										"title": {
+											"fzPosition": "end",
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"nameGap": 15,
+											"rotate": 0,
+											"showTitle": false,
+											"text": ""
+										},
+										"type": "value"
+									},
+									"yAxisRight": {
+										"inverse": false,
+										"name": "显示Y轴",
+										"netArea": {
+											"colorOne": "auto",
+											"colorTwo": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false
+										},
+										"netLine": {
+											"color": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false,
+											"type": "solid",
+											"width": 1
+										},
+										"show": false,
+										"tick": {
+											"color": "auto",
+											"length": 5,
+											"position": "outside",
+											"show": true,
+											"width": 1
+										},
+										"tickLabel": {
+											"digit": "auto",
+											"distance": 0,
+											"formatter": {
+												"digit": "auto",
+												"prefix": "",
+												"ratio": 1,
+												"suffix": ""
+											},
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"max": null,
+											"min": null,
+											"prefix": "",
+											"ratio": 1,
+											"rotate": 0,
+											"show": true,
+											"split": 5,
+											"suffix": ""
+										},
+										"tickLine": {
+											"color": "auto",
+											"show": true,
+											"width": 1
+										},
+										"title": {
+											"fzPosition": "end",
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"nameGap": 15,
+											"rotate": 0,
+											"showTitle": false,
+											"text": ""
+										}
+									}
+								},
+								"config": {
+									"color": "transparent",
+									"fontFamily": "Sans-serif",
+									"grid": {
+										"bottom": 10,
+										"left": 10,
+										"right": 20,
+										"top": 5,
+										"value": "normal"
+									}
+								},
+								"legend": {
+									"data": [
+										"Mon",
+										"Tues",
+										"Wed",
+										"Thur",
+										"Fri",
+										"Sat",
+										"Sun"
+									],
+									"distance": {
+										"cusGap": 10,
+										"value": "auto"
+									},
+									"height": {
+										"cusSize": 14,
+										"value": "auto"
+									},
+									"itemGap": 10,
+									"label": {
+										"color": "#333",
+										"cusFontSize": 12,
+										"fontFamily": "sans-serif",
+										"fontGroup": [],
+										"fontSize": 12
+									},
+									"position": {
+										"direction": "horizontal",
+										"offsetX": 40,
+										"offsetY": 50,
+										"value": "left-top"
+									},
+									"selected": [
+										{
+											"isShow": true,
+											"seriesName": "衣服"
+										},
+										{
+											"isShow": true,
+											"seriesName": "食材"
+										},
+										{
+											"isShow": true,
+											"seriesName": "图书"
+										}
+									],
+									"selectMode": "multiple",
+									"show": true,
+									"width": {
+										"cusSize": 25,
+										"value": "auto"
+									}
+								},
+								"series": [
+									{
+										"data": [
+											320,
+											120,
+											220,
+											820
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Mon",
+										"type": "bar"
+									},
+									{
+										"data": [
+											302,
+											132,
+											182,
+											832
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Tues",
+										"type": "bar"
+									},
+									{
+										"data": [
+											301,
+											101,
+											191,
+											901
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Wed",
+										"type": "bar"
+									},
+									{
+										"data": [
+											334,
+											134,
+											234,
+											934
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Thur",
+										"type": "bar"
+									},
+									{
+										"data": [
+											390,
+											90,
+											290,
+											1290
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Fri",
+										"type": "bar"
+									},
+									{
+										"data": [
+											330,
+											230,
+											330,
+											1330
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Sat",
+										"type": "bar"
+									},
+									{
+										"data": [
+											320,
+											210,
+											310,
+											1320
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Sun",
+										"type": "bar"
+									}
+								],
+								"seriesData": [
+									[
+										320,
+										120,
+										220,
+										820
+									],
+									[
+										302,
+										132,
+										182,
+										832
+									],
+									[
+										301,
+										101,
+										191,
+										901
+									],
+									[
+										334,
+										134,
+										234,
+										934
+									],
+									[
+										390,
+										90,
+										290,
+										1290
+									],
+									[
+										330,
+										230,
+										330,
+										1330
+									],
+									[
+										320,
+										210,
+										310,
+										1320
+									]
+								],
+								"subtitle": {
+									"distance": {
+										"cusGap": 40,
+										"value": "auto"
+									},
+									"label": {
+										"color": "#333",
+										"cusFontSize": 12,
+										"fontFamily": "sans-serif",
+										"fontGroup": [],
+										"fontSize": 12
+									},
+									"show": false,
+									"text": ""
+								},
+								"title": {
+									"label": {
+										"color": "#333",
+										"cusFontSize": 12,
+										"fontFamily": "sans-serif",
+										"fontGroup": [],
+										"fontSize": 12
+									},
+									"position": {
+										"offsetX": 40,
+										"offsetY": 50,
+										"value": "left-top"
+									},
+									"show": false,
+									"text": "默认标题"
+								},
+								"tooltip": {
+									"axisPointer": {
+										"style": {
+											"color": "#555",
+											"type": "solid",
+											"width": "normal"
+										},
+										"type": "line"
+									},
+									"backgroundColor": "rgba(50,50,50,0.7)",
+									"format": [
+										{
+											"digit": "auto",
+											"prefix": "",
+											"ratio": 1,
+											"seriesName": "衣服",
+											"suffix": ""
+										},
+										{
+											"digit": "auto",
+											"prefix": "",
+											"ratio": 1,
+											"seriesName": "食材",
+											"suffix": ""
+										},
+										{
+											"digit": "auto",
+											"prefix": "",
+											"ratio": 1,
+											"seriesName": "图书",
+											"suffix": ""
+										}
+									],
+									"label": {
+										"color": "#333",
+										"cusFontSize": 12,
+										"fontFamily": "sans-serif",
+										"fontGroup": [],
+										"fontSize": 12
+									},
+									"position": "auto",
+									"show": true,
+									"triggerOn": "mousemove",
+									"triggerType": "item"
+								}
+							},
+							"rangeArray": [
+								1,
+								2,
+								3
+							],
+							"rangeColCheck": {
+								"exits": true,
+								"range": [
+									0,
+									0
+								]
+							},
+							"rangeConfigCheck": false,
+							"rangeRowCheck": {
+								"exits": true,
+								"range": [
+									0,
+									0
+								]
+							},
+							"rangeSplitArray": {
+								"coltitle": {
+									"column": [
+										0,
+										0
+									],
+									"row": [
+										1,
+										4
+									]
+								},
+								"content": {
+									"column": [
+										1,
+										7
+									],
+									"row": [
+										1,
+										4
+									]
+								},
+								"range": {
+									"column": [
+										0,
+										7
+									],
+									"row": [
+										0,
+										4
+									]
+								},
+								"rowtitle": {
+									"column": [
+										1,
+										7
+									],
+									"row": [
+										0,
+										0
+									]
+								},
+								"title": {
+									"column": [
+										0,
+										0
+									],
+									"row": [
+										0,
+										0
+									]
+								},
+								"type": "normal"
+							},
+							"rangeTxt": "A1:H5"
+						},
+						"height": 250,
+						"isShow": false,
+						"left": 0,
+						"needRangeShow": true,
+						"sheetIndex": "Sheet_eSiL360H07AM_1675909580578",
+						"top": 0,
+						"width": 400
+					}
+				],
+				"index": 1
+			},
+			{
+				"chart": [
+					{
+						"chart_id": "chart_k7H3aH0lt3lo_1778768121172",
+						"chartOptions": {
+							"chartAllType": "echarts|column|default",
+							"chartData": [],
+							"chartDataCache": {
+								"label": [
+									"Mon",
+									"Tues",
+									"Wed",
+									"Thur",
+									"Fri",
+									"Sat",
+									"Sun"
+								],
+								"series": [
+									[
+										320,
+										302,
+										301,
+										334,
+										390,
+										330,
+										320
+									],
+									[
+										120,
+										132,
+										101,
+										134,
+										90,
+										230,
+										210
+									],
+									[
+										220,
+										182,
+										191,
+										234,
+										290,
+										330,
+										310
+									],
+									[
+										820,
+										832,
+										901,
+										934,
+										1290,
+										1330,
+										1320
+									]
+								],
+								"series_tpye": {
+									"0": "num",
+									"1": "num",
+									"2": "num",
+									"3": "num",
+									"4": "num",
+									"5": "num",
+									"6": "num"
+								},
+								"xAxis": [
+									"BUS",
+									"UBER",
+									"TAXI",
+									"SUBWAY"
+								]
+							},
+							"chartDataSeriesOrder": {
+								"0": 0,
+								"1": 1,
+								"2": 2,
+								"3": 3,
+								"4": 4,
+								"5": 5,
+								"6": 6,
+								"length": 7
+							},
+							"chartPro": "echarts",
+							"chartStyle": "default",
+							"chartType": "pie",
+							"defaultOption": {
+								"axis": {
+									"axisType": "xAxisDown",
+									"xAxisDown": {
+										"data": [
+											"BUS",
+											"UBER",
+											"TAXI",
+											"SUBWAY"
+										],
+										"inverse": false,
+										"name": "显示X轴",
+										"netArea": {
+											"colorOne": "auto",
+											"colorTwo": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false
+										},
+										"netLine": {
+											"color": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false,
+											"type": "solid",
+											"width": 1
+										},
+										"show": true,
+										"tick": {
+											"color": "auto",
+											"length": 5,
+											"position": "outside",
+											"show": true,
+											"width": 1
+										},
+										"tickLabel": {
+											"digit": "auto",
+											"distance": 0,
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"max": null,
+											"min": null,
+											"optimize": 0,
+											"prefix": "",
+											"ratio": 1,
+											"rotate": 0,
+											"show": true,
+											"suffix": ""
+										},
+										"tickLine": {
+											"color": "auto",
+											"show": true,
+											"width": 1
+										},
+										"title": {
+											"fzPosition": "end",
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"nameGap": 15,
+											"rotate": 0,
+											"showTitle": false,
+											"text": ""
+										},
+										"type": "category"
+									},
+									"xAxisUp": {
+										"axisLine": {
+											"onZero": false
+										},
+										"inverse": false,
+										"name": "显示X轴",
+										"netArea": {
+											"colorOne": "auto",
+											"colorTwo": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false
+										},
+										"netLine": {
+											"color": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false,
+											"type": "solid",
+											"width": 1
+										},
+										"show": false,
+										"tick": {
+											"color": "auto",
+											"length": 5,
+											"position": "outside",
+											"show": true,
+											"width": 1
+										},
+										"tickLabel": {
+											"digit": "auto",
+											"distance": 0,
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"max": "auto",
+											"min": "auto",
+											"optimize": 0,
+											"prefix": "",
+											"ratio": 1,
+											"rotate": 0,
+											"show": true,
+											"suffix": ""
+										},
+										"tickLine": {
+											"color": "auto",
+											"show": true,
+											"width": 1
+										},
+										"title": {
+											"fzPosition": "end",
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"nameGap": 15,
+											"rotate": 0,
+											"showTitle": false,
+											"text": ""
+										}
+									},
+									"yAxisLeft": {
+										"inverse": false,
+										"name": "显示Y轴",
+										"netArea": {
+											"colorOne": "auto",
+											"colorTwo": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false
+										},
+										"netLine": {
+											"color": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false,
+											"type": "solid",
+											"width": 1
+										},
+										"show": true,
+										"tick": {
+											"color": "auto",
+											"length": 5,
+											"position": "outside",
+											"show": true,
+											"width": 1
+										},
+										"tickLabel": {
+											"digit": "auto",
+											"distance": 0,
+											"formatter": {
+												"digit": "auto",
+												"prefix": "",
+												"ratio": 1,
+												"suffix": ""
+											},
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"max": null,
+											"min": null,
+											"prefix": "",
+											"ratio": 1,
+											"rotate": 0,
+											"show": true,
+											"split": 5,
+											"suffix": ""
+										},
+										"tickLine": {
+											"color": "auto",
+											"show": true,
+											"width": 1
+										},
+										"title": {
+											"fzPosition": "end",
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"nameGap": 15,
+											"rotate": 0,
+											"showTitle": false,
+											"text": ""
+										},
+										"type": "value"
+									},
+									"yAxisRight": {
+										"inverse": false,
+										"name": "显示Y轴",
+										"netArea": {
+											"colorOne": "auto",
+											"colorTwo": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false
+										},
+										"netLine": {
+											"color": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false,
+											"type": "solid",
+											"width": 1
+										},
+										"show": false,
+										"tick": {
+											"color": "auto",
+											"length": 5,
+											"position": "outside",
+											"show": true,
+											"width": 1
+										},
+										"tickLabel": {
+											"digit": "auto",
+											"distance": 0,
+											"formatter": {
+												"digit": "auto",
+												"prefix": "",
+												"ratio": 1,
+												"suffix": ""
+											},
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"max": null,
+											"min": null,
+											"prefix": "",
+											"ratio": 1,
+											"rotate": 0,
+											"show": true,
+											"split": 5,
+											"suffix": ""
+										},
+										"tickLine": {
+											"color": "auto",
+											"show": true,
+											"width": 1
+										},
+										"title": {
+											"fzPosition": "end",
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"nameGap": 15,
+											"rotate": 0,
+											"showTitle": false,
+											"text": ""
+										}
+									}
+								},
+								"config": {
+									"color": "transparent",
+									"fontFamily": "Sans-serif",
+									"grid": {
+										"bottom": 10,
+										"left": 10,
+										"right": 20,
+										"top": 5,
+										"value": "normal"
+									}
+								},
+								"legend": {
+									"data": [
+										"Mon",
+										"Tues",
+										"Wed",
+										"Thur",
+										"Fri",
+										"Sat",
+										"Sun"
+									],
+									"distance": {
+										"cusGap": 10,
+										"value": "auto"
+									},
+									"height": {
+										"cusSize": 14,
+										"value": "auto"
+									},
+									"itemGap": 10,
+									"label": {
+										"color": "#333",
+										"cusFontSize": 12,
+										"fontFamily": "sans-serif",
+										"fontGroup": [],
+										"fontSize": 12
+									},
+									"position": {
+										"direction": "horizontal",
+										"offsetX": 40,
+										"offsetY": 50,
+										"value": "left-top"
+									},
+									"selected": [
+										{
+											"isShow": true,
+											"seriesName": "衣服"
+										},
+										{
+											"isShow": true,
+											"seriesName": "食材"
+										},
+										{
+											"isShow": true,
+											"seriesName": "图书"
+										}
+									],
+									"selectMode": "multiple",
+									"show": true,
+									"width": {
+										"cusSize": 25,
+										"value": "auto"
+									}
+								},
+								"series": [
+									{
+										"data": [
+											320,
+											120,
+											220,
+											820
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Mon",
+										"type": "bar"
+									},
+									{
+										"data": [
+											302,
+											132,
+											182,
+											832
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Tues",
+										"type": "bar"
+									},
+									{
+										"data": [
+											301,
+											101,
+											191,
+											901
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Wed",
+										"type": "bar"
+									},
+									{
+										"data": [
+											334,
+											134,
+											234,
+											934
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Thur",
+										"type": "bar"
+									},
+									{
+										"data": [
+											390,
+											90,
+											290,
+											1290
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Fri",
+										"type": "bar"
+									},
+									{
+										"data": [
+											330,
+											230,
+											330,
+											1330
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Sat",
+										"type": "bar"
+									},
+									{
+										"data": [
+											320,
+											210,
+											310,
+											1320
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Sun",
+										"type": "bar"
+									}
+								],
+								"seriesData": [
+									[
+										320,
+										120,
+										220,
+										820
+									],
+									[
+										302,
+										132,
+										182,
+										832
+									],
+									[
+										301,
+										101,
+										191,
+										901
+									],
+									[
+										334,
+										134,
+										234,
+										934
+									],
+									[
+										390,
+										90,
+										290,
+										1290
+									],
+									[
+										330,
+										230,
+										330,
+										1330
+									],
+									[
+										320,
+										210,
+										310,
+										1320
+									]
+								],
+								"subtitle": {
+									"distance": {
+										"cusGap": 40,
+										"value": "auto"
+									},
+									"label": {
+										"color": "#333",
+										"cusFontSize": 12,
+										"fontFamily": "sans-serif",
+										"fontGroup": [],
+										"fontSize": 12
+									},
+									"show": false,
+									"text": ""
+								},
+								"title": {
+									"label": {
+										"color": "#333",
+										"cusFontSize": 12,
+										"fontFamily": "sans-serif",
+										"fontGroup": [],
+										"fontSize": 12
+									},
+									"position": {
+										"offsetX": 40,
+										"offsetY": 50,
+										"value": "left-top"
+									},
+									"show": false,
+									"text": "默认标题"
+								},
+								"tooltip": {
+									"axisPointer": {
+										"style": {
+											"color": "#555",
+											"type": "solid",
+											"width": "normal"
+										},
+										"type": "line"
+									},
+									"backgroundColor": "rgba(50,50,50,0.7)",
+									"format": [
+										{
+											"digit": "auto",
+											"prefix": "",
+											"ratio": 1,
+											"seriesName": "衣服",
+											"suffix": ""
+										},
+										{
+											"digit": "auto",
+											"prefix": "",
+											"ratio": 1,
+											"seriesName": "食材",
+											"suffix": ""
+										},
+										{
+											"digit": "auto",
+											"prefix": "",
+											"ratio": 1,
+											"seriesName": "图书",
+											"suffix": ""
+										}
+									],
+									"label": {
+										"color": "#333",
+										"cusFontSize": 12,
+										"fontFamily": "sans-serif",
+										"fontGroup": [],
+										"fontSize": 12
+									},
+									"position": "auto",
+									"show": true,
+									"triggerOn": "mousemove",
+									"triggerType": "item"
+								}
+							},
+							"rangeArray": [
+								1,
+								2,
+								3
+							],
+							"rangeColCheck": {
+								"exits": true,
+								"range": [
+									0,
+									0
+								]
+							},
+							"rangeConfigCheck": false,
+							"rangeRowCheck": {
+								"exits": true,
+								"range": [
+									0,
+									0
+								]
+							},
+							"rangeSplitArray": {
+								"coltitle": {
+									"column": [
+										0,
+										0
+									],
+									"row": [
+										1,
+										4
+									]
+								},
+								"content": {
+									"column": [
+										1,
+										7
+									],
+									"row": [
+										1,
+										4
+									]
+								},
+								"range": {
+									"column": [
+										0,
+										7
+									],
+									"row": [
+										0,
+										4
+									]
+								},
+								"rowtitle": {
+									"column": [
+										1,
+										7
+									],
+									"row": [
+										0,
+										0
+									]
+								},
+								"title": {
+									"column": [
+										0,
+										0
+									],
+									"row": [
+										0,
+										0
+									]
+								},
+								"type": "normal"
+							},
+							"rangeTxt": "A1:H5"
+						},
+						"height": 250,
+						"isShow": false,
+						"left": 0,
+						"needRangeShow": true,
+						"sheetIndex": "Sheet_1f97n57pdk10_1675910482569",
+						"top": 0,
+						"width": 400
+					}
+				],
+				"index": 2
+			},
+			{
+				"index": 3
+			},
+			{
+				"chart": [
+					{
+						"chart_id": "chart_684e1wH3War3_1778768150358",
+						"chartOptions": {
+							"chartAllType": "echarts|column|default",
+							"chartData": [],
+							"chartDataCache": {
+								"label": [
+									"Mon",
+									"Tues",
+									"Wed",
+									"Thur",
+									"Fri",
+									"Sat",
+									"Sun"
+								],
+								"series": [
+									[
+										320,
+										302,
+										301,
+										334,
+										390,
+										330,
+										320
+									],
+									[
+										120,
+										132,
+										101,
+										134,
+										90,
+										230,
+										210
+									],
+									[
+										220,
+										182,
+										191,
+										234,
+										290,
+										330,
+										310
+									],
+									[
+										820,
+										832,
+										901,
+										934,
+										1290,
+										1330,
+										1320
+									]
+								],
+								"series_tpye": {
+									"0": "num",
+									"1": "num",
+									"2": "num",
+									"3": "num",
+									"4": "num",
+									"5": "num",
+									"6": "num"
+								},
+								"xAxis": [
+									"BUS",
+									"UBER",
+									"TAXI",
+									"SUBWAY"
+								]
+							},
+							"chartDataSeriesOrder": {
+								"0": 0,
+								"1": 1,
+								"2": 2,
+								"3": 3,
+								"4": 4,
+								"5": 5,
+								"6": 6,
+								"length": 7
+							},
+							"chartPro": "echarts",
+							"chartStyle": "default",
+							"chartType": "pie",
+							"defaultOption": {
+								"axis": {
+									"axisType": "xAxisDown",
+									"xAxisDown": {
+										"data": [
+											"BUS",
+											"UBER",
+											"TAXI",
+											"SUBWAY"
+										],
+										"inverse": false,
+										"name": "显示X轴",
+										"netArea": {
+											"colorOne": "auto",
+											"colorTwo": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false
+										},
+										"netLine": {
+											"color": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false,
+											"type": "solid",
+											"width": 1
+										},
+										"show": true,
+										"tick": {
+											"color": "auto",
+											"length": 5,
+											"position": "outside",
+											"show": true,
+											"width": 1
+										},
+										"tickLabel": {
+											"digit": "auto",
+											"distance": 0,
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"max": null,
+											"min": null,
+											"optimize": 0,
+											"prefix": "",
+											"ratio": 1,
+											"rotate": 0,
+											"show": true,
+											"suffix": ""
+										},
+										"tickLine": {
+											"color": "auto",
+											"show": true,
+											"width": 1
+										},
+										"title": {
+											"fzPosition": "end",
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"nameGap": 15,
+											"rotate": 0,
+											"showTitle": false,
+											"text": ""
+										},
+										"type": "category"
+									},
+									"xAxisUp": {
+										"axisLine": {
+											"onZero": false
+										},
+										"inverse": false,
+										"name": "显示X轴",
+										"netArea": {
+											"colorOne": "auto",
+											"colorTwo": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false
+										},
+										"netLine": {
+											"color": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false,
+											"type": "solid",
+											"width": 1
+										},
+										"show": false,
+										"tick": {
+											"color": "auto",
+											"length": 5,
+											"position": "outside",
+											"show": true,
+											"width": 1
+										},
+										"tickLabel": {
+											"digit": "auto",
+											"distance": 0,
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"max": "auto",
+											"min": "auto",
+											"optimize": 0,
+											"prefix": "",
+											"ratio": 1,
+											"rotate": 0,
+											"show": true,
+											"suffix": ""
+										},
+										"tickLine": {
+											"color": "auto",
+											"show": true,
+											"width": 1
+										},
+										"title": {
+											"fzPosition": "end",
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"nameGap": 15,
+											"rotate": 0,
+											"showTitle": false,
+											"text": ""
+										}
+									},
+									"yAxisLeft": {
+										"inverse": false,
+										"name": "显示Y轴",
+										"netArea": {
+											"colorOne": "auto",
+											"colorTwo": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false
+										},
+										"netLine": {
+											"color": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false,
+											"type": "solid",
+											"width": 1
+										},
+										"show": true,
+										"tick": {
+											"color": "auto",
+											"length": 5,
+											"position": "outside",
+											"show": true,
+											"width": 1
+										},
+										"tickLabel": {
+											"digit": "auto",
+											"distance": 0,
+											"formatter": {
+												"digit": "auto",
+												"prefix": "",
+												"ratio": 1,
+												"suffix": ""
+											},
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"max": null,
+											"min": null,
+											"prefix": "",
+											"ratio": 1,
+											"rotate": 0,
+											"show": true,
+											"split": 5,
+											"suffix": ""
+										},
+										"tickLine": {
+											"color": "auto",
+											"show": true,
+											"width": 1
+										},
+										"title": {
+											"fzPosition": "end",
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"nameGap": 15,
+											"rotate": 0,
+											"showTitle": false,
+											"text": ""
+										},
+										"type": "value"
+									},
+									"yAxisRight": {
+										"inverse": false,
+										"name": "显示Y轴",
+										"netArea": {
+											"colorOne": "auto",
+											"colorTwo": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false
+										},
+										"netLine": {
+											"color": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false,
+											"type": "solid",
+											"width": 1
+										},
+										"show": false,
+										"tick": {
+											"color": "auto",
+											"length": 5,
+											"position": "outside",
+											"show": true,
+											"width": 1
+										},
+										"tickLabel": {
+											"digit": "auto",
+											"distance": 0,
+											"formatter": {
+												"digit": "auto",
+												"prefix": "",
+												"ratio": 1,
+												"suffix": ""
+											},
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"max": null,
+											"min": null,
+											"prefix": "",
+											"ratio": 1,
+											"rotate": 0,
+											"show": true,
+											"split": 5,
+											"suffix": ""
+										},
+										"tickLine": {
+											"color": "auto",
+											"show": true,
+											"width": 1
+										},
+										"title": {
+											"fzPosition": "end",
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"nameGap": 15,
+											"rotate": 0,
+											"showTitle": false,
+											"text": ""
+										}
+									}
+								},
+								"config": {
+									"color": "transparent",
+									"fontFamily": "Sans-serif",
+									"grid": {
+										"bottom": 10,
+										"left": 10,
+										"right": 20,
+										"top": 5,
+										"value": "normal"
+									}
+								},
+								"legend": {
+									"data": [
+										"Mon",
+										"Tues",
+										"Wed",
+										"Thur",
+										"Fri",
+										"Sat",
+										"Sun"
+									],
+									"distance": {
+										"cusGap": 10,
+										"value": "auto"
+									},
+									"height": {
+										"cusSize": 14,
+										"value": "auto"
+									},
+									"itemGap": 10,
+									"label": {
+										"color": "#333",
+										"cusFontSize": 12,
+										"fontFamily": "sans-serif",
+										"fontGroup": [],
+										"fontSize": 12
+									},
+									"position": {
+										"direction": "horizontal",
+										"offsetX": 40,
+										"offsetY": 50,
+										"value": "left-top"
+									},
+									"selected": [
+										{
+											"isShow": true,
+											"seriesName": "衣服"
+										},
+										{
+											"isShow": true,
+											"seriesName": "食材"
+										},
+										{
+											"isShow": true,
+											"seriesName": "图书"
+										}
+									],
+									"selectMode": "multiple",
+									"show": true,
+									"width": {
+										"cusSize": 25,
+										"value": "auto"
+									}
+								},
+								"series": [
+									{
+										"data": [
+											320,
+											120,
+											220,
+											820
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Mon",
+										"type": "bar"
+									},
+									{
+										"data": [
+											302,
+											132,
+											182,
+											832
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Tues",
+										"type": "bar"
+									},
+									{
+										"data": [
+											301,
+											101,
+											191,
+											901
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Wed",
+										"type": "bar"
+									},
+									{
+										"data": [
+											334,
+											134,
+											234,
+											934
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Thur",
+										"type": "bar"
+									},
+									{
+										"data": [
+											390,
+											90,
+											290,
+											1290
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Fri",
+										"type": "bar"
+									},
+									{
+										"data": [
+											330,
+											230,
+											330,
+											1330
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Sat",
+										"type": "bar"
+									},
+									{
+										"data": [
+											320,
+											210,
+											310,
+											1320
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Sun",
+										"type": "bar"
+									}
+								],
+								"seriesData": [
+									[
+										320,
+										120,
+										220,
+										820
+									],
+									[
+										302,
+										132,
+										182,
+										832
+									],
+									[
+										301,
+										101,
+										191,
+										901
+									],
+									[
+										334,
+										134,
+										234,
+										934
+									],
+									[
+										390,
+										90,
+										290,
+										1290
+									],
+									[
+										330,
+										230,
+										330,
+										1330
+									],
+									[
+										320,
+										210,
+										310,
+										1320
+									]
+								],
+								"subtitle": {
+									"distance": {
+										"cusGap": 40,
+										"value": "auto"
+									},
+									"label": {
+										"color": "#333",
+										"cusFontSize": 12,
+										"fontFamily": "sans-serif",
+										"fontGroup": [],
+										"fontSize": 12
+									},
+									"show": false,
+									"text": ""
+								},
+								"title": {
+									"label": {
+										"color": "#333",
+										"cusFontSize": 12,
+										"fontFamily": "sans-serif",
+										"fontGroup": [],
+										"fontSize": 12
+									},
+									"position": {
+										"offsetX": 40,
+										"offsetY": 50,
+										"value": "left-top"
+									},
+									"show": false,
+									"text": "默认标题"
+								},
+								"tooltip": {
+									"axisPointer": {
+										"style": {
+											"color": "#555",
+											"type": "solid",
+											"width": "normal"
+										},
+										"type": "line"
+									},
+									"backgroundColor": "rgba(50,50,50,0.7)",
+									"format": [
+										{
+											"digit": "auto",
+											"prefix": "",
+											"ratio": 1,
+											"seriesName": "衣服",
+											"suffix": ""
+										},
+										{
+											"digit": "auto",
+											"prefix": "",
+											"ratio": 1,
+											"seriesName": "食材",
+											"suffix": ""
+										},
+										{
+											"digit": "auto",
+											"prefix": "",
+											"ratio": 1,
+											"seriesName": "图书",
+											"suffix": ""
+										}
+									],
+									"label": {
+										"color": "#333",
+										"cusFontSize": 12,
+										"fontFamily": "sans-serif",
+										"fontGroup": [],
+										"fontSize": 12
+									},
+									"position": "auto",
+									"show": true,
+									"triggerOn": "mousemove",
+									"triggerType": "item"
+								}
+							},
+							"rangeArray": [
+								1,
+								2,
+								3
+							],
+							"rangeColCheck": {
+								"exits": true,
+								"range": [
+									0,
+									0
+								]
+							},
+							"rangeConfigCheck": false,
+							"rangeRowCheck": {
+								"exits": true,
+								"range": [
+									0,
+									0
+								]
+							},
+							"rangeSplitArray": {
+								"coltitle": {
+									"column": [
+										0,
+										0
+									],
+									"row": [
+										1,
+										4
+									]
+								},
+								"content": {
+									"column": [
+										1,
+										7
+									],
+									"row": [
+										1,
+										4
+									]
+								},
+								"range": {
+									"column": [
+										0,
+										7
+									],
+									"row": [
+										0,
+										4
+									]
+								},
+								"rowtitle": {
+									"column": [
+										1,
+										7
+									],
+									"row": [
+										0,
+										0
+									]
+								},
+								"title": {
+									"column": [
+										0,
+										0
+									],
+									"row": [
+										0,
+										0
+									]
+								},
+								"type": "normal"
+							},
+							"rangeTxt": "A1:H5"
+						},
+						"height": 250,
+						"isShow": false,
+						"left": 0,
+						"needRangeShow": true,
+						"sheetIndex": "Sheet_p0al031k39he_1675911399117",
+						"top": 0,
+						"width": 400
+					}
+				],
+				"index": 4
+			},
+			{
+				"chart": [
+					{
+						"chart_id": "chart_d00l0Kdollck_1778768170124",
+						"chartOptions": {
+							"chartAllType": "echarts|column|default",
+							"chartData": [],
+							"chartDataCache": {
+								"label": [
+									"Mon",
+									"Tues",
+									"Wed",
+									"Thur",
+									"Fri",
+									"Sat",
+									"Sun"
+								],
+								"series": [
+									[
+										320,
+										302,
+										301,
+										334,
+										390,
+										330,
+										320
+									],
+									[
+										120,
+										132,
+										101,
+										134,
+										90,
+										230,
+										210
+									],
+									[
+										220,
+										182,
+										191,
+										234,
+										290,
+										330,
+										310
+									],
+									[
+										820,
+										832,
+										901,
+										934,
+										1290,
+										1330,
+										1320
+									]
+								],
+								"series_tpye": {
+									"0": "num",
+									"1": "num",
+									"2": "num",
+									"3": "num",
+									"4": "num",
+									"5": "num",
+									"6": "num"
+								},
+								"xAxis": [
+									"BUS",
+									"UBER",
+									"TAXI",
+									"SUBWAY"
+								]
+							},
+							"chartDataSeriesOrder": {
+								"0": 0,
+								"1": 1,
+								"2": 2,
+								"3": 3,
+								"4": 4,
+								"5": 5,
+								"6": 6,
+								"length": 7
+							},
+							"chartPro": "echarts",
+							"chartStyle": "default",
+							"chartType": "pie",
+							"defaultOption": {
+								"axis": {
+									"axisType": "xAxisDown",
+									"xAxisDown": {
+										"data": [
+											"BUS",
+											"UBER",
+											"TAXI",
+											"SUBWAY"
+										],
+										"inverse": false,
+										"name": "显示X轴",
+										"netArea": {
+											"colorOne": "auto",
+											"colorTwo": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false
+										},
+										"netLine": {
+											"color": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false,
+											"type": "solid",
+											"width": 1
+										},
+										"show": true,
+										"tick": {
+											"color": "auto",
+											"length": 5,
+											"position": "outside",
+											"show": true,
+											"width": 1
+										},
+										"tickLabel": {
+											"digit": "auto",
+											"distance": 0,
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"max": null,
+											"min": null,
+											"optimize": 0,
+											"prefix": "",
+											"ratio": 1,
+											"rotate": 0,
+											"show": true,
+											"suffix": ""
+										},
+										"tickLine": {
+											"color": "auto",
+											"show": true,
+											"width": 1
+										},
+										"title": {
+											"fzPosition": "end",
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"nameGap": 15,
+											"rotate": 0,
+											"showTitle": false,
+											"text": ""
+										},
+										"type": "category"
+									},
+									"xAxisUp": {
+										"axisLine": {
+											"onZero": false
+										},
+										"inverse": false,
+										"name": "显示X轴",
+										"netArea": {
+											"colorOne": "auto",
+											"colorTwo": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false
+										},
+										"netLine": {
+											"color": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false,
+											"type": "solid",
+											"width": 1
+										},
+										"show": false,
+										"tick": {
+											"color": "auto",
+											"length": 5,
+											"position": "outside",
+											"show": true,
+											"width": 1
+										},
+										"tickLabel": {
+											"digit": "auto",
+											"distance": 0,
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"max": "auto",
+											"min": "auto",
+											"optimize": 0,
+											"prefix": "",
+											"ratio": 1,
+											"rotate": 0,
+											"show": true,
+											"suffix": ""
+										},
+										"tickLine": {
+											"color": "auto",
+											"show": true,
+											"width": 1
+										},
+										"title": {
+											"fzPosition": "end",
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"nameGap": 15,
+											"rotate": 0,
+											"showTitle": false,
+											"text": ""
+										}
+									},
+									"yAxisLeft": {
+										"inverse": false,
+										"name": "显示Y轴",
+										"netArea": {
+											"colorOne": "auto",
+											"colorTwo": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false
+										},
+										"netLine": {
+											"color": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false,
+											"type": "solid",
+											"width": 1
+										},
+										"show": true,
+										"tick": {
+											"color": "auto",
+											"length": 5,
+											"position": "outside",
+											"show": true,
+											"width": 1
+										},
+										"tickLabel": {
+											"digit": "auto",
+											"distance": 0,
+											"formatter": {
+												"digit": "auto",
+												"prefix": "",
+												"ratio": 1,
+												"suffix": ""
+											},
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"max": null,
+											"min": null,
+											"prefix": "",
+											"ratio": 1,
+											"rotate": 0,
+											"show": true,
+											"split": 5,
+											"suffix": ""
+										},
+										"tickLine": {
+											"color": "auto",
+											"show": true,
+											"width": 1
+										},
+										"title": {
+											"fzPosition": "end",
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"nameGap": 15,
+											"rotate": 0,
+											"showTitle": false,
+											"text": ""
+										},
+										"type": "value"
+									},
+									"yAxisRight": {
+										"inverse": false,
+										"name": "显示Y轴",
+										"netArea": {
+											"colorOne": "auto",
+											"colorTwo": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false
+										},
+										"netLine": {
+											"color": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false,
+											"type": "solid",
+											"width": 1
+										},
+										"show": false,
+										"tick": {
+											"color": "auto",
+											"length": 5,
+											"position": "outside",
+											"show": true,
+											"width": 1
+										},
+										"tickLabel": {
+											"digit": "auto",
+											"distance": 0,
+											"formatter": {
+												"digit": "auto",
+												"prefix": "",
+												"ratio": 1,
+												"suffix": ""
+											},
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"max": null,
+											"min": null,
+											"prefix": "",
+											"ratio": 1,
+											"rotate": 0,
+											"show": true,
+											"split": 5,
+											"suffix": ""
+										},
+										"tickLine": {
+											"color": "auto",
+											"show": true,
+											"width": 1
+										},
+										"title": {
+											"fzPosition": "end",
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"nameGap": 15,
+											"rotate": 0,
+											"showTitle": false,
+											"text": ""
+										}
+									}
+								},
+								"config": {
+									"color": "transparent",
+									"fontFamily": "Sans-serif",
+									"grid": {
+										"bottom": 10,
+										"left": 10,
+										"right": 20,
+										"top": 5,
+										"value": "normal"
+									}
+								},
+								"legend": {
+									"data": [
+										"Mon",
+										"Tues",
+										"Wed",
+										"Thur",
+										"Fri",
+										"Sat",
+										"Sun"
+									],
+									"distance": {
+										"cusGap": 10,
+										"value": "auto"
+									},
+									"height": {
+										"cusSize": 14,
+										"value": "auto"
+									},
+									"itemGap": 10,
+									"label": {
+										"color": "#333",
+										"cusFontSize": 12,
+										"fontFamily": "sans-serif",
+										"fontGroup": [],
+										"fontSize": 12
+									},
+									"position": {
+										"direction": "horizontal",
+										"offsetX": 40,
+										"offsetY": 50,
+										"value": "left-top"
+									},
+									"selected": [
+										{
+											"isShow": true,
+											"seriesName": "衣服"
+										},
+										{
+											"isShow": true,
+											"seriesName": "食材"
+										},
+										{
+											"isShow": true,
+											"seriesName": "图书"
+										}
+									],
+									"selectMode": "multiple",
+									"show": true,
+									"width": {
+										"cusSize": 25,
+										"value": "auto"
+									}
+								},
+								"series": [
+									{
+										"data": [
+											320,
+											120,
+											220,
+											820
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Mon",
+										"type": "bar"
+									},
+									{
+										"data": [
+											302,
+											132,
+											182,
+											832
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Tues",
+										"type": "bar"
+									},
+									{
+										"data": [
+											301,
+											101,
+											191,
+											901
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Wed",
+										"type": "bar"
+									},
+									{
+										"data": [
+											334,
+											134,
+											234,
+											934
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Thur",
+										"type": "bar"
+									},
+									{
+										"data": [
+											390,
+											90,
+											290,
+											1290
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Fri",
+										"type": "bar"
+									},
+									{
+										"data": [
+											330,
+											230,
+											330,
+											1330
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Sat",
+										"type": "bar"
+									},
+									{
+										"data": [
+											320,
+											210,
+											310,
+											1320
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Sun",
+										"type": "bar"
+									}
+								],
+								"seriesData": [
+									[
+										320,
+										120,
+										220,
+										820
+									],
+									[
+										302,
+										132,
+										182,
+										832
+									],
+									[
+										301,
+										101,
+										191,
+										901
+									],
+									[
+										334,
+										134,
+										234,
+										934
+									],
+									[
+										390,
+										90,
+										290,
+										1290
+									],
+									[
+										330,
+										230,
+										330,
+										1330
+									],
+									[
+										320,
+										210,
+										310,
+										1320
+									]
+								],
+								"subtitle": {
+									"distance": {
+										"cusGap": 40,
+										"value": "auto"
+									},
+									"label": {
+										"color": "#333",
+										"cusFontSize": 12,
+										"fontFamily": "sans-serif",
+										"fontGroup": [],
+										"fontSize": 12
+									},
+									"show": false,
+									"text": ""
+								},
+								"title": {
+									"label": {
+										"color": "#333",
+										"cusFontSize": 12,
+										"fontFamily": "sans-serif",
+										"fontGroup": [],
+										"fontSize": 12
+									},
+									"position": {
+										"offsetX": 40,
+										"offsetY": 50,
+										"value": "left-top"
+									},
+									"show": false,
+									"text": "默认标题"
+								},
+								"tooltip": {
+									"axisPointer": {
+										"style": {
+											"color": "#555",
+											"type": "solid",
+											"width": "normal"
+										},
+										"type": "line"
+									},
+									"backgroundColor": "rgba(50,50,50,0.7)",
+									"format": [
+										{
+											"digit": "auto",
+											"prefix": "",
+											"ratio": 1,
+											"seriesName": "衣服",
+											"suffix": ""
+										},
+										{
+											"digit": "auto",
+											"prefix": "",
+											"ratio": 1,
+											"seriesName": "食材",
+											"suffix": ""
+										},
+										{
+											"digit": "auto",
+											"prefix": "",
+											"ratio": 1,
+											"seriesName": "图书",
+											"suffix": ""
+										}
+									],
+									"label": {
+										"color": "#333",
+										"cusFontSize": 12,
+										"fontFamily": "sans-serif",
+										"fontGroup": [],
+										"fontSize": 12
+									},
+									"position": "auto",
+									"show": true,
+									"triggerOn": "mousemove",
+									"triggerType": "item"
+								}
+							},
+							"rangeArray": [
+								1,
+								2,
+								3
+							],
+							"rangeColCheck": {
+								"exits": true,
+								"range": [
+									0,
+									0
+								]
+							},
+							"rangeConfigCheck": false,
+							"rangeRowCheck": {
+								"exits": true,
+								"range": [
+									0,
+									0
+								]
+							},
+							"rangeSplitArray": {
+								"coltitle": {
+									"column": [
+										0,
+										0
+									],
+									"row": [
+										1,
+										4
+									]
+								},
+								"content": {
+									"column": [
+										1,
+										7
+									],
+									"row": [
+										1,
+										4
+									]
+								},
+								"range": {
+									"column": [
+										0,
+										7
+									],
+									"row": [
+										0,
+										4
+									]
+								},
+								"rowtitle": {
+									"column": [
+										1,
+										7
+									],
+									"row": [
+										0,
+										0
+									]
+								},
+								"title": {
+									"column": [
+										0,
+										0
+									],
+									"row": [
+										0,
+										0
+									]
+								},
+								"type": "normal"
+							},
+							"rangeTxt": "A1:H5"
+						},
+						"height": 250,
+						"isShow": false,
+						"left": 0,
+						"needRangeShow": true,
+						"sheetIndex": "Sheet_L166S1563d01_1675911399353",
+						"top": 0,
+						"width": 400
+					}
+				],
+				"index": 5
+			},
+			{
+				"chart": [
+					{
+						"chart_id": "chart_613il6o5fWtH_1778768192550",
+						"chartOptions": {
+							"chartAllType": "echarts|column|default",
+							"chartData": [],
+							"chartDataCache": {
+								"label": [
+									"Mon",
+									"Tues",
+									"Wed",
+									"Thur",
+									"Fri",
+									"Sat",
+									"Sun"
+								],
+								"series": [
+									[
+										320,
+										302,
+										301,
+										334,
+										390,
+										330,
+										320
+									],
+									[
+										120,
+										132,
+										101,
+										134,
+										90,
+										230,
+										210
+									],
+									[
+										220,
+										182,
+										191,
+										234,
+										290,
+										330,
+										310
+									],
+									[
+										820,
+										832,
+										901,
+										934,
+										1290,
+										1330,
+										1320
+									]
+								],
+								"series_tpye": {
+									"0": "num",
+									"1": "num",
+									"2": "num",
+									"3": "num",
+									"4": "num",
+									"5": "num",
+									"6": "num"
+								},
+								"xAxis": [
+									"BUS",
+									"UBER",
+									"TAXI",
+									"SUBWAY"
+								]
+							},
+							"chartDataSeriesOrder": {
+								"0": 0,
+								"1": 1,
+								"2": 2,
+								"3": 3,
+								"4": 4,
+								"5": 5,
+								"6": 6,
+								"length": 7
+							},
+							"chartPro": "echarts",
+							"chartStyle": "default",
+							"chartType": "pie",
+							"defaultOption": {
+								"axis": {
+									"axisType": "xAxisDown",
+									"xAxisDown": {
+										"data": [
+											"BUS",
+											"UBER",
+											"TAXI",
+											"SUBWAY"
+										],
+										"inverse": false,
+										"name": "显示X轴",
+										"netArea": {
+											"colorOne": "auto",
+											"colorTwo": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false
+										},
+										"netLine": {
+											"color": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false,
+											"type": "solid",
+											"width": 1
+										},
+										"show": true,
+										"tick": {
+											"color": "auto",
+											"length": 5,
+											"position": "outside",
+											"show": true,
+											"width": 1
+										},
+										"tickLabel": {
+											"digit": "auto",
+											"distance": 0,
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"max": null,
+											"min": null,
+											"optimize": 0,
+											"prefix": "",
+											"ratio": 1,
+											"rotate": 0,
+											"show": true,
+											"suffix": ""
+										},
+										"tickLine": {
+											"color": "auto",
+											"show": true,
+											"width": 1
+										},
+										"title": {
+											"fzPosition": "end",
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"nameGap": 15,
+											"rotate": 0,
+											"showTitle": false,
+											"text": ""
+										},
+										"type": "category"
+									},
+									"xAxisUp": {
+										"axisLine": {
+											"onZero": false
+										},
+										"inverse": false,
+										"name": "显示X轴",
+										"netArea": {
+											"colorOne": "auto",
+											"colorTwo": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false
+										},
+										"netLine": {
+											"color": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false,
+											"type": "solid",
+											"width": 1
+										},
+										"show": false,
+										"tick": {
+											"color": "auto",
+											"length": 5,
+											"position": "outside",
+											"show": true,
+											"width": 1
+										},
+										"tickLabel": {
+											"digit": "auto",
+											"distance": 0,
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"max": "auto",
+											"min": "auto",
+											"optimize": 0,
+											"prefix": "",
+											"ratio": 1,
+											"rotate": 0,
+											"show": true,
+											"suffix": ""
+										},
+										"tickLine": {
+											"color": "auto",
+											"show": true,
+											"width": 1
+										},
+										"title": {
+											"fzPosition": "end",
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"nameGap": 15,
+											"rotate": 0,
+											"showTitle": false,
+											"text": ""
+										}
+									},
+									"yAxisLeft": {
+										"inverse": false,
+										"name": "显示Y轴",
+										"netArea": {
+											"colorOne": "auto",
+											"colorTwo": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false
+										},
+										"netLine": {
+											"color": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false,
+											"type": "solid",
+											"width": 1
+										},
+										"show": true,
+										"tick": {
+											"color": "auto",
+											"length": 5,
+											"position": "outside",
+											"show": true,
+											"width": 1
+										},
+										"tickLabel": {
+											"digit": "auto",
+											"distance": 0,
+											"formatter": {
+												"digit": "auto",
+												"prefix": "",
+												"ratio": 1,
+												"suffix": ""
+											},
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"max": null,
+											"min": null,
+											"prefix": "",
+											"ratio": 1,
+											"rotate": 0,
+											"show": true,
+											"split": 5,
+											"suffix": ""
+										},
+										"tickLine": {
+											"color": "auto",
+											"show": true,
+											"width": 1
+										},
+										"title": {
+											"fzPosition": "end",
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"nameGap": 15,
+											"rotate": 0,
+											"showTitle": false,
+											"text": ""
+										},
+										"type": "value"
+									},
+									"yAxisRight": {
+										"inverse": false,
+										"name": "显示Y轴",
+										"netArea": {
+											"colorOne": "auto",
+											"colorTwo": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false
+										},
+										"netLine": {
+											"color": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false,
+											"type": "solid",
+											"width": 1
+										},
+										"show": false,
+										"tick": {
+											"color": "auto",
+											"length": 5,
+											"position": "outside",
+											"show": true,
+											"width": 1
+										},
+										"tickLabel": {
+											"digit": "auto",
+											"distance": 0,
+											"formatter": {
+												"digit": "auto",
+												"prefix": "",
+												"ratio": 1,
+												"suffix": ""
+											},
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"max": null,
+											"min": null,
+											"prefix": "",
+											"ratio": 1,
+											"rotate": 0,
+											"show": true,
+											"split": 5,
+											"suffix": ""
+										},
+										"tickLine": {
+											"color": "auto",
+											"show": true,
+											"width": 1
+										},
+										"title": {
+											"fzPosition": "end",
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"nameGap": 15,
+											"rotate": 0,
+											"showTitle": false,
+											"text": ""
+										}
+									}
+								},
+								"config": {
+									"color": "transparent",
+									"fontFamily": "Sans-serif",
+									"grid": {
+										"bottom": 10,
+										"left": 10,
+										"right": 20,
+										"top": 5,
+										"value": "normal"
+									}
+								},
+								"legend": {
+									"data": [
+										"Mon",
+										"Tues",
+										"Wed",
+										"Thur",
+										"Fri",
+										"Sat",
+										"Sun"
+									],
+									"distance": {
+										"cusGap": 10,
+										"value": "auto"
+									},
+									"height": {
+										"cusSize": 14,
+										"value": "auto"
+									},
+									"itemGap": 10,
+									"label": {
+										"color": "#333",
+										"cusFontSize": 12,
+										"fontFamily": "sans-serif",
+										"fontGroup": [],
+										"fontSize": 12
+									},
+									"position": {
+										"direction": "horizontal",
+										"offsetX": 40,
+										"offsetY": 50,
+										"value": "left-top"
+									},
+									"selected": [
+										{
+											"isShow": true,
+											"seriesName": "衣服"
+										},
+										{
+											"isShow": true,
+											"seriesName": "食材"
+										},
+										{
+											"isShow": true,
+											"seriesName": "图书"
+										}
+									],
+									"selectMode": "multiple",
+									"show": true,
+									"width": {
+										"cusSize": 25,
+										"value": "auto"
+									}
+								},
+								"series": [
+									{
+										"data": [
+											320,
+											120,
+											220,
+											820
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Mon",
+										"type": "bar"
+									},
+									{
+										"data": [
+											302,
+											132,
+											182,
+											832
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Tues",
+										"type": "bar"
+									},
+									{
+										"data": [
+											301,
+											101,
+											191,
+											901
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Wed",
+										"type": "bar"
+									},
+									{
+										"data": [
+											334,
+											134,
+											234,
+											934
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Thur",
+										"type": "bar"
+									},
+									{
+										"data": [
+											390,
+											90,
+											290,
+											1290
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Fri",
+										"type": "bar"
+									},
+									{
+										"data": [
+											330,
+											230,
+											330,
+											1330
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Sat",
+										"type": "bar"
+									},
+									{
+										"data": [
+											320,
+											210,
+											310,
+											1320
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Sun",
+										"type": "bar"
+									}
+								],
+								"seriesData": [
+									[
+										320,
+										120,
+										220,
+										820
+									],
+									[
+										302,
+										132,
+										182,
+										832
+									],
+									[
+										301,
+										101,
+										191,
+										901
+									],
+									[
+										334,
+										134,
+										234,
+										934
+									],
+									[
+										390,
+										90,
+										290,
+										1290
+									],
+									[
+										330,
+										230,
+										330,
+										1330
+									],
+									[
+										320,
+										210,
+										310,
+										1320
+									]
+								],
+								"subtitle": {
+									"distance": {
+										"cusGap": 40,
+										"value": "auto"
+									},
+									"label": {
+										"color": "#333",
+										"cusFontSize": 12,
+										"fontFamily": "sans-serif",
+										"fontGroup": [],
+										"fontSize": 12
+									},
+									"show": false,
+									"text": ""
+								},
+								"title": {
+									"label": {
+										"color": "#333",
+										"cusFontSize": 12,
+										"fontFamily": "sans-serif",
+										"fontGroup": [],
+										"fontSize": 12
+									},
+									"position": {
+										"offsetX": 40,
+										"offsetY": 50,
+										"value": "left-top"
+									},
+									"show": false,
+									"text": "默认标题"
+								},
+								"tooltip": {
+									"axisPointer": {
+										"style": {
+											"color": "#555",
+											"type": "solid",
+											"width": "normal"
+										},
+										"type": "line"
+									},
+									"backgroundColor": "rgba(50,50,50,0.7)",
+									"format": [
+										{
+											"digit": "auto",
+											"prefix": "",
+											"ratio": 1,
+											"seriesName": "衣服",
+											"suffix": ""
+										},
+										{
+											"digit": "auto",
+											"prefix": "",
+											"ratio": 1,
+											"seriesName": "食材",
+											"suffix": ""
+										},
+										{
+											"digit": "auto",
+											"prefix": "",
+											"ratio": 1,
+											"seriesName": "图书",
+											"suffix": ""
+										}
+									],
+									"label": {
+										"color": "#333",
+										"cusFontSize": 12,
+										"fontFamily": "sans-serif",
+										"fontGroup": [],
+										"fontSize": 12
+									},
+									"position": "auto",
+									"show": true,
+									"triggerOn": "mousemove",
+									"triggerType": "item"
+								}
+							},
+							"rangeArray": [
+								1,
+								2,
+								3
+							],
+							"rangeColCheck": {
+								"exits": true,
+								"range": [
+									0,
+									0
+								]
+							},
+							"rangeConfigCheck": false,
+							"rangeRowCheck": {
+								"exits": true,
+								"range": [
+									0,
+									0
+								]
+							},
+							"rangeSplitArray": {
+								"coltitle": {
+									"column": [
+										0,
+										0
+									],
+									"row": [
+										1,
+										4
+									]
+								},
+								"content": {
+									"column": [
+										1,
+										7
+									],
+									"row": [
+										1,
+										4
+									]
+								},
+								"range": {
+									"column": [
+										0,
+										7
+									],
+									"row": [
+										0,
+										4
+									]
+								},
+								"rowtitle": {
+									"column": [
+										1,
+										7
+									],
+									"row": [
+										0,
+										0
+									]
+								},
+								"title": {
+									"column": [
+										0,
+										0
+									],
+									"row": [
+										0,
+										0
+									]
+								},
+								"type": "normal"
+							},
+							"rangeTxt": "A1:H5"
+						},
+						"height": 250,
+						"left": 0,
+						"needRangeShow": false,
+						"sheetIndex": "Sheet_N90ElKawf0o0_1675912183552",
+						"top": 0,
+						"width": 400
+					},
+					{
+						"chart_id": "chart_3EcT3e6lkW00_1778768214293",
+						"chartOptions": {
+							"chartAllType": "echarts|column|default",
+							"chartData": [],
+							"chartDataCache": {
+								"label": [
+									"Mon",
+									"Tues",
+									"Wed",
+									"Thur",
+									"Fri",
+									"Sat",
+									"Sun"
+								],
+								"series": [
+									[
+										320,
+										302,
+										301,
+										334,
+										390,
+										330,
+										320
+									],
+									[
+										120,
+										132,
+										101,
+										134,
+										90,
+										230,
+										210
+									],
+									[
+										220,
+										182,
+										191,
+										234,
+										290,
+										330,
+										310
+									],
+									[
+										820,
+										832,
+										901,
+										934,
+										1290,
+										1330,
+										1320
+									]
+								],
+								"series_tpye": {
+									"0": "num",
+									"1": "num",
+									"2": "num",
+									"3": "num",
+									"4": "num",
+									"5": "num",
+									"6": "num"
+								},
+								"xAxis": [
+									"BUS",
+									"UBER",
+									"TAXI",
+									"SUBWAY"
+								]
+							},
+							"chartDataSeriesOrder": {
+								"0": 0,
+								"1": 1,
+								"2": 2,
+								"3": 3,
+								"4": 4,
+								"5": 5,
+								"6": 6,
+								"length": 7
+							},
+							"chartPro": "echarts",
+							"chartStyle": "default",
+							"chartType": "pie",
+							"defaultOption": {
+								"axis": {
+									"axisType": "xAxisDown",
+									"xAxisDown": {
+										"data": [
+											"BUS",
+											"UBER",
+											"TAXI",
+											"SUBWAY"
+										],
+										"inverse": false,
+										"name": "显示X轴",
+										"netArea": {
+											"colorOne": "auto",
+											"colorTwo": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false
+										},
+										"netLine": {
+											"color": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false,
+											"type": "solid",
+											"width": 1
+										},
+										"show": true,
+										"tick": {
+											"color": "auto",
+											"length": 5,
+											"position": "outside",
+											"show": true,
+											"width": 1
+										},
+										"tickLabel": {
+											"digit": "auto",
+											"distance": 0,
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"max": null,
+											"min": null,
+											"optimize": 0,
+											"prefix": "",
+											"ratio": 1,
+											"rotate": 0,
+											"show": true,
+											"suffix": ""
+										},
+										"tickLine": {
+											"color": "auto",
+											"show": true,
+											"width": 1
+										},
+										"title": {
+											"fzPosition": "end",
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"nameGap": 15,
+											"rotate": 0,
+											"showTitle": false,
+											"text": ""
+										},
+										"type": "category"
+									},
+									"xAxisUp": {
+										"axisLine": {
+											"onZero": false
+										},
+										"inverse": false,
+										"name": "显示X轴",
+										"netArea": {
+											"colorOne": "auto",
+											"colorTwo": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false
+										},
+										"netLine": {
+											"color": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false,
+											"type": "solid",
+											"width": 1
+										},
+										"show": false,
+										"tick": {
+											"color": "auto",
+											"length": 5,
+											"position": "outside",
+											"show": true,
+											"width": 1
+										},
+										"tickLabel": {
+											"digit": "auto",
+											"distance": 0,
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"max": "auto",
+											"min": "auto",
+											"optimize": 0,
+											"prefix": "",
+											"ratio": 1,
+											"rotate": 0,
+											"show": true,
+											"suffix": ""
+										},
+										"tickLine": {
+											"color": "auto",
+											"show": true,
+											"width": 1
+										},
+										"title": {
+											"fzPosition": "end",
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"nameGap": 15,
+											"rotate": 0,
+											"showTitle": false,
+											"text": ""
+										}
+									},
+									"yAxisLeft": {
+										"inverse": false,
+										"name": "显示Y轴",
+										"netArea": {
+											"colorOne": "auto",
+											"colorTwo": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false
+										},
+										"netLine": {
+											"color": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false,
+											"type": "solid",
+											"width": 1
+										},
+										"show": true,
+										"tick": {
+											"color": "auto",
+											"length": 5,
+											"position": "outside",
+											"show": true,
+											"width": 1
+										},
+										"tickLabel": {
+											"digit": "auto",
+											"distance": 0,
+											"formatter": {
+												"digit": "auto",
+												"prefix": "",
+												"ratio": 1,
+												"suffix": ""
+											},
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"max": null,
+											"min": null,
+											"prefix": "",
+											"ratio": 1,
+											"rotate": 0,
+											"show": true,
+											"split": 5,
+											"suffix": ""
+										},
+										"tickLine": {
+											"color": "auto",
+											"show": true,
+											"width": 1
+										},
+										"title": {
+											"fzPosition": "end",
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"nameGap": 15,
+											"rotate": 0,
+											"showTitle": false,
+											"text": ""
+										},
+										"type": "value"
+									},
+									"yAxisRight": {
+										"inverse": false,
+										"name": "显示Y轴",
+										"netArea": {
+											"colorOne": "auto",
+											"colorTwo": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false
+										},
+										"netLine": {
+											"color": "auto",
+											"interval": {
+												"cusNumber": 0,
+												"value": "auto"
+											},
+											"show": false,
+											"type": "solid",
+											"width": 1
+										},
+										"show": false,
+										"tick": {
+											"color": "auto",
+											"length": 5,
+											"position": "outside",
+											"show": true,
+											"width": 1
+										},
+										"tickLabel": {
+											"digit": "auto",
+											"distance": 0,
+											"formatter": {
+												"digit": "auto",
+												"prefix": "",
+												"ratio": 1,
+												"suffix": ""
+											},
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"max": null,
+											"min": null,
+											"prefix": "",
+											"ratio": 1,
+											"rotate": 0,
+											"show": true,
+											"split": 5,
+											"suffix": ""
+										},
+										"tickLine": {
+											"color": "auto",
+											"show": true,
+											"width": 1
+										},
+										"title": {
+											"fzPosition": "end",
+											"label": {
+												"color": "#333",
+												"cusFontSize": 12,
+												"fontFamily": "sans-serif",
+												"fontGroup": [],
+												"fontSize": 12
+											},
+											"nameGap": 15,
+											"rotate": 0,
+											"showTitle": false,
+											"text": ""
+										}
+									}
+								},
+								"config": {
+									"color": "transparent",
+									"fontFamily": "Sans-serif",
+									"grid": {
+										"bottom": 10,
+										"left": 10,
+										"right": 20,
+										"top": 5,
+										"value": "normal"
+									}
+								},
+								"legend": {
+									"data": [
+										"Mon",
+										"Tues",
+										"Wed",
+										"Thur",
+										"Fri",
+										"Sat",
+										"Sun"
+									],
+									"distance": {
+										"cusGap": 10,
+										"value": "auto"
+									},
+									"height": {
+										"cusSize": 14,
+										"value": "auto"
+									},
+									"itemGap": 10,
+									"label": {
+										"color": "#333",
+										"cusFontSize": 12,
+										"fontFamily": "sans-serif",
+										"fontGroup": [],
+										"fontSize": 12
+									},
+									"position": {
+										"direction": "horizontal",
+										"offsetX": 40,
+										"offsetY": 50,
+										"value": "left-top"
+									},
+									"selected": [
+										{
+											"isShow": true,
+											"seriesName": "衣服"
+										},
+										{
+											"isShow": true,
+											"seriesName": "食材"
+										},
+										{
+											"isShow": true,
+											"seriesName": "图书"
+										}
+									],
+									"selectMode": "multiple",
+									"show": true,
+									"width": {
+										"cusSize": 25,
+										"value": "auto"
+									}
+								},
+								"series": [
+									{
+										"data": [
+											320,
+											120,
+											220,
+											820
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Mon",
+										"type": "bar"
+									},
+									{
+										"data": [
+											302,
+											132,
+											182,
+											832
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Tues",
+										"type": "bar"
+									},
+									{
+										"data": [
+											301,
+											101,
+											191,
+											901
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Wed",
+										"type": "bar"
+									},
+									{
+										"data": [
+											334,
+											134,
+											234,
+											934
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Thur",
+										"type": "bar"
+									},
+									{
+										"data": [
+											390,
+											90,
+											290,
+											1290
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Fri",
+										"type": "bar"
+									},
+									{
+										"data": [
+											330,
+											230,
+											330,
+											1330
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Sat",
+										"type": "bar"
+									},
+									{
+										"data": [
+											320,
+											210,
+											310,
+											1320
+										],
+										"itemStyle": {
+											"borderColor": "#000",
+											"borderType": "solid",
+											"borderWidth": 1,
+											"color": null
+										},
+										"lineStyle": {
+											"color": null,
+											"type": "solid",
+											"width": 1
+										},
+										"markArea": {
+											"data": []
+										},
+										"markLine": {
+											"data": []
+										},
+										"markPoint": {
+											"data": []
+										},
+										"name": "Sun",
+										"type": "bar"
+									}
+								],
+								"seriesData": [
+									[
+										320,
+										120,
+										220,
+										820
+									],
+									[
+										302,
+										132,
+										182,
+										832
+									],
+									[
+										301,
+										101,
+										191,
+										901
+									],
+									[
+										334,
+										134,
+										234,
+										934
+									],
+									[
+										390,
+										90,
+										290,
+										1290
+									],
+									[
+										330,
+										230,
+										330,
+										1330
+									],
+									[
+										320,
+										210,
+										310,
+										1320
+									]
+								],
+								"subtitle": {
+									"distance": {
+										"cusGap": 40,
+										"value": "auto"
+									},
+									"label": {
+										"color": "#333",
+										"cusFontSize": 12,
+										"fontFamily": "sans-serif",
+										"fontGroup": [],
+										"fontSize": 12
+									},
+									"show": false,
+									"text": ""
+								},
+								"title": {
+									"label": {
+										"color": "#333",
+										"cusFontSize": 12,
+										"fontFamily": "sans-serif",
+										"fontGroup": [],
+										"fontSize": 12
+									},
+									"position": {
+										"offsetX": 40,
+										"offsetY": 50,
+										"value": "left-top"
+									},
+									"show": false,
+									"text": "默认标题"
+								},
+								"tooltip": {
+									"axisPointer": {
+										"style": {
+											"color": "#555",
+											"type": "solid",
+											"width": "normal"
+										},
+										"type": "line"
+									},
+									"backgroundColor": "rgba(50,50,50,0.7)",
+									"format": [
+										{
+											"digit": "auto",
+											"prefix": "",
+											"ratio": 1,
+											"seriesName": "衣服",
+											"suffix": ""
+										},
+										{
+											"digit": "auto",
+											"prefix": "",
+											"ratio": 1,
+											"seriesName": "食材",
+											"suffix": ""
+										},
+										{
+											"digit": "auto",
+											"prefix": "",
+											"ratio": 1,
+											"seriesName": "图书",
+											"suffix": ""
+										}
+									],
+									"label": {
+										"color": "#333",
+										"cusFontSize": 12,
+										"fontFamily": "sans-serif",
+										"fontGroup": [],
+										"fontSize": 12
+									},
+									"position": "auto",
+									"show": true,
+									"triggerOn": "mousemove",
+									"triggerType": "item"
+								}
+							},
+							"rangeArray": [
+								1,
+								2,
+								3
+							],
+							"rangeColCheck": {
+								"exits": true,
+								"range": [
+									0,
+									0
+								]
+							},
+							"rangeConfigCheck": false,
+							"rangeRowCheck": {
+								"exits": true,
+								"range": [
+									0,
+									0
+								]
+							},
+							"rangeSplitArray": {
+								"coltitle": {
+									"column": [
+										0,
+										0
+									],
+									"row": [
+										1,
+										4
+									]
+								},
+								"content": {
+									"column": [
+										1,
+										7
+									],
+									"row": [
+										1,
+										4
+									]
+								},
+								"range": {
+									"column": [
+										0,
+										7
+									],
+									"row": [
+										0,
+										4
+									]
+								},
+								"rowtitle": {
+									"column": [
+										1,
+										7
+									],
+									"row": [
+										0,
+										0
+									]
+								},
+								"title": {
+									"column": [
+										0,
+										0
+									],
+									"row": [
+										0,
+										0
+									]
+								},
+								"type": "normal"
+							},
+							"rangeTxt": "A1:H5"
+						},
+						"height": 250,
+						"left": 0,
+						"needRangeShow": true,
+						"sheetIndex": "Sheet_N90ElKawf0o0_1675912183552",
+						"top": 0,
+						"width": 400
+					}
+				],
+				"index": 6
+			}
+		],
+		"chartData": [],
+		"data": [
+			{
+				"mustFillInArray": [
+					"D3@@2021@@2021@@1",
+					"D4@@2021@@2021@@1",
+					"D5@@2021@@2021@@1",
+					"D6@@2021@@2021@@1",
+					"D7@@2021@@2021@@1",
+					"D8@@2021@@2021@@1",
+					"D9@@2021@@2021@@1",
+					"D10@@2021@@2021@@1",
+					"D11@@2021@@2021@@1",
+					"D12@@2021@@2021@@1",
+					"D13@@2021@@2021@@1",
+					"D14@@2021@@2021@@1",
+					"D15@@2022@@2022@@1",
+					"D16@@2022@@2022@@1",
+					"D17@@2022@@2022@@1",
+					"D18@@2022@@2022@@1",
+					"D19@@2022@@2022@@1",
+					"D20@@2022@@2022@@1",
+					"D21@@2022@@2022@@1",
+					"D22@@2022@@2022@@1",
+					"D23@@2022@@2022@@1",
+					"D24@@2022@@2022@@1",
+					"D25@@2022@@2022@@1",
+					"D26@@2022@@2022@@1",
+					"D27@@2021@@2021@@1",
+					"D28@@2021@@2021@@1",
+					"D29@@2021@@2021@@1",
+					"D30@@2021@@2021@@1",
+					"D31@@2021@@2021@@1",
+					"D32@@2021@@2021@@1",
+					"D33@@2021@@2021@@1",
+					"D34@@2021@@2021@@1",
+					"D35@@2021@@2021@@1",
+					"D36@@2021@@2021@@1",
+					"D37@@2021@@2021@@1",
+					"D38@@2021@@2021@@1",
+					"D39@@2022@@2022@@1",
+					"D40@@2022@@2022@@1",
+					"D41@@2022@@2022@@1",
+					"D42@@2022@@2022@@1",
+					"D43@@2022@@2022@@1",
+					"D44@@2022@@2022@@1",
+					"D45@@2022@@2022@@1",
+					"D46@@2022@@2022@@1",
+					"D47@@2022@@2022@@1",
+					"D48@@2022@@2022@@1",
+					"D49@@2022@@2022@@1",
+					"D50@@2022@@2022@@1",
+					"D51@@2021@@2021@@1",
+					"D52@@2021@@2021@@1",
+					"D53@@2021@@2021@@1",
+					"D54@@2021@@2021@@1",
+					"D55@@2021@@2021@@1",
+					"D56@@2021@@2021@@1",
+					"D57@@2021@@2021@@1",
+					"D58@@2021@@2021@@1",
+					"D59@@2021@@2021@@1",
+					"D60@@2021@@2021@@1",
+					"D61@@2021@@2021@@1",
+					"D62@@2021@@2021@@1",
+					"D63@@2022@@2022@@1",
+					"D64@@2022@@2022@@1",
+					"D65@@2022@@2022@@1",
+					"D66@@2022@@2022@@1",
+					"D67@@2022@@2022@@1",
+					"D68@@2022@@2022@@1",
+					"D69@@2022@@2022@@1",
+					"D70@@2022@@2022@@1",
+					"D71@@2022@@2022@@1",
+					"D72@@2022@@2022@@1",
+					"D73@@2022@@2022@@1",
+					"D74@@2022@@2022@@1",
+					"D75@@2021@@2021@@1",
+					"D76@@2021@@2021@@1",
+					"D77@@2021@@2021@@1",
+					"D78@@2021@@2021@@1",
+					"D79@@2021@@2021@@1",
+					"D80@@2021@@2021@@1",
+					"D81@@2021@@2021@@1",
+					"D82@@2021@@2021@@1",
+					"D83@@2021@@2021@@1",
+					"D84@@2021@@2021@@1",
+					"D85@@2021@@2021@@1",
+					"D86@@2021@@2021@@1",
+					"D87@@2022@@2022@@1",
+					"D88@@2022@@2022@@1",
+					"D89@@2022@@2022@@1",
+					"D90@@2022@@2022@@1",
+					"D91@@2022@@2022@@1",
+					"D92@@2022@@2022@@1",
+					"D93@@2022@@2022@@1",
+					"D94@@2022@@2022@@1",
+					"D95@@2022@@2022@@1",
+					"D96@@2022@@2022@@1",
+					"D97@@2022@@2022@@1",
+					"D98@@2022@@2022@@1",
+					"D99@@2021@@2021@@1",
+					"D100@@2021@@2021@@1",
+					"D101@@2021@@2021@@1",
+					"D102@@2021@@2021@@1",
+					"D103@@2021@@2021@@1",
+					"D104@@2021@@2021@@1",
+					"D105@@2021@@2021@@1",
+					"D106@@2021@@2021@@1",
+					"D107@@2021@@2021@@1",
+					"D108@@2021@@2021@@1",
+					"D109@@2021@@2021@@1",
+					"D110@@2021@@2021@@1",
+					"D111@@2022@@2022@@1",
+					"D112@@2022@@2022@@1",
+					"D113@@2022@@2022@@1",
+					"D114@@2022@@2022@@1",
+					"D115@@2022@@2022@@1",
+					"D116@@2022@@2022@@1",
+					"D117@@2022@@2022@@1",
+					"D118@@2022@@2022@@1",
+					"D119@@2022@@2022@@1",
+					"D120@@2022@@2022@@1",
+					"D121@@2022@@2022@@1",
+					"D122@@2022@@2022@@1",
+					"D123@@2021@@2021@@1",
+					"D124@@2021@@2021@@1",
+					"D125@@2021@@2021@@1",
+					"D126@@2021@@2021@@1",
+					"D127@@2021@@2021@@1",
+					"D128@@2021@@2021@@1",
+					"D129@@2021@@2021@@1",
+					"D130@@2021@@2021@@1",
+					"D131@@2021@@2021@@1",
+					"D132@@2021@@2021@@1",
+					"D133@@2021@@2021@@1",
+					"D134@@2021@@2021@@1",
+					"D135@@2022@@2022@@1",
+					"D136@@2022@@2022@@1",
+					"D137@@2022@@2022@@1",
+					"D138@@2022@@2022@@1",
+					"D139@@2022@@2022@@1",
+					"D140@@2022@@2022@@1",
+					"D141@@2022@@2022@@1",
+					"D142@@2022@@2022@@1",
+					"D143@@2022@@2022@@1",
+					"D144@@2022@@2022@@1",
+					"D145@@2022@@2022@@1",
+					"D146@@2022@@2022@@1",
+					"D147@@2021@@2021@@1",
+					"D148@@2021@@2021@@1",
+					"D149@@2021@@2021@@1",
+					"D150@@2021@@2021@@1",
+					"D151@@2021@@2021@@1",
+					"D152@@2021@@2021@@1",
+					"D153@@2021@@2021@@1",
+					"D154@@2021@@2021@@1",
+					"D155@@2021@@2021@@1",
+					"D156@@2021@@2021@@1",
+					"D157@@2021@@2021@@1",
+					"D158@@2021@@2021@@1",
+					"D159@@2022@@2022@@1",
+					"D160@@2022@@2022@@1",
+					"D161@@2022@@2022@@1",
+					"D162@@2022@@2022@@1",
+					"D163@@2022@@2022@@1",
+					"D164@@2022@@2022@@1",
+					"D165@@2022@@2022@@1",
+					"D166@@2022@@2022@@1",
+					"D167@@2022@@2022@@1",
+					"D168@@2022@@2022@@1",
+					"D169@@2022@@2022@@1",
+					"D170@@2022@@2022@@1",
+					"D171@@2021@@2021@@1",
+					"D172@@2021@@2021@@1",
+					"D173@@2021@@2021@@1",
+					"D174@@2021@@2021@@1",
+					"D175@@2021@@2021@@1",
+					"D176@@2021@@2021@@1",
+					"D177@@2021@@2021@@1",
+					"D178@@2021@@2021@@1",
+					"D179@@2021@@2021@@1",
+					"D180@@2021@@2021@@1",
+					"D181@@2021@@2021@@1",
+					"D182@@2021@@2021@@1",
+					"D183@@2022@@2022@@1",
+					"D184@@2022@@2022@@1",
+					"D185@@2022@@2022@@1",
+					"D186@@2022@@2022@@1",
+					"D187@@2022@@2022@@1",
+					"D188@@2022@@2022@@1",
+					"D189@@2022@@2022@@1",
+					"D190@@2022@@2022@@1",
+					"D191@@2022@@2022@@1",
+					"D192@@2022@@2022@@1",
+					"D193@@2022@@2022@@1",
+					"D194@@2022@@2022@@1",
+					"D195@@2021@@2021@@1",
+					"D196@@2021@@2021@@1",
+					"D197@@2021@@2021@@1",
+					"D198@@2021@@2021@@1",
+					"D199@@2021@@2021@@1",
+					"D200@@2021@@2021@@1",
+					"D201@@2021@@2021@@1",
+					"D202@@2021@@2021@@1",
+					"D203@@2021@@2021@@1",
+					"D204@@2021@@2021@@1",
+					"D205@@2021@@2021@@1",
+					"D206@@2021@@2021@@1",
+					"D207@@2022@@2022@@1",
+					"D208@@2022@@2022@@1",
+					"D209@@2022@@2022@@1",
+					"D210@@2022@@2022@@1",
+					"D211@@2022@@2022@@1",
+					"D212@@2022@@2022@@1",
+					"D213@@2022@@2022@@1",
+					"D214@@2022@@2022@@1",
+					"D215@@2022@@2022@@1",
+					"D216@@2022@@2022@@1",
+					"D217@@2022@@2022@@1",
+					"D218@@2022@@2022@@1",
+					"D219@@2021@@2021@@1",
+					"D220@@2021@@2021@@1",
+					"D221@@2021@@2021@@1",
+					"D222@@2021@@2021@@1",
+					"D223@@2021@@2021@@1",
+					"D224@@2021@@2021@@1",
+					"D225@@2021@@2021@@1",
+					"D226@@2021@@2021@@1",
+					"D227@@2021@@2021@@1",
+					"D228@@2021@@2021@@1",
+					"D229@@2021@@2021@@1",
+					"D230@@2021@@2021@@1",
+					"D231@@2022@@2022@@1",
+					"D232@@2022@@2022@@1",
+					"D233@@2022@@2022@@1",
+					"D234@@2022@@2022@@1",
+					"D235@@2022@@2022@@1",
+					"D236@@2022@@2022@@1",
+					"D237@@2022@@2022@@1",
+					"D238@@2022@@2022@@1",
+					"D239@@2022@@2022@@1",
+					"D240@@2022@@2022@@1",
+					"D241@@2022@@2022@@1",
+					"D242@@2022@@2022@@1",
+					"D243@@2021@@2021@@1",
+					"D244@@2021@@2021@@1",
+					"D245@@2021@@2021@@1",
+					"D246@@2021@@2021@@1",
+					"D247@@2021@@2021@@1",
+					"D248@@2021@@2021@@1",
+					"D249@@2021@@2021@@1",
+					"D250@@2021@@2021@@1",
+					"D251@@2021@@2021@@1",
+					"D252@@2021@@2021@@1",
+					"D253@@2021@@2021@@1",
+					"D254@@2021@@2021@@1",
+					"D255@@2022@@2022@@1",
+					"D256@@2022@@2022@@1",
+					"D257@@2022@@2022@@1",
+					"D258@@2022@@2022@@1",
+					"D259@@2022@@2022@@1",
+					"D260@@2022@@2022@@1",
+					"D261@@2022@@2022@@1",
+					"D262@@2022@@2022@@1",
+					"D263@@2022@@2022@@1",
+					"D264@@2022@@2022@@1",
+					"D265@@2022@@2022@@1",
+					"D266@@2022@@2022@@1",
+					"D267@@2021@@2021@@1",
+					"D268@@2021@@2021@@1",
+					"D269@@2021@@2021@@1",
+					"D270@@2021@@2021@@1",
+					"D271@@2021@@2021@@1",
+					"D272@@2021@@2021@@1",
+					"D273@@2021@@2021@@1",
+					"D274@@2021@@2021@@1",
+					"D275@@2021@@2021@@1",
+					"D276@@2021@@2021@@1",
+					"D277@@2021@@2021@@1",
+					"D278@@2021@@2021@@1",
+					"D279@@2022@@2022@@1",
+					"D280@@2022@@2022@@1",
+					"D281@@2022@@2022@@1",
+					"D282@@2022@@2022@@1",
+					"D283@@2022@@2022@@1",
+					"D284@@2022@@2022@@1",
+					"D285@@2022@@2022@@1",
+					"D286@@2022@@2022@@1",
+					"D287@@2022@@2022@@1",
+					"D288@@2022@@2022@@1",
+					"D289@@2022@@2022@@1",
+					"D290@@2022@@2022@@1",
+					"D291@@2021@@2021@@1",
+					"D292@@2021@@2021@@1",
+					"D293@@2021@@2021@@1",
+					"D294@@2021@@2021@@1",
+					"D295@@2021@@2021@@1",
+					"D296@@2021@@2021@@1",
+					"D297@@2021@@2021@@1",
+					"D298@@2021@@2021@@1",
+					"D299@@2021@@2021@@1",
+					"D300@@2021@@2021@@1",
+					"D301@@2021@@2021@@1",
+					"D302@@2021@@2021@@1",
+					"D303@@2022@@2022@@1",
+					"D304@@2022@@2022@@1",
+					"D305@@2022@@2022@@1",
+					"D306@@2022@@2022@@1",
+					"D307@@2022@@2022@@1",
+					"D308@@2022@@2022@@1",
+					"D309@@2022@@2022@@1",
+					"D310@@2022@@2022@@1",
+					"D311@@2022@@2022@@1",
+					"D312@@2022@@2022@@1",
+					"D313@@2022@@2022@@1",
+					"D314@@2022@@2022@@1",
+					"D315@@2021@@2021@@1",
+					"D316@@2021@@2021@@1",
+					"D317@@2021@@2021@@1",
+					"D318@@2021@@2021@@1",
+					"D319@@2021@@2021@@1",
+					"D320@@2021@@2021@@1",
+					"D321@@2021@@2021@@1",
+					"D322@@2021@@2021@@1",
+					"D323@@2021@@2021@@1",
+					"D324@@2021@@2021@@1",
+					"D325@@2021@@2021@@1",
+					"D326@@2021@@2021@@1",
+					"D327@@2022@@2022@@1",
+					"D328@@2022@@2022@@1",
+					"D329@@2022@@2022@@1",
+					"D330@@2022@@2022@@1",
+					"D331@@2022@@2022@@1",
+					"D332@@2022@@2022@@1",
+					"D333@@2022@@2022@@1",
+					"D334@@2022@@2022@@1",
+					"D335@@2022@@2022@@1",
+					"D336@@2022@@2022@@1",
+					"D337@@2022@@2022@@1",
+					"D338@@2022@@2022@@1",
+					"D339@@2021@@2021@@1",
+					"D340@@2021@@2021@@1",
+					"D341@@2021@@2021@@1",
+					"D342@@2021@@2021@@1",
+					"D343@@2021@@2021@@1",
+					"D344@@2021@@2021@@1",
+					"D345@@2021@@2021@@1",
+					"D346@@2021@@2021@@1",
+					"D347@@2021@@2021@@1",
+					"D348@@2021@@2021@@1",
+					"D349@@2021@@2021@@1",
+					"D350@@2021@@2021@@1",
+					"D351@@2022@@2022@@1",
+					"D352@@2022@@2022@@1",
+					"D353@@2022@@2022@@1",
+					"D354@@2022@@2022@@1",
+					"D355@@2022@@2022@@1",
+					"D356@@2022@@2022@@1",
+					"D357@@2022@@2022@@1",
+					"D358@@2022@@2022@@1",
+					"D359@@2022@@2022@@1",
+					"D360@@2022@@2022@@1",
+					"D361@@2022@@2022@@1",
+					"D362@@2022@@2022@@1",
+					"D363@@2021@@2021@@1",
+					"D364@@2021@@2021@@1",
+					"D365@@2021@@2021@@1",
+					"D366@@2021@@2021@@1",
+					"D367@@2021@@2021@@1",
+					"D368@@2021@@2021@@1",
+					"D369@@2021@@2021@@1",
+					"D370@@2021@@2021@@1",
+					"D371@@2021@@2021@@1",
+					"D372@@2021@@2021@@1",
+					"D373@@2021@@2021@@1",
+					"D374@@2021@@2021@@1",
+					"D375@@2022@@2022@@1",
+					"D376@@2022@@2022@@1",
+					"D377@@2022@@2022@@1",
+					"D378@@2022@@2022@@1",
+					"D379@@2022@@2022@@1",
+					"D380@@2022@@2022@@1",
+					"D381@@2022@@2022@@1",
+					"D382@@2022@@2022@@1",
+					"D383@@2022@@2022@@1",
+					"D384@@2022@@2022@@1",
+					"D385@@2022@@2022@@1",
+					"D386@@2022@@2022@@1",
+					"D387@@2021@@2021@@1",
+					"D388@@2021@@2021@@1",
+					"D389@@2021@@2021@@1",
+					"D390@@2021@@2021@@1",
+					"D391@@2021@@2021@@1",
+					"D392@@2021@@2021@@1",
+					"D393@@2021@@2021@@1",
+					"D394@@2021@@2021@@1",
+					"D395@@2021@@2021@@1",
+					"D396@@2021@@2021@@1",
+					"D397@@2021@@2021@@1",
+					"D398@@2021@@2021@@1",
+					"D399@@2022@@2022@@1",
+					"D400@@2022@@2022@@1",
+					"D401@@2022@@2022@@1",
+					"D402@@2022@@2022@@1",
+					"D403@@2022@@2022@@1",
+					"D404@@2022@@2022@@1",
+					"D405@@2022@@2022@@1",
+					"D406@@2022@@2022@@1",
+					"D407@@2022@@2022@@1",
+					"D408@@2022@@2022@@1",
+					"D409@@2022@@2022@@1",
+					"D410@@2022@@2022@@1"
+				],
+				"name": "亚马逊-美国站-电子产品市场数据源"
+			},
+			{
+				"mustFillInArray": [
+					"A3@@安全与监控@@安全与监控@@1",
+					"B3@@0.0322@@0.0322@@1",
+					"C3@@0.16620000000000001@@0.16620000000000001@@1",
+					"A4@@办公电子产品@@办公电子产品@@1",
+					"B4@@0.11@@0.11@@1",
+					"C4@@0.133@@0.133@@1",
+					"A5@@便携式音频和视频@@便携式音频和视频@@1",
+					"B5@@0.0484@@0.0484@@1",
+					"C5@@0.2782@@0.2782@@1",
+					"A6@@电脑及配件@@电脑及配件@@1",
+					"B6@@0.21230000000000002@@0.21230000000000002@@1",
+					"C6@@-0.0758@@-0.0758@@1",
+					"A7@@电视和视频@@电视和视频@@1",
+					"B7@@0.0538@@0.0538@@1",
+					"C7@@0.0146@@0.0146@@1",
+					"A8@@电子书阅读器和配件@@电子书阅读器和配件@@1",
+					"B8@@0.0021@@0.0021@@1",
+					"C8@@-0.4472@@-0.4472@@1",
+					"A9@@耳机@@耳机@@1",
+					"B9@@0.0078000000000000005@@0.0078000000000000005@@1",
+					"C9@@19.5103@@19.5103@@1",
+					"A10@@服务和更换计划@@服务和更换计划@@1",
+					"B10@@0@@0@@1",
+					"C10@@0.4596@@0.4596@@1",
+					"A11@@海洋电子@@海洋电子@@1",
+					"B11@@0.0033000000000000004@@0.0033000000000000004@@1",
+					"C11@@0.050300000000000004@@0.050300000000000004@@1",
+					"A12@@家庭音响和剧院@@家庭音响和剧院@@1",
+					"B12@@0.038700000000000005@@0.038700000000000005@@1",
+					"C12@@0.3232@@0.3232@@1",
+					"A13@@可穿戴技术@@可穿戴技术@@1",
+					"B13@@0.0395@@0.0395@@1",
+					"C13@@0.14220000000000002@@0.14220000000000002@@1",
+					"A14@@配件和用品@@配件和用品@@1",
+					"B14@@0.1775@@0.1775@@1",
+					"C14@@0.28690000000000004@@0.28690000000000004@@1",
+					"A15@@汽车电子@@汽车电子@@1",
+					"B15@@0.0174@@0.0174@@1",
+					"C15@@-0.0197@@-0.0197@@1",
+					"A16@@全球定位系统和导航@@全球定位系统和导航@@1",
+					"B16@@0.0134@@0.0134@@1",
+					"C16@@0.0045000000000000005@@0.0045000000000000005@@1",
+					"A17@@视频游戏机和配件@@视频游戏机和配件@@1",
+					"B17@@0.027700000000000002@@0.027700000000000002@@1",
+					"C17@@-0.3401@@-0.3401@@1",
+					"A18@@手机及配件@@手机及配件@@1",
+					"B18@@0.12990000000000002@@0.12990000000000002@@1",
+					"C18@@0.1388@@0.1388@@1",
+					"A19@@相机和照片@@相机和照片@@1",
+					"B19@@0.086@@0.086@@1",
+					"C19@@0.0639@@0.0639@@1"
+				],
+				"name": "细分市场统计数据"
+			},
+			{
+				"mustFillInArray": [
+					"D3@@0.26420000000000005@@0.26420000000000005@@1",
+					"E3@@8.17@@8.17@@1",
+					"D4@@0.1412@@0.1412@@1",
+					"D5@@0.1227@@0.1227@@1",
+					"E5@@0.1634@@0.1634@@1",
+					"D6@@0.0916@@0.0916@@1",
+					"D7@@0.0631@@0.0631@@1",
+					"D8@@0.0408@@0.0408@@1",
+					"D9@@0.0285@@0.0285@@1",
+					"D10@@0.0242@@0.0242@@1",
+					"D11@@0.0207@@0.0207@@1",
+					"D12@@0.018000000000000002@@0.018000000000000002@@1",
+					"D13@@0.0166@@0.0166@@1",
+					"D14@@0.0158@@0.0158@@1",
+					"D15@@0.0144@@0.0144@@1",
+					"D16@@0.01@@0.01@@1",
+					"D17@@0.0074@@0.0074@@1",
+					"D18@@0.0072@@0.0072@@1",
+					"D19@@0.0063@@0.0063@@1",
+					"D20@@0.0062@@0.0062@@1",
+					"D21@@0.0061@@0.0061@@1",
+					"D22@@0.006@@0.006@@1",
+					"D23@@0.005699999999999999@@0.005699999999999999@@1",
+					"D24@@0.005200000000000001@@0.005200000000000001@@1",
+					"D25@@0.0051@@0.0051@@1",
+					"D26@@0.0045000000000000005@@0.0045000000000000005@@1",
+					"D27@@0.0040999999999999995@@0.0040999999999999995@@1",
+					"D28@@0.004@@0.004@@1",
+					"D29@@0.0039000000000000003@@0.0039000000000000003@@1",
+					"D30@@0.0036@@0.0036@@1",
+					"D31@@0.0034999999999999996@@0.0034999999999999996@@1",
+					"D32@@0.0033000000000000004@@0.0033000000000000004@@1",
+					"D33@@0.0033000000000000004@@0.0033000000000000004@@1",
+					"D34@@0.003@@0.003@@1",
+					"D35@@0.003@@0.003@@1",
+					"D36@@0.0027@@0.0027@@1",
+					"D37@@0.0026000000000000003@@0.0026000000000000003@@1",
+					"D38@@0.0026000000000000003@@0.0026000000000000003@@1",
+					"D39@@0.0024@@0.0024@@1",
+					"D40@@0.0024@@0.0024@@1",
+					"D41@@0.0024@@0.0024@@1",
+					"D42@@0.0022@@0.0022@@1",
+					"D43@@0.0021@@0.0021@@1",
+					"D44@@0.0021@@0.0021@@1",
+					"D45@@0.002@@0.002@@1",
+					"D46@@0.002@@0.002@@1",
+					"D47@@0.0019@@0.0019@@1",
+					"D48@@0.0019@@0.0019@@1",
+					"D49@@0.0019@@0.0019@@1",
+					"D50@@0.0019@@0.0019@@1",
+					"D51@@0.0019@@0.0019@@1",
+					"D52@@0.0018@@0.0018@@1"
+				],
+				"name": "品牌数据"
+			},
+			{
+				"mustFillInArray": [
+					"I3@@200-250@@200-250@@1",
+					"I4@@0-50@@0-50@@1",
+					"I5@@0-50@@0-50@@1",
+					"I6@@150-200@@150-200@@1",
+					"I7@@0-50@@0-50@@1",
+					"I8@@0-50@@0-50@@1",
+					"I9@@0-50@@0-50@@1",
+					"I10@@50-100@@50-100@@1",
+					"I11@@0-50@@0-50@@1",
+					"I12@@0-50@@0-50@@1",
+					"I13@@0-50@@0-50@@1",
+					"I14@@50-100@@50-100@@1",
+					"I15@@200-250@@200-250@@1",
+					"I16@@0-50@@0-50@@1",
+					"I17@@0-50@@0-50@@1",
+					"I18@@0-50@@0-50@@1",
+					"I19@@0-50@@0-50@@1",
+					"I20@@50-100@@50-100@@1",
+					"I21@@50-100@@50-100@@1",
+					"I22@@0-50@@0-50@@1",
+					"I23@@0-50@@0-50@@1",
+					"I24@@250-300@@250-300@@1",
+					"I25@@0-50@@0-50@@1",
+					"I26@@0-50@@0-50@@1",
+					"I27@@0-50@@0-50@@1",
+					"I28@@50-100@@50-100@@1",
+					"I29@@0-50@@0-50@@1",
+					"I30@@0-50@@0-50@@1",
+					"I31@@0-50@@0-50@@1",
+					"I32@@0-50@@0-50@@1",
+					"I33@@50-100@@50-100@@1",
+					"I34@@0-50@@0-50@@1",
+					"I35@@0-50@@0-50@@1",
+					"I36@@0-50@@0-50@@1",
+					"I37@@0-50@@0-50@@1",
+					"I38@@0-50@@0-50@@1",
+					"I39@@0-50@@0-50@@1",
+					"I40@@0-50@@0-50@@1",
+					"I41@@0-50@@0-50@@1",
+					"I42@@0-50@@0-50@@1",
+					"I43@@0-50@@0-50@@1",
+					"I44@@50-100@@50-100@@1",
+					"I45@@50-100@@50-100@@1",
+					"I46@@0-50@@0-50@@1",
+					"I47@@0-50@@0-50@@1",
+					"I48@@50-100@@50-100@@1",
+					"I49@@50-100@@50-100@@1",
+					"I50@@0-50@@0-50@@1",
+					"I51@@0-50@@0-50@@1",
+					"I52@@0-50@@0-50@@1",
+					"I53@@0-50@@0-50@@1",
+					"I54@@0-50@@0-50@@1",
+					"I55@@0-50@@0-50@@1",
+					"I56@@0-50@@0-50@@1",
+					"I57@@0-50@@0-50@@1",
+					"I58@@0-50@@0-50@@1",
+					"I59@@200-250@@200-250@@1",
+					"I60@@0-50@@0-50@@1",
+					"I61@@100-150@@100-150@@1",
+					"I62@@0-50@@0-50@@1",
+					"I63@@0-50@@0-50@@1",
+					"I64@@0-50@@0-50@@1",
+					"I65@@0-50@@0-50@@1",
+					"I66@@0-50@@0-50@@1",
+					"I67@@0-50@@0-50@@1",
+					"I68@@0-50@@0-50@@1",
+					"I69@@150-200@@150-200@@1",
+					"I70@@50-100@@50-100@@1",
+					"I71@@0-50@@0-50@@1",
+					"I72@@100-150@@100-150@@1",
+					"I73@@0-50@@0-50@@1",
+					"I74@@0-50@@0-50@@1",
+					"I75@@0-50@@0-50@@1",
+					"I76@@0-50@@0-50@@1",
+					"I77@@0-50@@0-50@@1",
+					"I78@@0-50@@0-50@@1",
+					"I79@@0-50@@0-50@@1",
+					"I80@@0-50@@0-50@@1",
+					"I81@@50-100@@50-100@@1",
+					"I82@@0-50@@0-50@@1",
+					"I83@@50-100@@50-100@@1",
+					"I84@@50-100@@50-100@@1",
+					"I85@@0-50@@0-50@@1",
+					"I86@@50-100@@50-100@@1",
+					"I87@@0-50@@0-50@@1",
+					"I88@@0-50@@0-50@@1",
+					"I89@@0-50@@0-50@@1",
+					"I90@@0-50@@0-50@@1",
+					"I91@@0-50@@0-50@@1",
+					"I92@@50-100@@50-100@@1",
+					"I93@@0-50@@0-50@@1",
+					"I94@@100-150@@100-150@@1",
+					"I95@@0-50@@0-50@@1",
+					"I96@@100-150@@100-150@@1",
+					"I97@@0-50@@0-50@@1",
+					"I98@@350-400@@350-400@@1",
+					"I99@@0-50@@0-50@@1",
+					"I100@@0-50@@0-50@@1",
+					"I101@@0-50@@0-50@@1",
+					"I102@@0-50@@0-50@@1",
+					"I103@@0-50@@0-50@@1",
+					"I104@@0-50@@0-50@@1",
+					"I105@@0-50@@0-50@@1",
+					"I106@@0-50@@0-50@@1",
+					"I107@@50-100@@50-100@@1",
+					"I108@@200-250@@200-250@@1",
+					"I109@@0-50@@0-50@@1",
+					"I110@@0-50@@0-50@@1",
+					"I111@@0-50@@0-50@@1",
+					"I112@@0-50@@0-50@@1",
+					"I113@@250-300@@250-300@@1",
+					"I114@@0-50@@0-50@@1",
+					"I115@@0-50@@0-50@@1",
+					"I116@@0-50@@0-50@@1",
+					"I117@@0-50@@0-50@@1",
+					"I118@@300-350@@300-350@@1",
+					"I119@@0-50@@0-50@@1",
+					"I120@@150-200@@150-200@@1",
+					"I121@@0-50@@0-50@@1",
+					"I122@@0-50@@0-50@@1",
+					"I123@@0-50@@0-50@@1",
+					"I124@@0-50@@0-50@@1",
+					"I125@@0-50@@0-50@@1",
+					"I126@@0-50@@0-50@@1",
+					"I127@@100-150@@100-150@@1",
+					"I128@@0-50@@0-50@@1",
+					"I129@@250-300@@250-300@@1",
+					"I130@@150-200@@150-200@@1",
+					"I131@@150-200@@150-200@@1",
+					"I132@@0-50@@0-50@@1",
+					"I133@@0-50@@0-50@@1",
+					"I134@@50-100@@50-100@@1",
+					"I135@@0-50@@0-50@@1",
+					"I136@@50-100@@50-100@@1",
+					"I137@@0-50@@0-50@@1",
+					"I138@@0-50@@0-50@@1",
+					"I139@@0-50@@0-50@@1",
+					"I140@@0-50@@0-50@@1",
+					"I141@@0-50@@0-50@@1",
+					"I142@@0-50@@0-50@@1",
+					"I143@@50-100@@50-100@@1",
+					"I144@@0-50@@0-50@@1",
+					"I145@@0-50@@0-50@@1",
+					"I146@@50-100@@50-100@@1",
+					"I147@@0-50@@0-50@@1",
+					"I148@@500-550@@500-550@@1",
+					"I149@@0-50@@0-50@@1",
+					"I150@@0-50@@0-50@@1",
+					"I151@@100-150@@100-150@@1",
+					"I152@@200-250@@200-250@@1",
+					"I153@@0-50@@0-50@@1",
+					"I154@@50-100@@50-100@@1",
+					"I155@@0-50@@0-50@@1",
+					"I156@@50-100@@50-100@@1",
+					"I157@@0-50@@0-50@@1",
+					"I158@@0-50@@0-50@@1",
+					"I159@@0-50@@0-50@@1",
+					"I160@@0-50@@0-50@@1",
+					"I161@@150-200@@150-200@@1",
+					"I162@@100-150@@100-150@@1",
+					"I163@@0-50@@0-50@@1",
+					"I164@@250-300@@250-300@@1",
+					"I165@@0-50@@0-50@@1",
+					"I166@@0-50@@0-50@@1",
+					"I167@@50-100@@50-100@@1",
+					"I168@@0-50@@0-50@@1",
+					"I169@@0-50@@0-50@@1",
+					"I170@@0-50@@0-50@@1",
+					"I171@@0-50@@0-50@@1",
+					"I172@@50-100@@50-100@@1",
+					"I173@@0-50@@0-50@@1",
+					"I174@@0-50@@0-50@@1",
+					"I175@@0-50@@0-50@@1",
+					"I176@@0-50@@0-50@@1",
+					"I177@@0-50@@0-50@@1",
+					"I178@@0-50@@0-50@@1",
+					"I179@@0-50@@0-50@@1",
+					"I180@@0-50@@0-50@@1",
+					"I181@@0-50@@0-50@@1",
+					"I182@@0-50@@0-50@@1",
+					"I183@@100-150@@100-150@@1",
+					"I184@@0-50@@0-50@@1",
+					"I185@@0-50@@0-50@@1",
+					"I186@@0-50@@0-50@@1",
+					"I187@@0-50@@0-50@@1",
+					"I188@@0-50@@0-50@@1",
+					"I189@@50-100@@50-100@@1",
+					"I190@@0-50@@0-50@@1",
+					"I191@@0-50@@0-50@@1",
+					"I192@@0-50@@0-50@@1",
+					"I193@@0-50@@0-50@@1",
+					"I194@@0-50@@0-50@@1",
+					"I195@@250-300@@250-300@@1",
+					"I196@@150-200@@150-200@@1",
+					"I197@@50-100@@50-100@@1",
+					"I198@@0-50@@0-50@@1",
+					"I199@@0-50@@0-50@@1",
+					"I200@@0-50@@0-50@@1",
+					"I201@@0-50@@0-50@@1",
+					"I202@@50-100@@50-100@@1",
+					"I203@@250-300@@250-300@@1",
+					"I204@@0-50@@0-50@@1",
+					"I205@@200-250@@200-250@@1",
+					"I206@@100-150@@100-150@@1",
+					"I207@@0-50@@0-50@@1",
+					"I208@@200-250@@200-250@@1",
+					"I209@@0-50@@0-50@@1",
+					"I210@@0-50@@0-50@@1",
+					"I211@@0-50@@0-50@@1",
+					"I212@@0-50@@0-50@@1",
+					"I213@@0-50@@0-50@@1",
+					"I214@@0-50@@0-50@@1",
+					"I215@@150-200@@150-200@@1",
+					"I216@@100-150@@100-150@@1",
+					"I217@@0-50@@0-50@@1",
+					"I218@@50-100@@50-100@@1",
+					"I219@@0-50@@0-50@@1",
+					"I220@@50-100@@50-100@@1",
+					"I221@@0-50@@0-50@@1",
+					"I222@@0-50@@0-50@@1",
+					"I223@@0-50@@0-50@@1",
+					"I224@@50-100@@50-100@@1",
+					"I225@@0-50@@0-50@@1",
+					"I226@@0-50@@0-50@@1",
+					"I227@@0-50@@0-50@@1",
+					"I228@@350-400@@350-400@@1",
+					"I229@@0-50@@0-50@@1",
+					"I230@@0-50@@0-50@@1",
+					"I231@@50-100@@50-100@@1",
+					"I232@@50-100@@50-100@@1",
+					"I233@@0-50@@0-50@@1",
+					"I234@@150-200@@150-200@@1",
+					"I235@@0-50@@0-50@@1",
+					"I236@@0-50@@0-50@@1",
+					"I237@@50-100@@50-100@@1",
+					"I238@@50-100@@50-100@@1",
+					"I239@@0-50@@0-50@@1",
+					"I240@@0-50@@0-50@@1",
+					"I241@@0-50@@0-50@@1",
+					"I242@@0-50@@0-50@@1",
+					"I243@@0-50@@0-50@@1",
+					"I244@@200-250@@200-250@@1",
+					"I245@@150-200@@150-200@@1",
+					"I246@@0-50@@0-50@@1",
+					"I247@@0-50@@0-50@@1",
+					"I248@@100-150@@100-150@@1",
+					"I249@@0-50@@0-50@@1",
+					"I250@@100-150@@100-150@@1",
+					"I251@@0-50@@0-50@@1",
+					"I252@@0-50@@0-50@@1",
+					"I253@@0-50@@0-50@@1",
+					"I254@@0-50@@0-50@@1",
+					"I255@@0-50@@0-50@@1",
+					"I256@@150-200@@150-200@@1",
+					"I257@@100-150@@100-150@@1",
+					"I258@@0-50@@0-50@@1",
+					"I259@@0-50@@0-50@@1",
+					"I260@@0-50@@0-50@@1",
+					"I261@@50-100@@50-100@@1",
+					"I262@@0-50@@0-50@@1",
+					"I263@@0-50@@0-50@@1",
+					"I264@@0-50@@0-50@@1",
+					"I265@@0-50@@0-50@@1",
+					"I266@@0-50@@0-50@@1",
+					"I267@@50-100@@50-100@@1",
+					"I268@@0-50@@0-50@@1",
+					"I269@@0-50@@0-50@@1",
+					"I270@@150-200@@150-200@@1",
+					"I271@@0-50@@0-50@@1",
+					"I272@@0-50@@0-50@@1",
+					"I273@@0-50@@0-50@@1",
+					"I274@@150-200@@150-200@@1",
+					"I275@@0-50@@0-50@@1",
+					"I276@@0-50@@0-50@@1",
+					"I277@@0-50@@0-50@@1",
+					"I278@@150-200@@150-200@@1",
+					"I279@@0-50@@0-50@@1",
+					"I280@@50-100@@50-100@@1",
+					"I281@@0-50@@0-50@@1",
+					"I282@@0-50@@0-50@@1",
+					"I283@@0-50@@0-50@@1",
+					"I284@@0-50@@0-50@@1",
+					"I285@@0-50@@0-50@@1",
+					"I286@@50-100@@50-100@@1",
+					"I287@@0-50@@0-50@@1",
+					"I288@@100-150@@100-150@@1",
+					"I289@@0-50@@0-50@@1",
+					"I290@@100-150@@100-150@@1",
+					"I291@@0-50@@0-50@@1",
+					"I292@@50-100@@50-100@@1",
+					"I293@@0-50@@0-50@@1",
+					"I294@@0-50@@0-50@@1",
+					"I295@@0-50@@0-50@@1",
+					"I296@@150-200@@150-200@@1",
+					"I297@@50-100@@50-100@@1",
+					"I298@@0-50@@0-50@@1",
+					"I299@@0-50@@0-50@@1",
+					"I300@@0-50@@0-50@@1",
+					"I301@@150-200@@150-200@@1",
+					"I302@@0-50@@0-50@@1",
+					"I303@@200-250@@200-250@@1",
+					"I304@@0-50@@0-50@@1",
+					"I305@@0-50@@0-50@@1",
+					"I306@@50-100@@50-100@@1",
+					"I307@@0-50@@0-50@@1",
+					"I308@@250-300@@250-300@@1",
+					"I309@@0-50@@0-50@@1",
+					"I310@@0-50@@0-50@@1",
+					"I311@@0-50@@0-50@@1",
+					"I312@@0-50@@0-50@@1",
+					"I313@@0-50@@0-50@@1",
+					"I314@@0-50@@0-50@@1",
+					"I315@@50-100@@50-100@@1",
+					"I316@@50-100@@50-100@@1",
+					"I317@@0-50@@0-50@@1",
+					"I318@@100-150@@100-150@@1",
+					"I319@@50-100@@50-100@@1",
+					"I320@@150-200@@150-200@@1",
+					"I321@@0-50@@0-50@@1",
+					"I322@@100-150@@100-150@@1",
+					"I323@@0-50@@0-50@@1",
+					"I324@@0-50@@0-50@@1",
+					"I325@@0-50@@0-50@@1",
+					"I326@@0-50@@0-50@@1",
+					"I327@@0-50@@0-50@@1",
+					"I328@@0-50@@0-50@@1",
+					"I329@@0-50@@0-50@@1",
+					"I330@@50-100@@50-100@@1",
+					"I331@@0-50@@0-50@@1",
+					"I332@@0-50@@0-50@@1",
+					"I333@@0-50@@0-50@@1",
+					"I334@@0-50@@0-50@@1",
+					"I335@@0-50@@0-50@@1",
+					"I336@@100-150@@100-150@@1",
+					"I337@@50-100@@50-100@@1",
+					"I338@@0-50@@0-50@@1",
+					"I339@@0-50@@0-50@@1",
+					"I340@@0-50@@0-50@@1",
+					"I341@@100-150@@100-150@@1",
+					"I342@@0-50@@0-50@@1",
+					"I343@@0-50@@0-50@@1",
+					"I344@@300-350@@300-350@@1",
+					"I345@@0-50@@0-50@@1",
+					"I346@@0-50@@0-50@@1",
+					"I347@@0-50@@0-50@@1",
+					"I348@@50-100@@50-100@@1",
+					"I349@@100-150@@100-150@@1",
+					"I350@@0-50@@0-50@@1",
+					"I351@@150-200@@150-200@@1",
+					"I352@@50-100@@50-100@@1",
+					"I353@@50-100@@50-100@@1",
+					"I354@@250-300@@250-300@@1",
+					"I355@@0-50@@0-50@@1",
+					"I356@@0-50@@0-50@@1",
+					"I357@@0-50@@0-50@@1",
+					"I358@@0-50@@0-50@@1",
+					"I359@@150-200@@150-200@@1",
+					"I360@@0-50@@0-50@@1",
+					"I361@@200-250@@200-250@@1",
+					"I362@@0-50@@0-50@@1",
+					"I363@@0-50@@0-50@@1",
+					"I364@@100-150@@100-150@@1",
+					"I365@@0-50@@0-50@@1",
+					"I366@@0-50@@0-50@@1",
+					"I367@@0-50@@0-50@@1",
+					"I368@@0-50@@0-50@@1",
+					"I369@@0-50@@0-50@@1",
+					"I370@@250-300@@250-300@@1",
+					"I371@@50-100@@50-100@@1",
+					"I372@@0-50@@0-50@@1",
+					"I373@@0-50@@0-50@@1",
+					"I374@@0-50@@0-50@@1",
+					"I375@@0-50@@0-50@@1",
+					"I376@@50-100@@50-100@@1",
+					"I377@@0-50@@0-50@@1",
+					"I378@@100-150@@100-150@@1",
+					"I379@@0-50@@0-50@@1",
+					"I380@@0-50@@0-50@@1",
+					"I381@@0-50@@0-50@@1",
+					"I382@@550-600@@550-600@@1",
+					"I383@@0-50@@0-50@@1",
+					"I384@@0-50@@0-50@@1",
+					"I385@@50-100@@50-100@@1",
+					"I386@@0-50@@0-50@@1",
+					"I387@@250-300@@250-300@@1",
+					"I388@@200-250@@200-250@@1",
+					"I389@@0-50@@0-50@@1",
+					"I390@@150-200@@150-200@@1",
+					"I391@@0-50@@0-50@@1",
+					"I392@@50-100@@50-100@@1",
+					"I393@@50-100@@50-100@@1",
+					"I394@@0-50@@0-50@@1",
+					"I395@@0-50@@0-50@@1",
+					"I396@@0-50@@0-50@@1",
+					"I397@@0-50@@0-50@@1",
+					"I398@@450-500@@450-500@@1",
+					"I399@@50-100@@50-100@@1",
+					"I400@@0-50@@0-50@@1",
+					"I401@@100-150@@100-150@@1",
+					"I402@@0-50@@0-50@@1",
+					"I403@@0-50@@0-50@@1",
+					"I404@@0-50@@0-50@@1",
+					"I405@@0-50@@0-50@@1",
+					"I406@@0-50@@0-50@@1",
+					"I407@@50-100@@50-100@@1",
+					"I408@@0-50@@0-50@@1",
+					"I409@@0-50@@0-50@@1",
+					"I410@@100-150@@100-150@@1",
+					"I411@@0-50@@0-50@@1",
+					"I412@@0-50@@0-50@@1",
+					"I413@@0-50@@0-50@@1",
+					"I414@@0-50@@0-50@@1",
+					"I415@@0-50@@0-50@@1",
+					"I416@@0-50@@0-50@@1",
+					"I417@@0-50@@0-50@@1",
+					"I418@@300-350@@300-350@@1",
+					"I419@@0-50@@0-50@@1",
+					"I420@@0-50@@0-50@@1",
+					"I421@@0-50@@0-50@@1",
+					"I422@@0-50@@0-50@@1",
+					"I423@@0-50@@0-50@@1",
+					"I424@@0-50@@0-50@@1",
+					"I425@@0-50@@0-50@@1",
+					"I426@@100-150@@100-150@@1",
+					"I427@@0-50@@0-50@@1",
+					"I428@@0-50@@0-50@@1",
+					"I429@@50-100@@50-100@@1",
+					"I430@@0-50@@0-50@@1",
+					"I431@@0-50@@0-50@@1",
+					"I432@@0-50@@0-50@@1",
+					"I433@@0-50@@0-50@@1",
+					"I434@@100-150@@100-150@@1",
+					"I435@@0-50@@0-50@@1",
+					"I436@@100-150@@100-150@@1",
+					"I437@@0-50@@0-50@@1",
+					"I438@@50-100@@50-100@@1",
+					"I439@@0-50@@0-50@@1",
+					"I440@@50-100@@50-100@@1",
+					"I441@@50-100@@50-100@@1",
+					"I442@@0-50@@0-50@@1",
+					"I443@@0-50@@0-50@@1",
+					"I444@@0-50@@0-50@@1",
+					"I445@@0-50@@0-50@@1",
+					"I446@@100-150@@100-150@@1",
+					"I447@@100-150@@100-150@@1",
+					"I448@@50-100@@50-100@@1",
+					"I449@@0-50@@0-50@@1",
+					"I450@@0-50@@0-50@@1",
+					"I451@@100-150@@100-150@@1",
+					"I452@@0-50@@0-50@@1",
+					"I453@@0-50@@0-50@@1",
+					"I454@@0-50@@0-50@@1",
+					"I455@@100-150@@100-150@@1",
+					"I456@@0-50@@0-50@@1",
+					"I457@@50-100@@50-100@@1",
+					"I458@@0-50@@0-50@@1",
+					"I459@@0-50@@0-50@@1",
+					"I460@@0-50@@0-50@@1",
+					"I461@@50-100@@50-100@@1",
+					"I462@@0-50@@0-50@@1",
+					"I463@@0-50@@0-50@@1",
+					"I464@@0-50@@0-50@@1",
+					"I465@@0-50@@0-50@@1",
+					"I466@@0-50@@0-50@@1",
+					"I467@@50-100@@50-100@@1",
+					"I468@@150-200@@150-200@@1",
+					"I469@@0-50@@0-50@@1",
+					"I470@@150-200@@150-200@@1",
+					"I471@@100-150@@100-150@@1",
+					"I472@@0-50@@0-50@@1",
+					"I473@@0-50@@0-50@@1",
+					"I474@@150-200@@150-200@@1",
+					"I475@@0-50@@0-50@@1",
+					"I476@@0-50@@0-50@@1",
+					"I477@@0-50@@0-50@@1",
+					"I478@@0-50@@0-50@@1",
+					"I479@@0-50@@0-50@@1",
+					"I480@@0-50@@0-50@@1",
+					"I481@@0-50@@0-50@@1",
+					"I482@@0-50@@0-50@@1",
+					"I483@@50-100@@50-100@@1",
+					"I484@@0-50@@0-50@@1",
+					"I485@@0-50@@0-50@@1",
+					"I486@@100-150@@100-150@@1",
+					"I487@@0-50@@0-50@@1",
+					"I488@@0-50@@0-50@@1",
+					"I489@@0-50@@0-50@@1",
+					"I490@@0-50@@0-50@@1",
+					"I491@@0-50@@0-50@@1",
+					"I492@@0-50@@0-50@@1",
+					"I493@@100-150@@100-150@@1",
+					"I494@@0-50@@0-50@@1",
+					"I495@@0-50@@0-50@@1",
+					"I496@@0-50@@0-50@@1",
+					"I497@@0-50@@0-50@@1",
+					"I498@@50-100@@50-100@@1",
+					"I499@@0-50@@0-50@@1",
+					"I500@@0-50@@0-50@@1",
+					"I501@@100-150@@100-150@@1",
+					"I502@@100-150@@100-150@@1",
+					"I503@@0-50@@0-50@@1",
+					"I504@@50-100@@50-100@@1",
+					"I505@@0-50@@0-50@@1",
+					"I506@@0-50@@0-50@@1",
+					"I507@@0-50@@0-50@@1",
+					"I508@@0-50@@0-50@@1",
+					"I509@@0-50@@0-50@@1",
+					"I510@@450-500@@450-500@@1",
+					"I511@@0-50@@0-50@@1",
+					"I512@@0-50@@0-50@@1",
+					"I513@@0-50@@0-50@@1",
+					"I514@@0-50@@0-50@@1",
+					"I515@@0-50@@0-50@@1",
+					"I516@@0-50@@0-50@@1",
+					"I517@@50-100@@50-100@@1",
+					"I518@@0-50@@0-50@@1",
+					"I519@@0-50@@0-50@@1",
+					"I520@@150-200@@150-200@@1",
+					"I521@@0-50@@0-50@@1",
+					"I522@@0-50@@0-50@@1",
+					"I523@@0-50@@0-50@@1",
+					"I524@@0-50@@0-50@@1",
+					"I525@@0-50@@0-50@@1",
+					"I526@@100-150@@100-150@@1",
+					"I527@@0-50@@0-50@@1",
+					"I528@@100-150@@100-150@@1",
+					"I529@@0-50@@0-50@@1",
+					"I530@@0-50@@0-50@@1",
+					"I531@@50-100@@50-100@@1",
+					"I532@@0-50@@0-50@@1",
+					"I533@@50-100@@50-100@@1",
+					"I534@@0-50@@0-50@@1",
+					"I535@@0-50@@0-50@@1",
+					"I536@@0-50@@0-50@@1",
+					"I537@@0-50@@0-50@@1",
+					"I538@@100-150@@100-150@@1",
+					"I539@@0-50@@0-50@@1",
+					"I540@@0-50@@0-50@@1",
+					"I541@@150-200@@150-200@@1",
+					"I542@@50-100@@50-100@@1",
+					"I543@@0-50@@0-50@@1",
+					"I544@@0-50@@0-50@@1",
+					"I545@@0-50@@0-50@@1",
+					"I546@@0-50@@0-50@@1",
+					"I547@@0-50@@0-50@@1",
+					"I548@@0-50@@0-50@@1",
+					"I549@@0-50@@0-50@@1",
+					"I550@@0-50@@0-50@@1",
+					"I551@@0-50@@0-50@@1",
+					"I552@@0-50@@0-50@@1",
+					"I553@@0-50@@0-50@@1",
+					"I554@@0-50@@0-50@@1",
+					"I555@@50-100@@50-100@@1",
+					"I556@@100-150@@100-150@@1",
+					"I557@@50-100@@50-100@@1",
+					"I558@@0-50@@0-50@@1",
+					"I559@@150-200@@150-200@@1",
+					"I560@@50-100@@50-100@@1",
+					"I561@@100-150@@100-150@@1",
+					"I562@@0-50@@0-50@@1",
+					"I563@@0-50@@0-50@@1",
+					"I564@@0-50@@0-50@@1",
+					"I565@@0-50@@0-50@@1",
+					"I566@@100-150@@100-150@@1",
+					"I567@@0-50@@0-50@@1",
+					"I568@@0-50@@0-50@@1",
+					"I569@@0-50@@0-50@@1",
+					"I570@@350-400@@350-400@@1",
+					"I571@@0-50@@0-50@@1",
+					"I572@@0-50@@0-50@@1",
+					"I573@@0-50@@0-50@@1",
+					"I574@@50-100@@50-100@@1",
+					"I575@@50-100@@50-100@@1",
+					"I576@@0-50@@0-50@@1",
+					"I577@@0-50@@0-50@@1",
+					"I578@@0-50@@0-50@@1",
+					"I579@@0-50@@0-50@@1",
+					"I580@@100-150@@100-150@@1",
+					"I581@@0-50@@0-50@@1",
+					"I582@@0-50@@0-50@@1",
+					"I583@@0-50@@0-50@@1",
+					"I584@@0-50@@0-50@@1",
+					"I585@@100-150@@100-150@@1",
+					"I586@@0-50@@0-50@@1",
+					"I587@@0-50@@0-50@@1",
+					"I588@@0-50@@0-50@@1",
+					"I589@@0-50@@0-50@@1",
+					"I590@@0-50@@0-50@@1",
+					"I591@@50-100@@50-100@@1",
+					"I592@@50-100@@50-100@@1",
+					"I593@@0-50@@0-50@@1",
+					"I594@@50-100@@50-100@@1",
+					"I595@@50-100@@50-100@@1",
+					"I596@@50-100@@50-100@@1",
+					"I597@@0-50@@0-50@@1",
+					"I598@@50-100@@50-100@@1",
+					"I599@@0-50@@0-50@@1",
+					"I600@@0-50@@0-50@@1",
+					"I601@@50-100@@50-100@@1",
+					"I602@@0-50@@0-50@@1",
+					"I603@@150-200@@150-200@@1",
+					"I604@@0-50@@0-50@@1",
+					"I605@@0-50@@0-50@@1",
+					"I606@@0-50@@0-50@@1",
+					"I607@@0-50@@0-50@@1",
+					"I608@@0-50@@0-50@@1",
+					"I609@@0-50@@0-50@@1",
+					"I610@@0-50@@0-50@@1",
+					"I611@@0-50@@0-50@@1",
+					"I612@@0-50@@0-50@@1",
+					"I613@@0-50@@0-50@@1",
+					"I614@@250-300@@250-300@@1",
+					"I615@@0-50@@0-50@@1",
+					"I616@@0-50@@0-50@@1",
+					"I617@@50-100@@50-100@@1",
+					"I618@@0-50@@0-50@@1",
+					"I619@@0-50@@0-50@@1",
+					"I620@@350-400@@350-400@@1",
+					"I621@@0-50@@0-50@@1",
+					"I622@@50-100@@50-100@@1",
+					"I623@@50-100@@50-100@@1",
+					"I624@@0-50@@0-50@@1",
+					"I625@@0-50@@0-50@@1",
+					"I626@@0-50@@0-50@@1",
+					"I627@@0-50@@0-50@@1",
+					"I628@@150-200@@150-200@@1",
+					"I629@@50-100@@50-100@@1",
+					"I630@@0-50@@0-50@@1",
+					"I631@@0-50@@0-50@@1",
+					"I632@@50-100@@50-100@@1",
+					"I633@@50-100@@50-100@@1",
+					"I634@@250-300@@250-300@@1",
+					"I635@@0-50@@0-50@@1",
+					"I636@@50-100@@50-100@@1",
+					"I637@@50-100@@50-100@@1",
+					"I638@@0-50@@0-50@@1",
+					"I639@@50-100@@50-100@@1",
+					"I640@@0-50@@0-50@@1",
+					"I641@@0-50@@0-50@@1",
+					"I642@@200-250@@200-250@@1",
+					"I643@@0-50@@0-50@@1",
+					"I644@@0-50@@0-50@@1",
+					"I645@@0-50@@0-50@@1",
+					"I646@@0-50@@0-50@@1",
+					"I647@@0-50@@0-50@@1",
+					"I648@@0-50@@0-50@@1",
+					"I649@@0-50@@0-50@@1",
+					"I650@@0-50@@0-50@@1",
+					"I651@@0-50@@0-50@@1",
+					"I652@@0-50@@0-50@@1",
+					"I653@@0-50@@0-50@@1",
+					"I654@@0-50@@0-50@@1",
+					"I655@@50-100@@50-100@@1",
+					"I656@@0-50@@0-50@@1",
+					"I657@@0-50@@0-50@@1",
+					"I658@@0-50@@0-50@@1",
+					"I659@@0-50@@0-50@@1",
+					"I660@@0-50@@0-50@@1",
+					"I661@@0-50@@0-50@@1",
+					"I662@@0-50@@0-50@@1",
+					"I663@@200-250@@200-250@@1",
+					"I664@@350-400@@350-400@@1",
+					"I665@@0-50@@0-50@@1",
+					"I666@@0-50@@0-50@@1",
+					"I667@@0-50@@0-50@@1",
+					"I668@@0-50@@0-50@@1",
+					"I669@@0-50@@0-50@@1",
+					"I670@@0-50@@0-50@@1",
+					"I671@@0-50@@0-50@@1",
+					"I672@@0-50@@0-50@@1",
+					"I673@@0-50@@0-50@@1",
+					"I674@@0-50@@0-50@@1",
+					"I675@@50-100@@50-100@@1",
+					"I676@@0-50@@0-50@@1",
+					"I677@@50-100@@50-100@@1",
+					"I678@@0-50@@0-50@@1",
+					"I679@@0-50@@0-50@@1",
+					"I680@@50-100@@50-100@@1",
+					"I681@@0-50@@0-50@@1",
+					"I682@@0-50@@0-50@@1",
+					"I683@@0-50@@0-50@@1",
+					"I684@@0-50@@0-50@@1",
+					"I685@@0-50@@0-50@@1",
+					"I686@@0-50@@0-50@@1",
+					"I687@@50-100@@50-100@@1",
+					"I688@@150-200@@150-200@@1",
+					"I689@@350-400@@350-400@@1",
+					"I690@@50-100@@50-100@@1",
+					"I691@@150-200@@150-200@@1",
+					"I692@@100-150@@100-150@@1",
+					"I693@@50-100@@50-100@@1",
+					"I694@@100-150@@100-150@@1",
+					"I695@@0-50@@0-50@@1",
+					"I696@@0-50@@0-50@@1",
+					"I697@@150-200@@150-200@@1",
+					"I698@@0-50@@0-50@@1",
+					"I699@@0-50@@0-50@@1",
+					"I700@@0-50@@0-50@@1",
+					"I701@@0-50@@0-50@@1",
+					"I702@@50-100@@50-100@@1",
+					"I703@@50-100@@50-100@@1",
+					"I704@@100-150@@100-150@@1",
+					"I705@@50-100@@50-100@@1",
+					"I706@@0-50@@0-50@@1",
+					"I707@@250-300@@250-300@@1",
+					"I708@@0-50@@0-50@@1",
+					"I709@@50-100@@50-100@@1",
+					"I710@@0-50@@0-50@@1",
+					"I711@@300-350@@300-350@@1",
+					"I712@@50-100@@50-100@@1",
+					"I713@@50-100@@50-100@@1",
+					"I714@@0-50@@0-50@@1",
+					"I715@@0-50@@0-50@@1",
+					"I716@@550-600@@550-600@@1",
+					"I717@@50-100@@50-100@@1",
+					"I718@@0-50@@0-50@@1",
+					"I719@@300-350@@300-350@@1",
+					"I720@@0-50@@0-50@@1",
+					"I721@@0-50@@0-50@@1",
+					"I722@@50-100@@50-100@@1",
+					"I723@@50-100@@50-100@@1",
+					"I724@@0-50@@0-50@@1",
+					"I725@@0-50@@0-50@@1",
+					"I726@@50-100@@50-100@@1",
+					"I727@@0-50@@0-50@@1",
+					"I728@@0-50@@0-50@@1",
+					"I729@@0-50@@0-50@@1",
+					"I730@@0-50@@0-50@@1",
+					"I731@@50-100@@50-100@@1",
+					"I732@@0-50@@0-50@@1",
+					"I733@@0-50@@0-50@@1",
+					"I734@@0-50@@0-50@@1",
+					"I735@@0-50@@0-50@@1",
+					"I736@@0-50@@0-50@@1",
+					"I737@@0-50@@0-50@@1",
+					"I738@@0-50@@0-50@@1",
+					"I739@@0-50@@0-50@@1",
+					"I740@@0-50@@0-50@@1",
+					"I741@@0-50@@0-50@@1",
+					"I742@@0-50@@0-50@@1",
+					"I743@@0-50@@0-50@@1",
+					"I744@@0-50@@0-50@@1",
+					"I745@@0-50@@0-50@@1",
+					"I746@@0-50@@0-50@@1",
+					"I747@@0-50@@0-50@@1",
+					"I748@@0-50@@0-50@@1",
+					"I749@@0-50@@0-50@@1",
+					"I750@@0-50@@0-50@@1",
+					"I751@@150-200@@150-200@@1",
+					"I752@@100-150@@100-150@@1",
+					"I753@@350-400@@350-400@@1",
+					"I754@@0-50@@0-50@@1",
+					"I755@@0-50@@0-50@@1",
+					"I756@@0-50@@0-50@@1",
+					"I757@@0-50@@0-50@@1",
+					"I758@@0-50@@0-50@@1",
+					"I759@@150-200@@150-200@@1",
+					"I760@@50-100@@50-100@@1",
+					"I761@@0-50@@0-50@@1",
+					"I762@@150-200@@150-200@@1",
+					"I763@@0-50@@0-50@@1",
+					"I764@@0-50@@0-50@@1",
+					"I765@@300-350@@300-350@@1",
+					"I766@@0-50@@0-50@@1",
+					"I767@@0-50@@0-50@@1",
+					"I768@@0-50@@0-50@@1",
+					"I769@@0-50@@0-50@@1",
+					"I770@@0-50@@0-50@@1",
+					"I771@@150-200@@150-200@@1",
+					"I772@@50-100@@50-100@@1",
+					"I773@@0-50@@0-50@@1",
+					"I774@@0-50@@0-50@@1",
+					"I775@@0-50@@0-50@@1",
+					"I776@@0-50@@0-50@@1",
+					"I777@@50-100@@50-100@@1",
+					"I778@@0-50@@0-50@@1",
+					"I779@@0-50@@0-50@@1",
+					"I780@@0-50@@0-50@@1",
+					"I781@@50-100@@50-100@@1",
+					"I782@@0-50@@0-50@@1",
+					"I783@@0-50@@0-50@@1",
+					"I784@@50-100@@50-100@@1",
+					"I785@@0-50@@0-50@@1",
+					"I786@@0-50@@0-50@@1",
+					"I787@@0-50@@0-50@@1",
+					"I788@@50-100@@50-100@@1",
+					"I789@@0-50@@0-50@@1",
+					"I790@@0-50@@0-50@@1",
+					"I791@@0-50@@0-50@@1",
+					"I792@@0-50@@0-50@@1",
+					"I793@@0-50@@0-50@@1",
+					"I794@@0-50@@0-50@@1",
+					"I795@@0-50@@0-50@@1",
+					"I796@@100-150@@100-150@@1",
+					"I797@@0-50@@0-50@@1",
+					"I798@@100-150@@100-150@@1",
+					"I799@@0-50@@0-50@@1",
+					"I800@@0-50@@0-50@@1",
+					"I801@@0-50@@0-50@@1",
+					"I802@@0-50@@0-50@@1",
+					"I803@@0-50@@0-50@@1",
+					"I804@@250-300@@250-300@@1"
+				],
+				"name": "商品数据"
+			},
+			{
+				"mustFillInArray": [
+					"B2@@求和:近30天预估销售额@@求和:近30天预估销售额@@1",
+					"C2@@求和:卖家数 @@求和:卖家数 @@1",
+					"D2@@卖家平均销售额@@卖家平均销售额@@1",
+					"A3@@0-50@@0-50@@1",
+					"B3@@17853560.51@@17853560.51@@1",
+					"C3@@2035@@2035@@1",
+					"D3@@8773.25@@8773.25@@1",
+					"A4@@100-150@@100-150@@1",
+					"B4@@6766017.92@@6766017.92@@1",
+					"C4@@645@@645@@1",
+					"D4@@10489.95@@10489.95@@1",
+					"A5@@150-200@@150-200@@1",
+					"B5@@9658379.48@@9658379.48@@1",
+					"C5@@392@@392@@1",
+					"D5@@24638.72@@24638.72@@1",
+					"A6@@200-250@@200-250@@1",
+					"B6@@12884708.05@@12884708.05@@1",
+					"C6@@151@@151@@1",
+					"D6@@85329.19@@85329.19@@1",
+					"A7@@250-300@@250-300@@1",
+					"B7@@2023865.43@@2023865.43@@1",
+					"C7@@108@@108@@1",
+					"D7@@18739.49@@18739.49@@1",
+					"A8@@300-350@@300-350@@1",
+					"B8@@2218441.95@@2218441.95@@1",
+					"C8@@137@@137@@1",
+					"D8@@16193.01@@16193.01@@1",
+					"A9@@350-400@@350-400@@1",
+					"B9@@1305453.14@@1305453.14@@1",
+					"C9@@56@@56@@1",
+					"D9@@23311.66@@23311.66@@1",
+					"A10@@450-500@@450-500@@1",
+					"B10@@7650@@7650@@1",
+					"C10@@6@@6@@1",
+					"D10@@1275@@1275@@1",
+					"A11@@50-100@@50-100@@1",
+					"B11@@7839434.94@@7839434.94@@1",
+					"C11@@760@@760@@1",
+					"D11@@10315.05@@10315.05@@1",
+					"A12@@500-550@@500-550@@1",
+					"B12@@529.19@@529.19@@1",
+					"C12@@3@@3@@1",
+					"D12@@176.4@@176.4@@1",
+					"A13@@550-600@@550-600@@1",
+					"B13@@0@@0@@1",
+					"C13@@4@@4@@1",
+					"D13@@0@@0@@1"
+				],
+				"name": "价格带透视表"
+			},
+			{
+				"mustFillInArray": [
+					"E3@@0.4863@@0.4863@@1",
+					"F3@@66947.01@@66947.01@@1",
+					"E4@@0.0053@@0.0053@@1",
+					"F4@@46558.64@@46558.64@@1",
+					"E5@@0.5081@@0.5081@@1",
+					"F5@@35222.1@@35222.1@@1",
+					"E6@@0.0001@@0.0001@@1",
+					"F6@@6247.5@@6247.5@@1",
+					"E7@@0.0002@@0.0002@@1",
+					"F7@@2496.71@@2496.71@@1",
+					"E8@@0.0001@@0.0001@@1",
+					"F8@@2123@@2123@@1",
+					"E9@@0@@0@@1",
+					"F9@@0@@0@@1",
+					"E10@@0@@0@@1",
+					"F10@@0@@0@@1",
+					"E11@@0@@0@@1",
+					"F11@@0@@0@@1",
+					"E12@@0@@0@@1",
+					"F12@@0@@0@@1",
+					"E13@@0@@0@@1",
+					"F13@@0@@0@@1",
+					"E14@@0@@0@@1",
+					"F14@@0@@0@@1",
+					"E15@@0@@0@@1",
+					"F15@@0@@0@@1"
+				],
+				"name": "卖家国家分布数据"
+			},
+			{
+				"mustFillInArray": [
+					"D3@@0.579@@0.579@@1",
+					"E3@@0.42100000000000004@@0.42100000000000004@@1",
+					"F3@@275958@@275958@@1",
+					"D4@@0.6123@@0.6123@@1",
+					"E4@@0.38770000000000004@@0.38770000000000004@@1",
+					"F4@@394049.48@@394049.48@@1",
+					"D5@@0.0936@@0.0936@@1",
+					"E5@@0.9064@@0.9064@@1",
+					"F5@@-1394439.26@@-1394439.26@@1",
+					"D6@@0.4631@@0.4631@@1",
+					"E6@@0.5369@@0.5369@@1",
+					"F6@@-79409@@-79409@@1",
+					"D7@@0.1075@@0.1075@@1",
+					"E7@@0.8925000000000001@@0.8925000000000001@@1",
+					"F7@@-843897@@-843897@@1",
+					"D8@@0.0819@@0.0819@@1",
+					"E8@@0.9181@@0.9181@@1",
+					"F8@@-198521@@-198521@@1",
+					"D9@@0.6399@@0.6399@@1",
+					"E9@@0.3601@@0.3601@@1",
+					"F9@@3956@@3956@@1",
+					"D10@@0.4483@@0.4483@@1",
+					"E10@@0.5517000000000001@@0.5517000000000001@@1",
+					"F10@@-14754@@-14754@@1",
+					"D11@@0.4072@@0.4072@@1",
+					"E11@@0.5928@@0.5928@@1",
+					"F11@@-55843@@-55843@@1",
+					"D12@@0.441@@0.441@@1",
+					"E12@@0.559@@0.559@@1",
+					"F12@@-31683@@-31683@@1",
+					"D13@@0.0947@@0.0947@@1",
+					"E13@@0.9053@@0.9053@@1",
+					"F13@@-454511@@-454511@@1",
+					"D14@@0.20260000000000003@@0.20260000000000003@@1",
+					"E14@@0.7974@@0.7974@@1",
+					"F14@@-908300.74@@-908300.74@@1",
+					"D15@@0.3455@@0.3455@@1",
+					"E15@@0.6545000000000001@@0.6545000000000001@@1",
+					"F15@@-255556@@-255556@@1",
+					"D16@@0.6725@@0.6725@@1",
+					"E16@@0.3275@@0.3275@@1",
+					"F16@@190403@@190403@@1",
+					"D17@@0.6939000000000001@@0.6939000000000001@@1",
+					"E17@@0.3061@@0.3061@@1",
+					"F17@@209635@@209635@@1",
+					"D18@@0.6844@@0.6844@@1",
+					"E18@@0.3156@@0.3156@@1",
+					"F18@@153027@@153027@@1",
+					"D19@@0.8225@@0.8225@@1",
+					"E19@@0.1775@@0.1775@@1",
+					"F19@@308435@@308435@@1",
+					"D20@@0.8176000000000001@@0.8176000000000001@@1",
+					"E20@@0.18239999999999998@@0.18239999999999998@@1",
+					"F20@@288089@@288089@@1",
+					"D21@@0.8362@@0.8362@@1",
+					"E21@@0.1638@@0.1638@@1",
+					"F21@@362244@@362244@@1",
+					"D22@@0.7472@@0.7472@@1",
+					"E22@@0.2528@@0.2528@@1",
+					"F22@@272702@@272702@@1",
+					"D23@@0.37829999999999997@@0.37829999999999997@@1",
+					"E23@@0.6217@@0.6217@@1",
+					"F23@@-4963661.19@@-4963661.19@@1",
+					"D24@@0.4361@@0.4361@@1",
+					"E24@@0.5639000000000001@@0.5639000000000001@@1",
+					"F24@@-8094238.21@@-8094238.21@@1",
+					"D25@@0.40890000000000004@@0.40890000000000004@@1",
+					"E25@@0.5911@@0.5911@@1",
+					"F25@@-15184911.34@@-15184911.34@@1",
+					"D26@@0.3299@@0.3299@@1",
+					"E26@@0.6701@@0.6701@@1",
+					"F26@@-44957039.98@@-44957039.98@@1"
+				],
+				"name": "三方&自营销售数据"
+			}
+		],
+		"end": false
+	},
+	"record_id": "18875",
+	"stemNumber": 0,
+	"type": "table"
+}

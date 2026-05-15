@@ -1,6 +1,6 @@
 import requests
 import json
-
+# 表格题
 def do_2112():
     with open("./answer_bank/data_2112.json", "r", encoding="utf-8") as f:
         answer = json.load(f)
@@ -22,8 +22,39 @@ def do_2112():
 
     print(f"状态码: {response.status_code}")
     print(f"响应: {response.text}")
+# 连线题
+def do_2222():
+    with open("./answer_bank/data_2222.json", "r", encoding="utf-8") as f:
+        answer = json.load(f)
 
+    # 发送 JSON
+    headers = {
+        'host': 'bi.suitanglian.com:3012',
+        'user-agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0',
+        'accept': 'application/json, text/plain, */*',
+        'accept-language': 'undefined',
+        'accept-encoding': 'gzip, deflate, br, zstd',
+        'content-type': 'application/json;charset=utf-8',
+        'pasign': 'a35f3bd0-5071-11f1-98dd-61702fe24b2f',
+        'content-length': '113',
+        'origin': 'https://bi.suitanglian.com:3012',
+        'connection': 'keep-alive',
+        'referer': 'https://bi.suitanglian.com:3012/bi_tools.html',
+        'cookie': 'io=MRd_cQ_5OuMYB-41ABBN',
+        'sec-fetch-dest': 'empty',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-site': 'same-origin'
+    }
 
+    response = requests.post(
+        url="https://bi.suitanglian.com:3012/api/bitools/apiSaveProcessNodes",
+        json=answer,
+        headers=headers
+    )
+
+    print(f"状态码: {response.status_code}")
+    print(f"响应: {response.text}")
+# 代码题
 def do_3112():
     with open("./answer_bank/data_3112.json", "r", encoding="utf-8") as f:
         answer = json.load(f)
@@ -61,4 +92,4 @@ def do_3122():
 
 
 if __name__ == "__main__":
-    do_2112()
+    do_2222()
