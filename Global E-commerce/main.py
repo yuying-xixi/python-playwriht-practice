@@ -39,6 +39,8 @@ with Task(231416100122, 123456) as student:
     print("完成!项目二任务二")
     student.close_current_and_return()
 
+
+
     print("准备进入!项目三任务一")
     student_task = student.choose_project_task(3, 1)
     headers = student.get_headers_token(student_task)

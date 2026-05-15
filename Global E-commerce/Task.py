@@ -399,3 +399,4 @@ class Task(Student):
             page.wait_for_load_state("networkidle")
             print(f"当前页面跳转: {page.url}")
             return page
+

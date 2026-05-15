@@ -66,7 +66,7 @@ class Student:
 
         self.response_post(answer, aim_url, headers)
 
-    # 作答222(连线)
+    # 作答222(连线题)
     def do_question_2222(self, headers_cookie):
         data_name = "data_2222.json"
         aim_url = r"https://bi.suitanglian.com:3012/api/bitools/apiSaveProcessNodes"
@@ -94,7 +94,24 @@ class Student:
         print(answer)
         self.response_post(answer, aim_url, headers)
 
-    # 作答311
+    # 作答231(表格题)
+    def do_question_2312(self, headers):
+        data_name = "data_2312.json"
+        aim_url = r"https://www.suitanglian.com:3018/api/traditional/financial/submitGroupData"
+        headers = {
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0",
+            "accept": "application/json, text/plain, */*",
+            "x-token": f"{headers['x-token']}",
+            "origin": f"{headers['origin']}",
+            "referer": f"{headers['referer']}"
+        }
+
+        with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
+            answer = json.load(f)
+
+        self.response_post(answer, aim_url, headers)
+
+    # 作答311(代码题)
     def do_question_3112(self):
         data_name = "data_3112.json"
         aim_url = f"https://py.suitanglian.com:3000/api/contents/307-19086-{self.username}/main.ipynb"
