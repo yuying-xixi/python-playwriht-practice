@@ -1,0 +1,18 @@
+{
+	"data_id": 96,
+	"group_id": 664422,
+	"insertData": [
+		{
+			"decision_comparison": {
+				"chain_1": 96.17,
+				"chain_2": 2
+			},
+			"sheet_key": "chain_interpret_1",
+			"show_content": {
+				"chain_1": 96.17,
+				"chain_2": 2
+			}
+		}
+	],
+	"is_submit": 0
+}

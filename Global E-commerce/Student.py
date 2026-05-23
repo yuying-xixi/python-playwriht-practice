@@ -28,6 +28,7 @@ class Student:
         print(f"状态码: {response.status_code}")
         print(f"响应: {response.text}")
 
+
     # 发送post请求
     @staticmethod
     def response_post(answer:dict, aim_url :str, headers):
@@ -49,7 +50,43 @@ class Student:
         print(f"状态码: {response.status_code}")
         print(f"响应: {response.text}")
 
-    # 作答211(表格题)
+    # 作答112(填空题)
+    def do_question_1122(self, headers):
+        data_name_collection = ["data_1122_A.json", "data_1122_B.json"]
+        aim_url = r"https://www.suitanglian.com:3018/api/traditional/financial/submitGroupData"
+        headers = {
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0",
+            "accept": "application/json, text/plain, */*",
+            "x-token": f"{headers['x-token']}",
+            "origin": f"{headers['origin']}",
+            "referer": f"{headers['referer']}"
+        }
+
+        for data_name in data_name_collection:
+            with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
+                answer = json.load(f)
+
+            self.response_post(answer, aim_url, headers)
+
+    # 作答122(填空题)
+    def do_question_1222(self, headers):
+        data_name_collection = ["data_1222_A.json", "data_1222_B.json", "data_1222_C.json", "data_1222_D.json"]
+        aim_url = r"https://www.suitanglian.com:3018/api/traditional/financial/submitGroupData"
+        headers = {
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0",
+            "accept": "application/json, text/plain, */*",
+            "x-token": f"{headers['x-token']}",
+            "origin": f"{headers['origin']}",
+            "referer": f"{headers['referer']}"
+        }
+
+        for data_name in data_name_collection:
+            with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
+                answer = json.load(f)
+
+            self.response_post(answer, aim_url, headers)
+
+    # 作答212(表格题)
     def do_question_2112(self, headers):
         data_name = "data_2112.json"
         aim_url = r"https://www.suitanglian.com:3018/api/traditional/financial/submitGroupData"
@@ -111,6 +148,21 @@ class Student:
 
         self.response_post(answer, aim_url, headers)
 
+    # 作答232(填空题)
+    def do_question_2322(self, headers):
+        data_name = "data_2322.json"
+        aim_url = r"https://www.suitanglian.com:3018/api/traditional/financial/submitGroupData"
+        headers = {
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0",
+            "accept": "application/json, text/plain, */*",
+            "x-token": f"{headers['x-token']}"
+        }
+
+        with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
+            answer = json.load(f)
+
+        self.response_post(answer, aim_url, headers)
+
     # 作答311(代码题)
     def do_question_3112(self):
         data_name = "data_3112.json"
@@ -124,7 +176,7 @@ class Student:
 
         self.response_put(answer, aim_url, headers)
 
-    # 作答312
+    # 作答312(填空题)
     def do_question_3122(self, headers):
         data_name = "data_3122.json"
         aim_url = r"https://www.suitanglian.com:3018/api/selection_strategy/unifiedUpdateDecision"
@@ -138,5 +190,281 @@ class Student:
 
         with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
             answer = json.load(f)
+
+        self.response_post(answer, aim_url, headers)
+
+    # 作答321(代码题)
+    def do_question_3212(self):
+        data_name = "data_3212.json"
+        aim_url = f"https://py.suitanglian.com:3000/api/contents/307-19086-{self.username}/main.ipynb"
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0'
+        }
+
+        with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
+            answer = json.load(f)
+
+        self.response_put(answer, aim_url, headers)
+
+    # 作答322(填空题)
+    def do_question_3222(self, headers):
+        data_name = "data_3222.json"
+        aim_url = r"https://www.suitanglian.com:3018/api/selection_strategy/unifiedUpdateDecision"
+        headers = {
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0",
+            "accept": "application/json, text/plain, */*",
+            "x-token": f"{headers['x-token']}",
+            "origin": f"{headers['origin']}",
+            "referer": f"{headers['referer']}"
+        }
+
+        with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
+            answer = json.load(f)
+
+        self.response_post(answer, aim_url, headers)
+
+    # 作答331(代码题)
+    def do_question_3312(self):
+        data_name = "data_3312.json"
+        aim_url = f"https://py.suitanglian.com:3000/api/contents/307-19086-{self.username}/main.ipynb"
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0'
+        }
+
+        with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
+            answer = json.load(f)
+
+        self.response_put(answer, aim_url, headers)
+
+    # 作答332(填空题)
+    def do_question_3322(self, headers):
+        data_name = "data_3322.json"
+        aim_url = r"https://www.suitanglian.com:3018/api/selection_strategy/unifiedUpdateDecision"
+        headers = {
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0",
+            "accept": "application/json, text/plain, */*",
+            "x-token": f"{headers['x-token']}",
+            "origin": f"{headers['origin']}",
+            "referer": f"{headers['referer']}"
+        }
+
+        with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
+            answer = json.load(f)
+
+        self.response_post(answer, aim_url, headers)
+
+    # 作答432
+    def do_question_4323(self, headers):
+        data_name = "data_4323.json"
+        aim_url = r"https://www.suitanglian.com:3018/api/traditional/financial/submitGroupData"
+        headers = {
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0",
+            "accept": "application/json, text/plain, */*",
+            "x-token": f"{headers['x-token']}",
+            "origin": f"{headers['origin']}",
+            "referer": f"{headers['referer']}"
+        }
+
+        with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
+            answer = json.load(f)
+
+        self.response_post(answer, aim_url, headers)
+
+    # 作答433
+    def do_question_4333(self, headers):
+        data_name = "data_4333.json"
+        aim_url = r"https://www.suitanglian.com:3018/api/traditional/financial/submitGroupData"
+        headers = {
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0",
+            "accept": "application/json, text/plain, */*",
+            "x-token": f"{headers['x-token']}",
+            "origin": f"{headers['origin']}",
+            "referer": f"{headers['referer']}"
+        }
+
+        with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
+            answer = json.load(f)
+
+        self.response_post(answer, aim_url, headers)
+
+    # 作答442
+    def do_question_4423(self, headers):
+        data_name = "data_4423.json"
+        aim_url = r"https://www.suitanglian.com:3018/api/traditional/financial/submitGroupData"
+        headers = {
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0",
+            "accept": "application/json, text/plain, */*",
+            "x-token": f"{headers['x-token']}",
+            "origin": f"{headers['origin']}",
+            "referer": f"{headers['referer']}"
+        }
+
+        with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
+            answer = json.load(f)
+
+        self.response_post(answer, aim_url, headers)
+
+    # 作答443
+    def do_question_4433(self, headers):
+        data_name = "data_4433.json"
+        aim_url = r"https://www.suitanglian.com:3018/api/traditional/financial/submitGroupData"
+        headers = {
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0",
+            "accept": "application/json, text/plain, */*",
+            "x-token": f"{headers['x-token']}",
+            "origin": f"{headers['origin']}",
+            "referer": f"{headers['referer']}"
+        }
+
+        with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
+            answer = json.load(f)
+
+        self.response_post(answer, aim_url, headers)
+
+    # 作答511
+    def do_question_5112(self):
+        data_name = "data_5112.json"
+        aim_url = f"https://py.suitanglian.com:3000/api/contents/307-19086-{self.username}/main.ipynb"
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0'
+        }
+
+        with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
+            answer = json.load(f)
+
+        self.response_put(answer, aim_url, headers)
+
+    # 作答512
+    def do_question_5122(self, headers):
+        data_name = "data_5122.json"
+        aim_url = r"https://www.suitanglian.com:3018/api/selection_strategy/unifiedUpdateDecision"
+        headers = {
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0",
+            "accept": "application/json, text/plain, */*",
+            "x-token": f"{headers['x-token']}",
+            "origin": f"{headers['origin']}",
+            "referer": f"{headers['referer']}"
+        }
+
+        with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
+            answer = json.load(f)
+
+        self.response_post(answer, aim_url, headers)
+
+    # 作答521
+    def do_question_5212(self, headers):
+        data_name = "data_5212.json"
+        aim_url = r"https://www.suitanglian.com:3018/api/traditional/financial/submitGroupData"
+        headers = {
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0",
+            "accept": "application/json, text/plain, */*",
+            "x-token": f"{headers['x-token']}",
+            "origin": f"{headers['origin']}",
+            "referer": f"{headers['referer']}"
+        }
+
+        with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
+            answer = json.load(f)
+
+        self.response_post(answer, aim_url, headers)
+
+        # 第二题
+        data_name = "data_5212_A.json"
+
+        with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
+            answer = json.load(f)
+
+        self.response_post(answer, aim_url, headers)
+
+    #  作答522
+    def do_question_5222(self, headers):
+        data_name = "data_5222.json"
+        aim_url = r"https://www.suitanglian.com:3018/api/traditional/financial/submitGroupData"
+        headers = {
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0",
+            "accept": "application/json, text/plain, */*",
+            "x-token": f"{headers['x-token']}",
+            "origin": f"{headers['origin']}",
+            "referer": f"{headers['referer']}"
+        }
+
+        with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
+            answer = json.load(f)
+
+        self.response_post(answer, aim_url, headers)
+
+    # 作答611(表格题)
+    def do_question_6112(self, headers):
+        data_name = "data_6112.json"
+        aim_url = r"https://www.suitanglian.com:3015/api/cross/submitDecision"
+        headers = {
+            "Accept": "application/json, text/plain, */*",
+            "x-token": f"{headers['x-token']}"
+        }
+
+        get_url = r"https://www.suitanglian.com:3015/api/common_func/commonTable/getStepInfoByUserId?record_id=267139"
+        group_id = requests.get(get_url, headers=headers).json().get("data", {}).get('group_id')
+        print(group_id)
+
+        with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
+            answer = json.load(f)
+            answer['group_id'] = group_id
+
+        self.response_post(answer, aim_url, headers)
+
+    # 作答612
+    def do_question_6122(self, headers):
+        data_name = "data_6122.json"
+        aim_url = r"https://www.suitanglian.com:3015/api/cross/submitInterpret"
+        headers = {
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0",
+            "x-token": f"{headers['x-token']}"
+        }
+
+        get_url = r"https://www.suitanglian.com:3015/api/common_func/commonTable/getStepInfoByUserId?record_id=267139"
+        group_id = requests.get(get_url, headers=headers).json().get("data", {}).get('group_id')
+        print(group_id)
+
+        with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
+            answer = json.load(f)
+            answer['group_id'] = group_id
+
+        self.response_post(answer, aim_url, headers)
+
+    # 作答631(表格题)
+    def do_question_6312(self, headers):
+        data_name = "data_6312.json"
+        aim_url = r"https://www.suitanglian.com:3015/api/cross/submitDecision"
+        headers = {
+            "Accept": "application/json, text/plain, */*",
+            "x-token": f"{headers['x-token']}"
+        }
+
+        get_url = r"https://www.suitanglian.com:3015/api/common_func/commonTable/getStepInfoByUserId?record_id=267141"
+        group_id = requests.get(get_url, headers=headers).json().get("data", {}).get('group_id')
+        print(group_id)
+
+        with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
+            answer = json.load(f)
+            answer['group_id'] = group_id
+
+        self.response_post(answer, aim_url, headers)
+
+    # 作答632
+    def do_question_6322(self, headers):
+        data_name = "data_6322.json"
+        aim_url = r"https://www.suitanglian.com:3015/api/cross/submitInterpret"
+        headers = {
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0",
+            "x-token": f"{headers['x-token']}"
+        }
+
+        get_url = r"https://www.suitanglian.com:3015/api/common_func/commonTable/getStepInfoByUserId?record_id=267141"
+        group_id = requests.get(get_url, headers=headers).json().get("data", {}).get('group_id')
+        print(group_id)
+
+        with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
+            answer = json.load(f)
+            answer['group_id'] = group_id
 
         self.response_post(answer, aim_url, headers)

@@ -1,0 +1,43 @@
+{
+	"data_id": 71,
+	"group_id": 677525,
+	"insertData": [
+		{
+			"decision_comparison": {
+				"shop_1": 3,
+				"shop_2": 3,
+				"shop_3": 5,
+				"shop_4": "B01AN3MDMQ",
+				"shop_5": "B01HNL4OJG"
+			},
+			"sheet_key": "product_interpret_1",
+			"show_content": {
+				"shop_1": 3,
+				"shop_2": 3,
+				"shop_3": 5,
+				"shop_4": "B01AN3MDMQ",
+				"shop_5": "B01HNL4OJG"
+			}
+		},
+		{
+			"decision_comparison": {
+				"market_1": 1,
+				"market_2": 4,
+				"market_3": 3,
+				"market_4": "B08L5M9BTJ",
+				"market_5": "B09CSYNDMH",
+				"market_6": "B00YFTHJ9C"
+			},
+			"sheet_key": "product_interpret_2",
+			"show_content": {
+				"market_1": 1,
+				"market_2": 4,
+				"market_3": 3,
+				"market_4": "B08L5M9BTJ",
+				"market_5": "B09CSYNDMH",
+				"market_6": "B00YFTHJ9C"
+			}
+		}
+	],
+	"is_submit": 0
+}

@@ -1,0 +1,17 @@
+{
+	"decision": {
+		"checkList": [
+			[
+				2
+			],
+			[
+				1
+			]
+		],
+		"estimatedSales": 28
+	},
+	"decision_key": "Decision_3",
+	"is_sure": true,
+	"record_id": "19088",
+	"step": 1
+}

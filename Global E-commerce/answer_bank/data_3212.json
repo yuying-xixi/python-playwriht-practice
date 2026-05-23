@@ -1,0 +1,155 @@
+{
+	"content": {
+		"cells": [
+			{
+				"cell_type": "markdown",
+				"metadata": {},
+				"source": "# 国际站产品库选品"
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {},
+				"source": "在这一章节，你需要根据国际站爆款特征分析的分析结果，进一步筛选符合条件的产品，形成新的产品库，并评估这些产品成为潜在爆款的程度，选择最有可能成为潜力爆款的产品，从而达成选品的目的。  \n1、数据分析前准备工作：导入相关库和数据源。  \n2、属性筛选：确定产品库数据。  \n3、爆款潜力值分析：首先按照自然周分组汇总数据，从中筛选3期数据，然后进行数据的变形，整理表格并计算增幅，最后将数据归一化并计算爆款潜力值。    \n接下来请按照要求补充代码。"
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {},
+				"source": "## 一、相关库和数据源导入"
+			},
+			{
+				"cell_type": "code",
+				"execution_count": null,
+				"metadata": {
+					"trusted": true
+				},
+				"outputs": [],
+				"source": "# 导入库并忽略警告\n\nimport pandas as pd\nfrom sklearn import preprocessing\nimport warnings\nwarnings.filterwarnings('ignore')"
+			},
+			{
+				"cell_type": "code",
+				"execution_count": null,
+				"metadata": {
+					"trusted": true
+				},
+				"outputs": [],
+				"source": "# 导入数据\n\ndata = 【待填充】('../爆款选品策略/国际站数据.xlsx')  # 与国际站爆款特征分析中数据一样\ndf_new = 【待填充】('../爆款选品策略/属性数据.xlsx')  # 从国际站爆款特征分析处理过程中导出的数据"
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {},
+				"source": "## 二、基于属性筛选"
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {},
+				"source": "使用loc函数，结合str.contains方法，检查字符串中是否包含指定的子字符串，从而从df_new中选择满足所有条件的行。"
+			},
+			{
+				"cell_type": "code",
+				"execution_count": null,
+				"metadata": {
+					"trusted": true
+				},
+				"outputs": [],
+				"source": "# 使用loc函数，检查成分属性是否包含Acid、Sugar、VC、Syrup关键词，包装属性是否包含Box、Carton、OPP关键词，形状属性是否包含BALL、Stick、Cartoon、Piece、Drop、Rectangle、CUBE、Block关键词，味道属性是否包含Fruity、Sweet、Spices & Herbs关键词。\nattribute = df_new.loc[(【待填充】) & (df_new['包装'].str.contains('Box|Carton|OPP')) & (df_new['形状'].str.contains('BALL|Stick|Cartoon|Piece|Drop|Rectangle|CUBE|Block')) & (df_new['味道'].str.contains('Fruity|Sweet|Spices & Herbs'))]\n# 提取attribute字典中宝贝ID这个键对应的值，并将其转换为集合类型。\nid_list = set(attribute['宝贝ID']) \n# 筛选出data中'宝贝ID'在id_list中出现的所有行，重置索引并丢弃原来的索引。\ndata_id = 【待填充】 "
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {},
+				"source": "## 三、爆款潜力值分析"
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {},
+				"source": "使用pd.Grouper函数进行频率为'W'的分组，即它将按照每周的开始日期对数据进行分组。"
+			},
+			{
+				"cell_type": "code",
+				"execution_count": null,
+				"metadata": {
+					"trusted": true
+				},
+				"outputs": [],
+				"source": "# 按照星期一至星期日的日期和'宝贝ID'列进行分组(pd.Grouper()函数将数据按自然周（即每周的星期一至星期日）进行分组)，并计算每个组的近一年销量的总和,最后重置索引\nsummary = data_id.【待填充】"
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {},
+				"source": "筛选符合3期的数据"
+			},
+			{
+				"cell_type": "code",
+				"execution_count": null,
+				"metadata": {
+					"trusted": true
+				},
+				"outputs": [],
+				"source": "# 使用pivot_table函数创建数据透视表，基于宝贝ID，汇总采集日期，汇总方式为计数，统计每个宝贝有多少期数据。\nd_count = 【待填充】\nd_count = d_count[d_count['采集日期'] >= 3]  # 筛选至少3期的数据\nlist = d_count.index.tolist()\n\n# 筛选出summary里宝贝ID中在list中出现的所有行数据，在此数据的基础上用groupby函数对宝贝ID进行分组，结合apply函数和lambda函数(设置参数为x)分别对每个分组按照'采集日期'列进行升序排序，并使用tail函数取出最后3期数据，最后将索引重置。\ndata_id_3 = summary[summary['宝贝ID'].isin(list)].【待填充】.reset_index(drop=True)\n\ndata_id_3"
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {},
+				"source": "以上处理后data_id_3数据框的数据形式不方便计算，为了计算每个宝贝的爆款潜力值，需要对数据进行变形。  \n创建几个对应的空列表，处理数据使用for循环遍历这些不同的宝贝ID，例如，当i为1600383013129时，会筛选出3期的数据，根据索引0、1、2使用取值的方式获取到列中对应的值，再结合append函数将筛选后的数据按追加的方式存储到新列表中。最后整合成新的数据框即可，再通过计算添加两个新列，上期增幅和本期增幅。\n\n|挖掘日期|宝贝ID|采集日期1|采集日期2|采集日期3|第一期销量|第二期销量|第三期销量|上期增幅|本期增幅|\n|---|---|---|---|---|---|---|---|---|---|\n|2023/11/20|1600614413601|2023-11-05|2023-11-12|2023-11-19|1637|1648|1703|0.006720|0.033374|"
+			},
+			{
+				"cell_type": "code",
+				"execution_count": null,
+				"metadata": {
+					"trusted": true
+				},
+				"outputs": [],
+				"source": "# 数据变形，整理表格并计算增幅\ndate_drug = '2023/11/20'   # 挖掘日期\npid = []   # 宝贝ID\ndate_caiji1 = []   # 采集日期1\ndate_caiji2 = []   # 采集日期2\ndate_caiji3 = []   # 采集日期3\nsale1 = []   # 第一期销量\nsale2 = []\nsale3 = []\nfor i in set(data_id_3['宝贝ID']):\n    # 筛选一个id的3期数据，重置索引并丢弃原来的索引。\n    file_id = 【待填充】\n    # 追加宝贝ID\n    pid.append(file_id['宝贝ID'][0])  \n    # 追加采集日期1\n    date_caiji1.append(file_id['采集日期'][0])   \n    date_caiji2.append(file_id['采集日期'][1])\n    date_caiji3.append(file_id['采集日期'][2])\n    sale1.append(file_id['近一年销量'][0])\n    sale2.append(file_id['近一年销量'][1])\n    sale3.append(file_id['近一年销量'][2])\nfile_good = pd.DataFrame({'挖掘日期':date_drug,'宝贝ID':pid,'采集日期1':date_caiji1,'采集日期2':date_caiji2,'采集日期3':date_caiji3,\n                          '第一期销量':sale1,'第二期销量':sale2,'第三期销量':sale3})\nfile_good['上期增幅'] = (file_good['第二期销量']-file_good['第一期销量']) / file_good['第一期销量']\nfile_good['本期增幅'] = (file_good['第三期销量']-file_good['第二期销量']) / file_good['第二期销量']\n\nfile_good"
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {},
+				"source": "为了消除不同指标间的量纲影响，将指标进行归一化处理，即将指标限定在一定的范围内，比如0-1。"
+			},
+			{
+				"cell_type": "code",
+				"execution_count": null,
+				"metadata": {
+					"trusted": true
+				},
+				"outputs": [],
+				"source": "# 归一化数据\n# 从file_good中选择三列数据，分别是'第三期销量'、'上期增幅'和'本期增幅'。\nfile_scaler = file_good[['第三期销量','上期增幅','本期增幅']] \n# 转换为数组\nvalues = file_scaler.values   \n# 创建一个最小-最大标准化的对象，认为范围0~1\nmin_max_scaler = preprocessing.MinMaxScaler()  \n# 使用fit_transform方法对values数组进行最小-最大标准化。\nvalues_minmax = 【待填充】 \nfile_scaler_data = pd.DataFrame(values_minmax)\nfile_scaler_data.columns=['标准化第三期销量','标准化上期增幅','标准化本期增幅']\n# 使用pd.concat方法将原始的file_good和标准化后的file_scaler_data沿列方向合并，生成新的DataFrame\nfile_good_scaler = 【待填充】 "
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {},
+				"source": "根据爆款潜力值的计算分析思路，基于不同区间、不同指标赋予不同的权重进行计算即可。这里需要结合for循环和if判断，用以实现不同的区间采用不同的权重计算方法。  \n计算公式如下：  \n某产品标准化第三期销量在0-25%区间，则该产品的爆款潜力值为：标准化第三期销量x1x0.1 + 标准化上期增幅x0.3+标准化本期增幅x0.6  \n某产品标准化第三期销量在25-50%区间，则该产品的爆款潜力值为：标准化第三期销量x0.7x0.1 + 标准化上期增幅x0.3+标准化本期增幅x0.6  \n某产品标准化第三期销量在50-75%区间，则该产品的爆款潜力值为：标准化第三期销量x0.4x0.1 + 标准化上期增幅x0.3+标准化本期增幅x0.6  \n某产品标准化第三期销量在75-100%区间，则该产品的爆款潜力值为：标准化第三期销量x0.1x0.1 + 标准化上期增幅x0.3+标准化本期增幅x0.6"
+			},
+			{
+				"cell_type": "code",
+				"execution_count": null,
+				"metadata": {
+					"trusted": true
+				},
+				"outputs": [],
+				"source": "# 计算爆款潜力值\ndescribe_1 = file_scaler_data['标准化第三期销量'].describe()[4]   # 25%\ndescribe_2 = file_scaler_data['标准化第三期销量'].describe()[5]   # 50%\ndescribe_3 = file_scaler_data['标准化第三期销量'].describe()[6]   # 75%\n# 区间权重： x<=25% : 1; 25%<x<=50% : 0.7; 50%<x<=75% : 0.4; x>75% : 0.1;\n# 指标权重： 标准化近一年销量3: 0.1;  标准化上期增幅: 0.3;  标准化本期增幅: 0.6;\nfor v in range(len(file_good_scaler['挖掘日期'])):\n    if file_good_scaler['标准化第三期销量'][v] <= describe_1:\n        file_good_scaler.loc[v, '爆款潜力值'] = file_good_scaler.loc[v,'标准化第三期销量']*1*0.1 + file_good_scaler.loc[v,'标准化上期增幅']*0.3 + file_good_scaler.loc[v,'标准化本期增幅']*0.6\n    elif (file_good_scaler[ '标准化第三期销量'][v] > describe_1) & (file_good_scaler['标准化第三期销量'][v] <= describe_2):\n        【待填充】\n    elif (file_good_scaler['标准化第三期销量'][v] > describe_2) & (file_good_scaler['标准化第三期销量'][v] <= describe_3):\n        file_good_scaler.loc[v,'爆款潜力值'] = file_good_scaler.loc[v,'标准化第三期销量'] * 0.4 * 0.1 + file_good_scaler.loc[v,'标准化上期增幅'] * 0.3 + file_good_scaler.loc[v,'标准化本期增幅'] * 0.6  \n    else:\n        file_good_scaler.loc[v,'爆款潜力值'] = file_good_scaler.loc[v,'标准化第三期销量'] * 0.1 * 0.1 + file_good_scaler.loc[v,'标准化上期增幅'] * 0.3 + file_good_scaler.loc[v,'标准化本期增幅'] * 0.6\n# 按照'爆款潜力值'列对file_good_scaler数据框进行降序排序。\nfile_good_scaler = file_good_scaler.【待填充】 \nfile_good_scaler"
+			}
+		],
+		"metadata": {
+			"kernelspec": {
+				"display_name": "Python 3 (ipykernel)",
+				"language": "python",
+				"name": "python3"
+			},
+			"language_info": {
+				"codemirror_mode": {
+					"name": "ipython",
+					"version": 3
+				},
+				"file_extension": ".py",
+				"mimetype": "text/x-python",
+				"name": "python",
+				"nbconvert_exporter": "python",
+				"pygments_lexer": "ipython3",
+				"version": "3.8.9"
+			}
+		},
+		"nbformat": 4,
+		"nbformat_minor": 2
+	},
+	"type": "notebook"
+}

@@ -112,8 +112,6 @@ class Task(Student):
         page.mouse.move(x, y)
         page.mouse.click(x, y)
 
-        print(f"已点击 ({x}, {y})")
-
     @staticmethod
     def debug_click(page: Page, x: int, y: int) -> None:
         page.evaluate(f"""
@@ -214,11 +212,41 @@ class Task(Student):
             print(f"获取 headers 失败或超时: {e}")
             return None
 
+    # 拖动
+    @staticmethod
+    def drag_by_coords(page, start, end, steps=20, scroll_to_top=True):
+        """
+        按坐标拖动
 
-    def get_headers_cookie(self, page, url_keyword="suitanglian.com", timeout=20000):
+        :param page: Playwright page
+        :param start: (x, y) 起始坐标
+        :param end: (x, y) 终止坐标
+        :param steps: 拖动轨迹平滑度
+        :param scroll_to_top: 是否滚动到顶部避免坐标偏移
+        """
+
+        if scroll_to_top:
+            page.evaluate("window.scrollTo(0, 0)")
+
+        start_x, start_y = start
+        end_x, end_y = end
+
+        page.mouse.move(start_x, start_y)
+        page.mouse.down()
+
+        for i in range(steps):
+            x = start_x + (end_x - start_x) * i / steps
+            y = start_y + (end_y - start_y) * i / steps
+            page.mouse.move(x, y)
+
+        page.mouse.up()
+
+    def get_headers_cookie(self, page, x=0, y=0, url_keyword="suitanglian.com", timeout=20000):
         """
         通过拦截网络请求获取请求头中的 cookie
         :param page: Playwright 的 page 对象
+        :param x: int 触发捕获的点击x坐标
+        :param y: int 触发捕获的点击y坐标
         :param url_keyword: 过滤请求的关键词，默认为域名
         :param timeout: 等待请求的超时时间（毫秒）
         :return: 找到的 cookie 字符串，如果没找到则返回 None
@@ -228,9 +256,13 @@ class Task(Student):
             check_func = lambda req: url_keyword in req.url and "cookie" in req.headers
 
             # 使用 with 启动监听
-            with page.expect_request(check_func, timeout=timeout) as request_info:
-                # 触发页面刷新
-                self.debug_click(page, 1120, 80)
+            if x or y:
+                with page.expect_request(check_func, timeout=timeout) as request_info:
+                    self.debug_click(page, x, y)
+                    self.reload()
+            else:
+                with page.expect_request(check_func, timeout=timeout) as request_info:
+                    self.reload()
 
             # 提取并返回 cookie
             return request_info.value.headers
@@ -378,24 +410,18 @@ class Task(Student):
             else:
                 x, y = 780, 680
 
-        # 记录点击前已有的页面
-        pages_before = self.context.pages
+        try:
+            # 等待新标签页出现
+            with self.context.expect_page(timeout=3000) as new_page_info:
+                self.screen_click(page, x, y)
 
-        self.screen_click(page, x, y)
-        time.sleep(3)  # 等待页面响应
-
-        # 检查是否有新页面出现
-        pages_after = self.context.pages
-        new_pages = [p for p in pages_after if p not in pages_before]
-
-        if new_pages:
-            # 情况1: 打开了新标签页
-            new_page = new_pages[-1]
-            new_page.wait_for_load_state("networkidle")
+            # 获取新页面
+            new_page = new_page_info.value
             print(f"捕获到新页面: {new_page.url}")
             return new_page
-        else:
-            # 情况2: 在当前页面内跳转
+
+        except Exception:
+            # 没有新标签，说明是当前页面跳转
             page.wait_for_load_state("networkidle")
             print(f"当前页面跳转: {page.url}")
             return page

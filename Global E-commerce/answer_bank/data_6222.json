@@ -1,0 +1,42 @@
+{
+	"data_id": 95,
+	"group_id": 677608,
+	"insertData": [
+		{
+			"decision_comparison": {
+				"shop_1": 2,
+				"shop_2": 2
+			},
+			"sheet_key": "sales_interpret_1",
+			"show_content": {
+				"shop_1": 2,
+				"shop_2": 2
+			}
+		},
+		{
+			"decision_comparison": {
+				"product_1": 1,
+				"product_2": 2
+			},
+			"sheet_key": "sales_interpret_2",
+			"show_content": {
+				"product_1": 1,
+				"product_2": 2
+			}
+		},
+		{
+			"decision_comparison": {
+				"industry_1": 2,
+				"industry_2": 2,
+				"industry_3": 1
+			},
+			"sheet_key": "sales_interpret_3",
+			"show_content": {
+				"industry_1": 2,
+				"industry_2": 2,
+				"industry_3": 1
+			}
+		}
+	],
+	"is_submit": 0
+}

@@ -1,0 +1,17 @@
+{
+	"decision": {
+		"checkList": [
+			1
+		],
+		"inputList": [
+			"0.64",
+			"0.58",
+			"0.56",
+			"0.53"
+		]
+	},
+	"decision_key": "Decision_2",
+	"is_sure": false,
+	"record_id": "19087",
+	"step": 1
+}

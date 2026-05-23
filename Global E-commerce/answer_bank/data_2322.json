@@ -1,0 +1,38 @@
+{
+	"body": {
+		"end": false,
+		"value": {
+			"0": [
+				null,
+				17,
+				null,
+				null,
+				6
+			],
+			"1": [
+				null,
+				8.17,
+				null,
+				0,
+				null,
+				null,
+				0
+			],
+			"2": [
+				null,
+				4
+			],
+			"3": [
+				null,
+				0
+			],
+			"4": [
+				null,
+				1
+			]
+		}
+	},
+	"record_id": "18875",
+	"stemNumber": 1,
+	"type": "select"
+}
