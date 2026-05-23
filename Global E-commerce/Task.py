@@ -273,7 +273,7 @@ class Task(Student):
 
     # 点击确认并提交
     def submit_and_confirm(self, page, *points):
-        page.wait_for_load_state("networkidle")
+        page.wait_for_load_state("domcontentloaded")
         time.sleep(5)
 
         for i, (x, y) in enumerate(points):
@@ -334,7 +334,7 @@ class Task(Student):
         new_page = new_page_info.value
 
         #  等待页面内容变化,等待网络空闲或特定元素消失/出现
-        page.wait_for_load_state("networkidle")
+        page.wait_for_load_state("domcontentloaded")
 
         print(f"成功进入实验主页，新窗口标题: {new_page.title()}")
         return new_page

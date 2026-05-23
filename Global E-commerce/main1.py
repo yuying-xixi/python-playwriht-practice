@@ -5,20 +5,19 @@ from time import sleep
 # student = Task(231416100122, 123456)
 # student = Task(241537011123, 123456)
 
-with Task(241537011432, 123456) as student:
-    print("进入实验主页")
+with Task(231416100122, 123456) as student:
+
 
     # ══════════════════════════════════════════
     #  项目二任务一
     # ══════════════════════════════════════════
 
-    print("进入实验主页")
     print("准备进入!项目二任务一")
     student_task = student.choose_project_task(2, 1)
     headers = student.get_headers_token(student_task)
     student.do_question_2112(headers)
     sleep(5)
-    student.start_practice(student_task, 2, 2)
+    student_task_2 = student.start_practice(student_task, 2, 2)
     print("准备提交!项目二任务一")
     student.submit_and_confirm(student_task, (1220, 80), (1220, 170))
     print("提交完成!!!")
@@ -35,12 +34,12 @@ with Task(241537011432, 123456) as student:
     sleep(5)
     student_task_2 = student.start_practice(student_task, 2, 2)
     sleep(5)
-    cookie = student.get_headers_cookie(page=student_task_2, x=1120, y=80, url_keyword="https://bi.suitanglian.com:3012/api/bitools/apiSaveProcessNodes")
+    cookie = student.get_headers_cookie(page=student_task_2, x=1120, y=80,url_keyword="https://bi.suitanglian.com:3012/api/bitools/apiSaveProcessNodes")
     student.do_question_2222(cookie)
     student_task.reload()
     sleep(5)
+    student_task_2 = student.start_practice(student_task, 2, 2)
     print("准备提交!项目二任务二")
-    student.start_practice(student_task, 2, 2)
     student.submit_and_confirm(student_task, (1220, 80), (1220, 170))
     print("提交完成!!!")
     print("完成!项目二任务二")
@@ -68,6 +67,7 @@ with Task(241537011432, 123456) as student:
     print("第二模块提交完成!!!")
     print("完成!项目二任务三")
     student.close_current_and_return()
+
 
     # ══════════════════════════════════════════
     #  项目三任务一
@@ -237,7 +237,7 @@ with Task(241537011432, 123456) as student:
     student.do_question_6122(headers)
     student_task = student.start_practice(student_task, 2, 2)
     print("准备提交!项目六任务一模块二")
-    student.submit_and_confirm(student_task, (210, 430), (300, 380))
+    student.submit_and_confirm(student_task, (210,430), (300,380))
     print("完成!项目六任务一")
 
     student.close_current_and_return()
@@ -261,7 +261,7 @@ with Task(241537011432, 123456) as student:
     student.do_question_6322(headers)
     student_task = student.start_practice(student_task, 2, 2)
     print("准备提交!项目六任务三模块二")
-    student.submit_and_confirm(student_task, (210, 290), (300, 230))
+    student.submit_and_confirm(student_task, (210,290), (300,230))
     print("完成!项目六任务三")
 
     student.close_current_and_return()
@@ -279,8 +279,7 @@ with Task(241537011432, 123456) as student:
     sleep(5)
     student_task_2 = student.start_practice(student_task, 1, 2)
     sleep(10)
-    cookie = student.get_headers_cookie(page=student_task_2, x=1200, y=80,
-                                        url_keyword="https://bi.suitanglian.com:3012/api/bitools/apiSaveProcessNodes")
+    cookie = student.get_headers_cookie(page=student_task_2, x=1200, y=80,url_keyword="https://bi.suitanglian.com:3012/api/bitools/apiSaveProcessNodes")
     student.do_question_6412(cookie)
     student_task.reload()
     sleep(2)
