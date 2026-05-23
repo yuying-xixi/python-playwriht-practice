@@ -2,6 +2,7 @@ import json
 import requests
 
 
+
 # 表格题
 def do_2112():
     with open("./answer_bank/data_2112.json", "r", encoding="utf-8") as f:
@@ -123,7 +124,6 @@ def do_4323():
     print(response.status_code)
     print(response.text)
 
-
 def do_4423():
     with open("./answer_bank/data_4423.json", "r", encoding="utf-8") as f:
         answer = json.load(f)
@@ -136,7 +136,6 @@ def do_4423():
     response = requests.post(headers=headers, url=url, json=answer)
     print(response.status_code)
     print(response.text)
-
 
 def get_6112_id(aim_url :str, headers, aim_value):
     """
@@ -156,7 +155,6 @@ def get_6112_id(aim_url :str, headers, aim_value):
     print(f"状态码: {response.status_code}")
     print(f"响应: {response.text}")
     print(f"响应 JSON: {result.get("data", {}).get(aim_value)}")
-
 
 def do_6222():
     data_name = "data_6222.json"
@@ -185,5 +183,21 @@ def do_6222():
     print(f"状态码: {response.status_code}")
     print(f"响应: {response.text}")
 
+def do_task_3_3():
+    data_name = "data_3312.json"
+
+    aim_url = "https://py.suitanglian.com:3000/api/contents/309-19088-231416100122/main.ipynb"
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0'
+    }
+
+    with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
+        answer = json.load(f)
+
+    response = requests.put(aim_url, json=answer, headers=headers)
+
+    print(response.status_code)
+    print(response.text)
+
 if __name__ == "__main__":
-    do_6222()
+    do_task_3_3()

@@ -32,7 +32,7 @@
 					"trusted": true
 				},
 				"outputs": [],
-				"source": "# 导入数据\n\ndata = 【待填充】('../爆款选品策略/国际站数据.xlsx')  # 与国际站爆款特征分析中数据一样\ndf_new = 【待填充】('../爆款选品策略/属性数据.xlsx')  # 从国际站爆款特征分析处理过程中导出的数据"
+				"source": "# 导入数据\n \ndata = pd.read_excel('../爆款选品策略/国际站数据.xlsx')  # 与国际站爆款特征分析中数据一样\ndf_new = pd.read_excel('../爆款选品策略/属性数据.xlsx')  # 从国际站爆款特征分析处理过程中导出的数据\n"
 			},
 			{
 				"cell_type": "markdown",
@@ -51,7 +51,7 @@
 					"trusted": true
 				},
 				"outputs": [],
-				"source": "# 使用loc函数，检查成分属性是否包含Acid、Sugar、VC、Syrup关键词，包装属性是否包含Box、Carton、OPP关键词，形状属性是否包含BALL、Stick、Cartoon、Piece、Drop、Rectangle、CUBE、Block关键词，味道属性是否包含Fruity、Sweet、Spices & Herbs关键词。\nattribute = df_new.loc[(【待填充】) & (df_new['包装'].str.contains('Box|Carton|OPP')) & (df_new['形状'].str.contains('BALL|Stick|Cartoon|Piece|Drop|Rectangle|CUBE|Block')) & (df_new['味道'].str.contains('Fruity|Sweet|Spices & Herbs'))]\n# 提取attribute字典中宝贝ID这个键对应的值，并将其转换为集合类型。\nid_list = set(attribute['宝贝ID']) \n# 筛选出data中'宝贝ID'在id_list中出现的所有行，重置索引并丢弃原来的索引。\ndata_id = 【待填充】 "
+				"source": "# 使用loc函数，检查成分属性是否包含Acid、Sugar、VC、Syrup关键词，包装属性是否包含Box、Carton、OPP关键词，形状属性是否包含BALL、Stick、Cartoon、Piece、Drop、Rectangle、CUBE、Block关键词，味道属性是否包含Fruity、Sweet、Spices & Herbs关键词。\nattribute = df_new.loc[(df_new['成分'].str.contains('Acid|Sugar|VC|Syrup')) & (df_new['包装'].str.contains('Box|Carton|OPP')) & (df_new['形状'].str.contains('BALL|Stick|Cartoon|Piece|Drop|Rectangle|CUBE|Block')) & (df_new['味道'].str.contains('Fruity|Sweet|Spices & Herbs'))]\nid_list= set(attribute['宝贝ID'])  # 提取attribute字典中宝贝ID这个键对应的值，并将其转换为集合类型。\ndata_id = data[data['宝贝ID'].isin(id_list)].reset_index(drop=True)# 将data数据框中'宝贝ID'列的值筛选出来，重置索引并丢弃原来的索引，使得索引从0开始重新编号。\n"
 			},
 			{
 				"cell_type": "markdown",
@@ -70,7 +70,7 @@
 					"trusted": true
 				},
 				"outputs": [],
-				"source": "# 按照星期一至星期日的日期和'宝贝ID'列进行分组(pd.Grouper()函数将数据按自然周（即每周的星期一至星期日）进行分组)，并计算每个组的近一年销量的总和,最后重置索引\nsummary = data_id.【待填充】"
+				"source": "# 按照星期一至星期日的日期和'宝贝ID'列进行分组(pd.Grouper()函数将数据按自然周（即每周的星期一至星期日）进行分组)，并计算每个组的销量总和,最后重置索引\nsummary = data_id.groupby(['宝贝ID', pd.Grouper(key='采集日期', freq='W')]).agg({'近一年销量': 'sum'}).reset_index()\n"
 			},
 			{
 				"cell_type": "markdown",
@@ -84,7 +84,7 @@
 					"trusted": true
 				},
 				"outputs": [],
-				"source": "# 使用pivot_table函数创建数据透视表，基于宝贝ID，汇总采集日期，汇总方式为计数，统计每个宝贝有多少期数据。\nd_count = 【待填充】\nd_count = d_count[d_count['采集日期'] >= 3]  # 筛选至少3期的数据\nlist = d_count.index.tolist()\n\n# 筛选出summary里宝贝ID中在list中出现的所有行数据，在此数据的基础上用groupby函数对宝贝ID进行分组，结合apply函数和lambda函数(设置参数为x)分别对每个分组按照'采集日期'列进行升序排序，并使用tail函数取出最后3期数据，最后将索引重置。\ndata_id_3 = summary[summary['宝贝ID'].isin(list)].【待填充】.reset_index(drop=True)\n\ndata_id_3"
+				"source": "# 使用pivot_table函数创建数据透视表，基于宝贝ID，汇总采集日期，汇总方式为计数，统计每个宝贝有多少期数据。\nd_count = pd.pivot_table(summary,index='宝贝ID',values='采集日期',aggfunc='count')\nd_count = d_count[d_count['采集日期'] >= 3]  # 筛选至少3期的数据\nlist = d_count.index.tolist()\n \n# 使用isin方法筛选出summary数据框中符合条件宝贝ID中的行数据，在此数据的基础上用groupby函数进行分组汇总取值，对每个分组按照'采集日期'列进行升序排序，结合apply函数和lambda函数分别对每个宝贝进行处理，使用tail函数取出最后3期数据，最后将索引重置。\ndata_id_3 = summary[summary['宝贝ID'].isin(list)].groupby('宝贝ID').apply(lambda x: x.sort_values('采集日期', ascending=True).tail(3)).reset_index(drop=True)\n \ndata_id_3\n"
 			},
 			{
 				"cell_type": "markdown",
@@ -98,7 +98,7 @@
 					"trusted": true
 				},
 				"outputs": [],
-				"source": "# 数据变形，整理表格并计算增幅\ndate_drug = '2023/11/20'   # 挖掘日期\npid = []   # 宝贝ID\ndate_caiji1 = []   # 采集日期1\ndate_caiji2 = []   # 采集日期2\ndate_caiji3 = []   # 采集日期3\nsale1 = []   # 第一期销量\nsale2 = []\nsale3 = []\nfor i in set(data_id_3['宝贝ID']):\n    # 筛选一个id的3期数据，重置索引并丢弃原来的索引。\n    file_id = 【待填充】\n    # 追加宝贝ID\n    pid.append(file_id['宝贝ID'][0])  \n    # 追加采集日期1\n    date_caiji1.append(file_id['采集日期'][0])   \n    date_caiji2.append(file_id['采集日期'][1])\n    date_caiji3.append(file_id['采集日期'][2])\n    sale1.append(file_id['近一年销量'][0])\n    sale2.append(file_id['近一年销量'][1])\n    sale3.append(file_id['近一年销量'][2])\nfile_good = pd.DataFrame({'挖掘日期':date_drug,'宝贝ID':pid,'采集日期1':date_caiji1,'采集日期2':date_caiji2,'采集日期3':date_caiji3,\n                          '第一期销量':sale1,'第二期销量':sale2,'第三期销量':sale3})\nfile_good['上期增幅'] = (file_good['第二期销量']-file_good['第一期销量']) / file_good['第一期销量']\nfile_good['本期增幅'] = (file_good['第三期销量']-file_good['第二期销量']) / file_good['第二期销量']\n\nfile_good"
+				"source": "# 数据变形，整理表格并计算增幅\ndate_drug = '2023/11/20'   # 挖掘日期\npid = []   # 宝贝ID\ndate_caiji1 = []   # 采集日期1\ndate_caiji2 = []   # 采集日期2\ndate_caiji3 = []   # 采集日期3\nsale1 = []   # 第一期销量\nsale2 = []\nsale3 = []\nfor i in set(data_id_3['宝贝ID']):\n    file_id = data_id_3[data_id_3['宝贝ID']==i].reset_index(drop=True)   # 筛选一个id的3期数据，重置索引并丢弃原来的索引，使索引从0开始重新编号。\n    pid.append(file_id['宝贝ID'][0])  # 追加宝贝ID\n    date_caiji1.append(file_id['采集日期'][0])   # 追加采集日期1\n    date_caiji2.append(file_id['采集日期'][1])\n    date_caiji3.append(file_id['采集日期'][2])\n    sale1.append(file_id['近一年销量'][0])\n    sale2.append(file_id['近一年销量'][1])\n    sale3.append(file_id['近一年销量'][2])\nfile_good = pd.DataFrame({'挖掘日期':date_drug,'宝贝ID':pid,'采集日期1':date_caiji1,'采集日期2':date_caiji2,'采集日期3':date_caiji3,\n                          '第一期销量':sale1,'第二期销量':sale2,'第三期销量':sale3})\nfile_good['上期增幅'] = (file_good['第二期销量']-file_good['第一期销量']) / file_good['第一期销量']\nfile_good['本期增幅'] = (file_good['第三期销量']-file_good['第二期销量']) / file_good['第二期销量']\n \nfile_good\n"
 			},
 			{
 				"cell_type": "markdown",
@@ -112,7 +112,7 @@
 					"trusted": true
 				},
 				"outputs": [],
-				"source": "# 归一化数据\n# 从file_good中选择三列数据，分别是'第三期销量'、'上期增幅'和'本期增幅'。\nfile_scaler = file_good[['第三期销量','上期增幅','本期增幅']] \n# 转换为数组\nvalues = file_scaler.values   \n# 创建一个最小-最大标准化的对象，认为范围0~1\nmin_max_scaler = preprocessing.MinMaxScaler()  \n# 使用fit_transform方法对values数组进行最小-最大标准化。\nvalues_minmax = 【待填充】 \nfile_scaler_data = pd.DataFrame(values_minmax)\nfile_scaler_data.columns=['标准化第三期销量','标准化上期增幅','标准化本期增幅']\n# 使用pd.concat方法将原始的file_good和标准化后的file_scaler_data沿列方向合并，生成新的DataFrame\nfile_good_scaler = 【待填充】 "
+				"source": "# 归一化数据\nfile_scaler = file_good[['第三期销量','上期增幅','本期增幅']] # 从file_good中选择三列数据，分别是'第三期销量'、'上期增幅'和'本期增幅'。\nvalues = file_scaler.values   # 转换为数组\nmin_max_scaler = preprocessing.MinMaxScaler()  # 创建一个最小-最大标准化的对象，认为范围0~1\nvalues_minmax = min_max_scaler.fit_transform(values)# 使用fit_transform方法对values数组进行最小-最大标准化。\nfile_scaler_data = pd.DataFrame(values_minmax)\nfile_scaler_data.columns=['标准化第三期销量','标准化上期增幅','标准化本期增幅']\nfile_good_scaler = pd.concat([file_good,file_scaler_data],axis=1) # 使用pd.concat方法将原始的file_good和标准化后的file_scaler_data沿列方向合并，生成新的DataFrame\n \n"
 			},
 			{
 				"cell_type": "markdown",
@@ -126,7 +126,7 @@
 					"trusted": true
 				},
 				"outputs": [],
-				"source": "# 计算爆款潜力值\ndescribe_1 = file_scaler_data['标准化第三期销量'].describe()[4]   # 25%\ndescribe_2 = file_scaler_data['标准化第三期销量'].describe()[5]   # 50%\ndescribe_3 = file_scaler_data['标准化第三期销量'].describe()[6]   # 75%\n# 区间权重： x<=25% : 1; 25%<x<=50% : 0.7; 50%<x<=75% : 0.4; x>75% : 0.1;\n# 指标权重： 标准化近一年销量3: 0.1;  标准化上期增幅: 0.3;  标准化本期增幅: 0.6;\nfor v in range(len(file_good_scaler['挖掘日期'])):\n    if file_good_scaler['标准化第三期销量'][v] <= describe_1:\n        file_good_scaler.loc[v, '爆款潜力值'] = file_good_scaler.loc[v,'标准化第三期销量']*1*0.1 + file_good_scaler.loc[v,'标准化上期增幅']*0.3 + file_good_scaler.loc[v,'标准化本期增幅']*0.6\n    elif (file_good_scaler[ '标准化第三期销量'][v] > describe_1) & (file_good_scaler['标准化第三期销量'][v] <= describe_2):\n        【待填充】\n    elif (file_good_scaler['标准化第三期销量'][v] > describe_2) & (file_good_scaler['标准化第三期销量'][v] <= describe_3):\n        file_good_scaler.loc[v,'爆款潜力值'] = file_good_scaler.loc[v,'标准化第三期销量'] * 0.4 * 0.1 + file_good_scaler.loc[v,'标准化上期增幅'] * 0.3 + file_good_scaler.loc[v,'标准化本期增幅'] * 0.6  \n    else:\n        file_good_scaler.loc[v,'爆款潜力值'] = file_good_scaler.loc[v,'标准化第三期销量'] * 0.1 * 0.1 + file_good_scaler.loc[v,'标准化上期增幅'] * 0.3 + file_good_scaler.loc[v,'标准化本期增幅'] * 0.6\n# 按照'爆款潜力值'列对file_good_scaler数据框进行降序排序。\nfile_good_scaler = file_good_scaler.【待填充】 \nfile_good_scaler"
+				"source": "# 计算爆款潜力值\ndescribe_1 = file_scaler_data['标准化第三期销量'].describe()[4]   # 25%\ndescribe_2 = file_scaler_data['标准化第三期销量'].describe()[5]   # 50%\ndescribe_3 = file_scaler_data['标准化第三期销量'].describe()[6]   # 75%\n# 区间权重： x<=25% : 1; 25%<x<=50% : 0.7; 50%<x<=75% : 0.4; x>75% : 0.1;\n# 指标权重： 标准化近一年销量3: 0.1;  标准化上期增幅: 0.3;  标准化本期增幅: 0.6;\nfor v in range(len(file_good_scaler['挖掘日期'])):\n    if file_good_scaler['标准化第三期销量'][v] <= describe_1:\n        file_good_scaler.loc[v, '爆款潜力值'] = file_good_scaler.loc[v,'标准化第三期销量']*1*0.1 + file_good_scaler.loc[v,'标准化上期增幅']*0.3 + file_good_scaler.loc[v,'标准化本期增幅']*0.6\n    elif (file_good_scaler[ '标准化第三期销量'][v] > describe_1) & (file_good_scaler['标准化第三期销量'][v] <= describe_2):\n        file_good_scaler.loc[v,'爆款潜力值'] = file_good_scaler.loc[v,'标准化第三期销量'] * 0.7 * 0.1 + file_good_scaler.loc[v,'标准化上期增幅'] * 0.3 + file_good_scaler.loc[v,'标准化本期增幅'] * 0.6\n    elif (file_good_scaler['标准化第三期销量'][v] > describe_2) & (file_good_scaler['标准化第三期销量'][v] <= describe_3):\n        file_good_scaler.loc[v,'爆款潜力值'] = file_good_scaler.loc[v,'标准化第三期销量'] * 0.4 * 0.1 + file_good_scaler.loc[v,'标准化上期增幅'] * 0.3 + file_good_scaler.loc[v,'标准化本期增幅'] * 0.6   # 不同写法\n    else:\n        file_good_scaler.loc[v,'爆款潜力值'] = file_good_scaler.loc[v,'标准化第三期销量'] * 0.1 * 0.1 + file_good_scaler.loc[v,'标准化上期增幅'] * 0.3 + file_good_scaler.loc[v,'标准化本期增幅'] * 0.6\nfile_good_scaler = file_good_scaler.sort_values('爆款潜力值',ascending=False) # 按照'爆款潜力值'列对file_good_scaler数据框进行降序排序。\nprint(file_good_scaler)\n"
 			}
 		],
 		"metadata": {

@@ -196,7 +196,8 @@ class Student:
     # 作答321(代码题)
     def do_question_3212(self):
         data_name = "data_3212.json"
-        aim_url = f"https://py.suitanglian.com:3000/api/contents/307-19086-{self.username}/main.ipynb"
+        # https://py.suitanglian.com:3000/api/contents/308-19087-231416100122/main.ipynb
+        aim_url = f"https://py.suitanglian.com:3000/api/contents/308-19087-{self.username}/main.ipynb"
         headers = {
             'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0'
         }
@@ -226,7 +227,9 @@ class Student:
     # 作答331(代码题)
     def do_question_3312(self):
         data_name = "data_3312.json"
-        aim_url = f"https://py.suitanglian.com:3000/api/contents/307-19086-{self.username}/main.ipynb"
+        # https://py.suitanglian.com:3000/api/contents/309-19088-231416100122/main.ipynb
+        # https://py.suitanglian.com:3000/api/contents/309-19088-231416100122/main.ipynb
+        aim_url = f"https://py.suitanglian.com:3000/api/contents/309-19088-{self.username}/main.ipynb"
         headers = {
             'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0'
         }
@@ -324,7 +327,8 @@ class Student:
     # 作答511
     def do_question_5112(self):
         data_name = "data_5112.json"
-        aim_url = f"https://py.suitanglian.com:3000/api/contents/307-19086-{self.username}/main.ipynb"
+        # https://py.suitanglian.com:3000/api/contents/310-19518-231416100122/main.ipynb
+        aim_url = f"https://py.suitanglian.com:3000/api/contents/310-19518-{self.username}/main.ipynb"
         headers = {
             'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0'
         }

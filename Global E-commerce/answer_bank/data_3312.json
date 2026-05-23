@@ -20,7 +20,7 @@
 				"cell_type": "code",
 				"execution_count": null,
 				"metadata": {
-					"trusted": false
+					"trusted": true
 				},
 				"outputs": [],
 				"source": "import pandas as pd\nimport ast\nimport warnings\nwarnings.filterwarnings('ignore')"
@@ -29,10 +29,10 @@
 				"cell_type": "code",
 				"execution_count": null,
 				"metadata": {
-					"trusted": false
+					"trusted": true
 				},
 				"outputs": [],
-				"source": "data = 【待填充】('../爆款选品策略/国际站数据.xlsx')\nprint(data.dtypes)\ndata['宝贝ID'] = 【待填充】.astype(str) # 将宝贝ID的格式转换为字符串"
+				"source": "data = pd.read_excel('../爆款选品策略/国际站数据.xlsx')\nprint(data.dtypes)\ndata['宝贝ID'] = data['宝贝ID'].astype(str) # 将宝贝ID转换为字符串\n \n"
 			},
 			{
 				"cell_type": "markdown",
@@ -43,10 +43,10 @@
 				"cell_type": "code",
 				"execution_count": null,
 				"metadata": {
-					"trusted": false
+					"trusted": true
 				},
 				"outputs": [],
-				"source": "# 从data数据框中筛选出'宝贝ID'列值为'1600616216994'的行，然后按照'采集日期'列进行升序排序，最后重置索引并丢弃原来的索引，使得索引从0开始重新编号。\ndf = 【待填充】.reset_index(drop=True)\n# 取2023-10月的最后一个日期和最后一行（即最新日期），并忽略合并时的索引\nnew_df = pd.concat([【待填充】, df.tail(1)], ignore_index=True)\n# 将'近一年销量(月)'列从字符串转化为Python对象列表\nnew_df['近一年销量(月)'] = new_df['近一年销量(月)'].apply(ast.literal_eval)\n# 将 new_df['近一年销量(月)'][0] 和 new_df['近一年销量(月)'][1]转换为两个DataFrame，并按行合并成一个新的DataFrame，其中新DataFrame的列名为'month'和'transactions'。\nmonth_sale = pd.concat([pd.DataFrame(new_df['近一年销量(月)'][0], columns=['month', 'transactions']),pd.DataFrame(new_df['近一年销量(月)'][1], columns=['month', 'transactions'])])\n# 根据month列和transactions列去重,并去掉最后一行2023-11月数据\nmonth_sale = month_sale.drop_duplicates(subset=【待填充】)[:-1]\n\nmonth_sale"
+				"source": "# 从data数据框中筛选出'宝贝ID'列值为'1600616216994'的行，然后按照'采集日期'列进行升序排序，最后重置索引并丢弃原来的索引，使得索引从0开始重新编号。\ndf = data[data['宝贝ID'] == '1600616216994'].sort_values('采集日期',ascending=True).reset_index(drop=True)\n# 取2023-10月的最后一个日期和最后一行（即最新日期），并忽略合并时的索引\nnew_df = pd.concat([df[df['采集日期'] =='2023-10-31'], df.tail(1)], ignore_index=True)\n# 将'近一年销量(月)'列从字符串转化为Python对象列表\nnew_df['近一年销量(月)'] = new_df['近一年销量(月)'].apply(ast.literal_eval)\n# 将 new_df['近一年销量(月)'][0] 和 new_df['近一年销量(月)'][1]转换为两个DataFrame，并按行合并成一个新的DataFrame，其中新DataFrame的列名为'month'和'transactions'。\nmonth_sale = pd.concat([pd.DataFrame(new_df['近一年销量(月)'][0], columns=['month', 'transactions']),\n                        pd.DataFrame(new_df['近一年销量(月)'][1], columns=['month', 'transactions'])])\n# 根据month列和transactions列去重,并去掉最后一行2023-11月数据\nmonth_sale = month_sale.drop_duplicates(subset=['month','transactions'])[:-1]\nmonth_sale\n"
 			},
 			{
 				"cell_type": "markdown",
@@ -57,10 +57,10 @@
 				"cell_type": "code",
 				"execution_count": null,
 				"metadata": {
-					"trusted": false
+					"trusted": true
 				},
 				"outputs": [],
-				"source": "# 将'month'列转换为datetime类型\nmonth_sale2 = pd.DataFrame()\nmonth_sale2['month'] = pd.to_datetime(month_sale['month'], format='%Y-%m')\n# 计算总交易量\ntotal_transactions = month_sale['transactions'].sum()\n# 将交易量数据归一化，使其总和为1（或100%），以更好地反映趋势和变化\nmonth_sale2['transactions'] = 【待填充】\n# 计算移动平均值，这里使用3个月的移动平均值\nmonth_sale2['moving_average'] = 【待填充】\n# 预测2023-11月的销量\n# 使用前三个月的移动平均值作为预测的依据\npredicted_sales = 【待填充】  # 恢复原始的交易量数据大小\nprint(f\"预测的2023-11月销量为：{predicted_sales:.0f}\")"
+				"source": "# 将'month'列转换为datetime类型\nmonth_sale2 = pd.DataFrame()\nmonth_sale2['month'] = pd.to_datetime(month_sale['month'], format='%Y-%m')\n# 计算总交易量\ntotal_transactions = month_sale['transactions'].sum()\n# 将交易量数据归一化，使其总和为1（或100%），以更好地反映趋势和变化\nmonth_sale2['transactions'] = month_sale['transactions'] / total_transactions\n# 计算移动平均值，这里使用3个月的移动平均值\nmonth_sale2['moving_average'] = month_sale2['transactions'].rolling(window=3).mean()\n# 预测2023-11月的销量\n# 使用前三个月的移动平均值作为预测的依据\npredicted_sales = month_sale2['moving_average'].iloc[-1] * total_transactions  # 恢复原始的交易量数据大小\nprint(f\"预测的2023-11月销量为：{predicted_sales:.0f}\")输出结果：\n\n"
 			}
 		],
 		"metadata": {
