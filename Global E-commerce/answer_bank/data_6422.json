@@ -1,0 +1,25 @@
+{
+	"decision": {
+		"checkList": [
+			[
+				0
+			],
+			[
+				3
+			],
+			[
+				0
+			],
+			[
+				3
+			],
+			[
+				1
+			]
+		]
+	},
+	"decision_key": "Decision_5",
+	"is_sure": false,
+	"record_id": "19519",
+	"step": 1
+}

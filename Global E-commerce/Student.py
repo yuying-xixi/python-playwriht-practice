@@ -468,3 +468,47 @@ class Student:
             answer['group_id'] = group_id
 
         self.response_post(answer, aim_url, headers)
+
+    # 作答641(连线题)
+    def do_question_6412(self, headers_cookie):
+        data_name = "data_6412.json"
+        aim_url = r"https://bi.suitanglian.com:3012/api/bitools/apiSaveProcessNodes"
+
+        with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
+            answer = json.load(f)
+            answer['group_key'] = f"cross_border14-19519-{self.username}"
+            answer['student_id'] = f"{self.username}"
+
+
+        headers = {
+            "Accept": "application/json, text/plain, */*",
+            "Accept-Encoding": "gzip, deflate, br, zstd",
+            "Accept-Language": "zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2",
+            "Connection": "keep-alive",
+            "Content-Type": "application/json;charset=utf-8",
+            "Cookie": f"{headers_cookie['cookie']}",
+            "Host": "bi.suitanglian.com:3012",
+            "Origin": "https://bi.suitanglian.com:3012",
+            "Pasign": f"{headers_cookie['pasign']}",
+            "Referer": "https://bi.suitanglian.com:3012/bi_tools.html",
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0"
+        }
+
+        self.response_post(answer, aim_url, headers)
+
+    # 作答642
+    def do_question_6422(self, headers):
+        data_name = "data_6422.json"
+        aim_url = r"https://www.suitanglian.com:3018/api/selection_strategy/unifiedUpdateDecision"
+        headers = {
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0",
+            "accept": "application/json, text/plain, */*",
+            "x-token": f"{headers['x-token']}",
+            "origin": f"{headers['origin']}",
+            "referer": f"{headers['referer']}"
+        }
+
+        with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
+            answer = json.load(f)
+
+        self.response_post(answer, aim_url, headers)

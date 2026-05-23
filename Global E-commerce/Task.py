@@ -2,6 +2,7 @@ import time
 from Student import Student
 
 from playwright.sync_api import sync_playwright, Page, ViewportSize
+from playwright.sync_api import TimeoutError
 
 class Task(Student):
     # 登录地址
@@ -259,7 +260,6 @@ class Task(Student):
             if x or y:
                 with page.expect_request(check_func, timeout=timeout) as request_info:
                     self.debug_click(page, x, y)
-                    self.reload()
             else:
                 with page.expect_request(check_func, timeout=timeout) as request_info:
                     self.reload()
@@ -368,14 +368,17 @@ class Task(Student):
         # 等待进入实验按钮加载
         time.sleep(2)
 
-        # 捕获点击"进入实验"后的新页面
-        with self.context.expect_page() as new_page_info:
-            print("进行点击")
-            self.screen_click(self.home, 720, 210)
-        if new_page_info:
+        try:
+            with self.context.expect_page(timeout=3000) as new_page_info:
+                print("进行点击")
+                self.screen_click(self.home, 720, 210)
+
             print("进入实验选择页面成功")
             return new_page_info.value
-        return None
+
+        except TimeoutError:
+            print("进入实验页面超时，跳过")
+            return None
 
     # 选择练习模块,并进入练习
     def start_practice(self, page, choose_practice_index, practice_number=2):
@@ -393,7 +396,7 @@ class Task(Student):
             print(f"不存在第{choose_practice_index}个训练模块")
             exit()
 
-        page.wait_for_load_state("networkidle")
+        page.wait_for_load_state("domcontentloaded")
 
         time.sleep(10)
 
@@ -411,18 +414,18 @@ class Task(Student):
                 x, y = 780, 680
 
         try:
-            # 等待新标签页出现
             with self.context.expect_page(timeout=3000) as new_page_info:
                 self.screen_click(page, x, y)
 
-            # 获取新页面
             new_page = new_page_info.value
             print(f"捕获到新页面: {new_page.url}")
             return new_page
 
-        except Exception:
-            # 没有新标签，说明是当前页面跳转
-            page.wait_for_load_state("networkidle")
-            print(f"当前页面跳转: {page.url}")
+        except TimeoutError:
+            print("没有新标签页，继续当前页面")
+
+            page.wait_for_timeout(2000)
+
+            print(f"当前页面: {page.url}")
             return page
 
