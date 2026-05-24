@@ -26,7 +26,6 @@ class Student:
         )
 
         print(f"状态码: {response.status_code}")
-        print(f"响应: {response.text}")
 
 
     # 发送post请求
@@ -48,7 +47,6 @@ class Student:
         )
 
         print(f"状态码: {response.status_code}")
-        print(f"响应: {response.text}")
 
     # 作答112(填空题)
     def do_question_1122(self, headers):
@@ -419,7 +417,6 @@ class Student:
 
         get_url = r"https://www.suitanglian.com:3015/api/common_func/commonTable/getStepInfoByUserId?record_id=267139"
         group_id = requests.get(get_url, headers=headers).json().get("data", {}).get('group_id')
-        print(group_id)
 
         with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
             answer = json.load(f)
@@ -438,7 +435,6 @@ class Student:
 
         get_url = r"https://www.suitanglian.com:3015/api/common_func/commonTable/getStepInfoByUserId?record_id=267139"
         group_id = requests.get(get_url, headers=headers).json().get("data", {}).get('group_id')
-        print(group_id)
 
         with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
             answer = json.load(f)

@@ -80,6 +80,11 @@ def task_2_2(student):
     student.start_practice(student_task, 2, 2)
     sleep(5)
     cookie = student.get_headers_cookie(page=student_task, url_keyword="https://bi.suitanglian.com:3012/api/bitools/apiSaveProcessNodes")
+
+    if not cookie:
+        student.close_current_and_return()
+        return "项目二任务二可能已经作答或cookie获取失败"
+
     student.do_question_2222(cookie)
     student_task.reload()
     sleep(5)
@@ -298,7 +303,7 @@ def task_5_2(student):
     # 提交模块1
     student.start_practice(student_task, 1, 2)
     sleep(5)
-    print("正在提交!项目二任务三")
+    print("正在提交!项目五任务三")
     student.confirm_commit_click(student_task)
     print("第一模块提交完成!!!")
 
@@ -392,7 +397,11 @@ def task_6_4(student):
     student.start_practice(student_task, 1, 2)
     sleep(5)
     cookie = student.get_headers_cookie(page=student_task, url_keyword="https://bi.suitanglian.com:3012/api/bitools/apiSaveProcessNodes")
-    print(cookie)
+
+    if not cookie:
+        student.close_current_and_return()
+        return "项目六任务四可能已经作答或cookie获取失败"
+
     student.do_question_6412(cookie)
     student_task.reload()
     sleep(2)

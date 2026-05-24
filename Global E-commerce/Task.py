@@ -484,14 +484,14 @@ class Task(Student):
                 self.screen_click(page, x, y)
 
             new_page = new_page_info.value
-            print(f"捕获到新页面: {new_page.url}")
+            # print(f"捕获到新页面: {new_page.url}")
             return new_page
 
         except TimeoutError:
-            print("没有新标签页，继续当前页面")
+            # print("没有新标签页，继续当前页面")
 
             page.wait_for_timeout(2000)
 
-            print(f"当前页面: {page.url}")
+            # print(f"当前页面: {page.url}")
             return page
 
