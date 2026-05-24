@@ -382,15 +382,26 @@ class Student:
 
     #  作答522
     def do_question_5222(self, headers):
-        data_name = "data_5222.json"
+        # 作答结果分析
+        data_name = "data_5222_B.json"
         aim_url = r"https://www.suitanglian.com:3018/api/traditional/financial/submitGroupData"
+        print(headers)
         headers = {
             "user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0",
             "accept": "application/json, text/plain, */*",
-            "x-token": f"{headers['x-token']}",
-            "origin": f"{headers['origin']}",
-            "referer": f"{headers['referer']}"
+            "x-token": headers["x-token"],
+            "origin": headers["origin"],
+            "referer": headers["referer"]
         }
+
+        with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
+            answer = json.load(f)
+
+        self.response_post(answer, aim_url, headers)
+
+        # 作答excel表格
+        data_name = "data_5222_A.json"
+        aim_url = r"https://www.suitanglian.com:3018/api/traditional/financial/submitGroupData"
 
         with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
             answer = json.load(f)

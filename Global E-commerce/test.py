@@ -199,5 +199,37 @@ def do_task_3_3():
     print(response.status_code)
     print(response.text)
 
+
+def do_5222():
+    data_name = "data_5222_A.json"
+    aim_url = r"https://www.suitanglian.com:3018/api/traditional/financial/submitGroupData"
+    headers = {
+        "Accept": "application/json, text/plain, */*",
+        "Accept-Encoding": "gzip, deflate, br, zstd",
+        "Accept-Language": "zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2",
+        "Connection": "keep-alive",
+        "Content-Length": "84",
+        "Content-Type": "application/json;charset=utf-8",
+        "Cookie": "ydtsession=d4368f70-c375ba63-567d-4e6f-ad40-37672b2e974f",
+        "Host": "www.suitanglian.com:3018",
+        "Origin": "https://www.suitanglian.com:3018",
+        "Priority": "u=0",
+        "Referer": "https://www.suitanglian.com:3018/crossBorder.html",
+        "Sec-Fetch-Dest": "empty",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Site": "same-origin",
+        "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0",
+        "x-token": "009a04e154b9a9e36f21cc9a8881ec136f224d92d0160ecedfcf399d52715763cded43a8096445aaa93891e0ccab80b0e9d6b89dfbd7a6edb9102168b2990d2b56f200d23630018445a089fb979ed708a3cc3af7bc7738a7e9758c4f129290fdeacf88f5dbc9e3af755f49f26a4f23969c59877da037951deb9bb8f798f940c9eadf8cd17ed070cc01f6f238ee287408100fee8feba82ef83feffbc8c652ffec"
+    }
+
+    with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
+        answer = json.load(f)
+
+    response = requests.post(aim_url, json=answer,  headers=headers)
+
+    print(f"状态码: {response.status_code}")
+    print(f"响应: {response.text}")
+
+
 if __name__ == "__main__":
-    do_task_3_3()
+    do_5222()

@@ -1,4 +1,6 @@
 import time
+from asyncio import sleep
+
 from Student import Student
 
 from playwright.sync_api import sync_playwright, Page, ViewportSize
@@ -113,6 +115,7 @@ class Task(Student):
         page.mouse.move(x, y)
         page.mouse.click(x, y)
 
+    # 屏幕点击调试
     @staticmethod
     def debug_click(page: Page, x: int, y: int) -> None:
         page.evaluate(f"""
@@ -187,6 +190,68 @@ class Task(Student):
 
         print(f"已点击 ({x}, {y})")
 
+    # 保存按钮
+    @staticmethod
+    def save_click(page: Page,  content='保 存', iframe_id='#iframe_window') -> None:
+        try:
+            # 1. 定位到第一层 iframe
+            iframe = page.frame_locator(iframe_id)
+
+            # 2. 动态定位按钮 (添加 exact=False 忽略空格和大小写差异)
+            # 比如 content="保存"，即便 HTML 里是 "保 存" 或 "  保存  " 也能匹配到
+            save_button = iframe.get_by_role("button", name=content, exact=False)
+
+            print(f"正在尝试点击按钮: '{content}'")
+
+            # 3. 等待并点击
+            save_button.wait_for(state="visible", timeout=5000)
+            save_button.click()
+            print(f"成功点击按钮: '{content}'")
+
+        except TimeoutError:
+            print(f"超时：未能在5秒内找到或点击按钮 '{content}'，已自动跳过")
+        except Exception as e:
+            print(f"点击按钮 '{content}' 时发生其他错误: {e}，已自动跳过")
+
+    # 提交并确认
+    @staticmethod
+    def confirm_commit_click(page: Page, iframe_id='#iframe_window') -> None:
+        try:
+            # 1. 定位到第一层 iframe
+            iframe = page.frame_locator(iframe_id)
+
+            # ================= 步骤 1：点击【提交】 =================
+            try:
+                # 在该 iframe 内通过角色(button)和名字(提交)定位按钮
+                commit_button = iframe.get_by_role("button", name="提 交")
+
+                # 等待按钮可见并点击
+                commit_button.wait_for(state="visible", timeout=5000)
+                commit_button.click()
+                print("成功点击【提交】按钮")
+            except TimeoutError:
+                print("未在限定时间内检测到【提交】按钮，已跳过")
+            except Exception as e:
+                print(f"点击【提交】时发生其他错误: {e}，已跳过")
+
+            # ================= 步骤 2：点击【确定】 =================
+            try:
+                # 在该 iframe 内通过角色(button)和名字(确认)定位按钮
+                confirm_button = iframe.get_by_role("button", name="确 定")
+
+                # 点击
+                confirm_button.wait_for(state="visible", timeout=5000)
+                confirm_button.click()
+                print("成功点击【确定】按钮")
+            except TimeoutError:
+                print("未在限定时间内检测到【确定】按钮，已跳过")
+            except Exception as e:
+                print(f"点击【确定】时发生其他错误: {e}，已跳过")
+
+        except Exception as main_e:
+            print(f"Iframe 定位或整体流程发生重大异常: {main_e}")
+
+
     # headers获取
     @staticmethod
     def get_headers_token(page, url_keyword="suitanglian.com", timeout=20000):
@@ -242,6 +307,7 @@ class Task(Student):
 
         page.mouse.up()
 
+    # 获取cookie
     def get_headers_cookie(self, page, x=0, y=0, url_keyword="suitanglian.com", timeout=20000):
         """
         通过拦截网络请求获取请求头中的 cookie
@@ -262,7 +328,7 @@ class Task(Student):
                     self.debug_click(page, x, y)
             else:
                 with page.expect_request(check_func, timeout=timeout) as request_info:
-                    self.reload()
+                    self.save_click(page)
 
             # 提取并返回 cookie
             return request_info.value.headers
