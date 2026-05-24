@@ -2,7 +2,6 @@ import json
 import requests
 
 
-
 # 表格题
 def do_2112():
     with open("./answer_bank/data_2112.json", "r", encoding="utf-8") as f:
@@ -230,6 +229,27 @@ def do_5222():
     print(f"状态码: {response.status_code}")
     print(f"响应: {response.text}")
 
+def do_641():
+    aim_url = r"https://bi.suitanglian.com:3012/api/bitools/apiSaveProcessNodes"
+    data_name = "data_6412.json"
+    headers = {
+        "Accept": "application/json, text/plain, */*",
+        "Content-Type": "application/json; charset=utf-8",
+        "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0",
+        "Origin": "https://bi.suitanglian.com:3012",
+        "Referer": "https://bi.suitanglian.com:3012/bi_tools.html",
+        "Host": "bi.suitanglian.com:3012",
+        "Cookie": "io=ojDO-WE8ZN8GawNQAAS7",
+        "Pasign": "dddf0210-5786-11f1-b89e-2b06e60b54c1"
+    }
+
+    with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
+        answer = json.load(f)
+        answer['group_key'] = f"cross_border14-19519-{241438010104}"
+        answer['student_id'] = f"{241438010104}"
+
+    response = requests.post(aim_url, json=answer, headers=headers)
+    print(response.text)
 
 if __name__ == "__main__":
-    do_5222()
+    do_641()

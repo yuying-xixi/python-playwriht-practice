@@ -494,19 +494,15 @@ class Student:
             answer['group_key'] = f"cross_border14-19519-{self.username}"
             answer['student_id'] = f"{self.username}"
 
-
         headers = {
             "Accept": "application/json, text/plain, */*",
-            "Accept-Encoding": "gzip, deflate, br, zstd",
-            "Accept-Language": "zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2",
-            "Connection": "keep-alive",
-            "Content-Type": "application/json;charset=utf-8",
-            "Cookie": f"{headers_cookie['cookie']}",
-            "Host": "bi.suitanglian.com:3012",
+            "Content-Type": "application/json; charset=utf-8",
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0",
             "Origin": "https://bi.suitanglian.com:3012",
-            "Pasign": f"{headers_cookie['pasign']}",
             "Referer": "https://bi.suitanglian.com:3012/bi_tools.html",
-            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0"
+            "Host": "bi.suitanglian.com:3012",
+            "Cookie": headers_cookie["cookie"],
+            "Pasign": headers_cookie["pasign"]
         }
 
         self.response_post(answer, aim_url, headers)
