@@ -252,4 +252,14 @@ def do_641():
     print(response.text)
 
 if __name__ == "__main__":
-    do_641()
+    data_name = "data_3112.json"
+    aim_url = f"https://py.suitanglian.com:3000/api/contents/307-19086-{241408030325}/main.ipynb"
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0'
+    }
+
+    with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
+        answer = json.load(f)
+
+    res = requests.put(aim_url, json=answer, headers=headers)
+    print(res.status_code)

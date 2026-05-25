@@ -305,7 +305,7 @@ def task_5_2(student):
     # 提交模块1
     student.start_practice(student_task, 1, 2)
     sleep(5)
-    print("正在提交!项目五任务三")
+    print("正在提交!项目五任务二")
     student.confirm_commit_click(student_task)
     print("第一模块提交完成!!!")
 
@@ -406,6 +406,14 @@ def task_6_4(student):
 
     student.do_question_6412(cookie)
     student_task.reload()
+
+    # 提交模块1
+    student.start_practice(student_task, 1, 2)
+    sleep(5)
+    student.save_click(student_task)
+    student_task.reload()
+
+    # 作答模块2
     sleep(2)
     student.do_question_6422(token)
     sleep(3)
@@ -426,9 +434,9 @@ if __name__ == "__main__":
     # student = Task(231416100122, 123456)
     # student = Task(241537011123, 123456)
 
-    with Task(231416100122, 123456) as student:
-        # task_1_1(student)
-        # task_1_2(student)
+    with Task(241408030325, 123456) as student:
+        task_1_1(student)
+        task_1_2(student)
         # task_2_1(student)
         # task_2_2(student)
         # task_2_3(student)
@@ -437,8 +445,8 @@ if __name__ == "__main__":
         # task_3_3(student)
         # task_4_3(student)
         # task_4_4(student)
-        # task_5_1(student)
-        # task_5_2(student)
-        # task_6_1(student)
-        # task_6_3(student)
-        # task_6_4(student)
+        task_5_1(student)
+        task_5_2(student)
+        task_6_1(student)
+        task_6_3(student)
+        task_6_4(student)
