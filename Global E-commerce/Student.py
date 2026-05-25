@@ -355,7 +355,7 @@ class Student:
 
     # 作答521
     def do_question_5212(self, headers):
-        data_name = "data_5212.json"
+        data_name = "data_5212_A.json"
         aim_url = r"https://www.suitanglian.com:3018/api/traditional/financial/submitGroupData"
         headers = {
             "user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0",
@@ -371,7 +371,7 @@ class Student:
         self.response_post(answer, aim_url, headers)
 
         # 第二题
-        data_name = "data_5212_A.json"
+        data_name = "data_5212_B.json"
 
         with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
             answer = json.load(f)
