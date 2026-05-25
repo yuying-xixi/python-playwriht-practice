@@ -1,5 +1,5 @@
 import time
-from asyncio import sleep
+
 
 from Student import Student
 
@@ -61,6 +61,7 @@ class Task(Student):
 
     # 浏览器窗口切换
     def close_current_and_return(self):
+        time.sleep(3)
         pages = self.context.pages
         if len(pages) > 1:
             current_page = pages[-1]
@@ -215,10 +216,20 @@ class Task(Student):
 
     # 提交并确认
     @staticmethod
-    def confirm_commit_click(page: Page, iframe_id='#iframe_window') -> None:
+    def confirm_commit_click(page: Page, iframe_id='#iframe_window', is_click_tab = False) -> None:
         try:
             # 1. 定位到第一层 iframe
             iframe = page.frame_locator(iframe_id)
+
+            # 依次点击tab
+            if is_click_tab:
+                tabs = iframe.locator("div.ant-tabs-nav").get_by_role("tab").all()
+
+                # 依次点击
+                for tab in tabs:
+                    print("点击:", tab.inner_text())
+                    tab.click()
+                    page.wait_for_timeout(1000)
 
             # ================= 步骤 1：点击【提交】 =================
             try:

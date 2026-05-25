@@ -19,7 +19,8 @@ def task_1_1(student):
     student.start_practice(student_task, 2, 2)
     sleep(5)
     print("正在提交,项目一任务一")
-    student.submit_and_confirm(student_task, (180, 80), (1200, 80), (1240, 180))
+    # student.submit_and_confirm(student_task, (180, 80), (1200, 80), (1240, 180))
+    student.confirm_commit_click(student_task, is_click_tab=True)
     print("完成 项目一任务一")
     
     student.close_current_and_return()
@@ -41,7 +42,8 @@ def task_1_2(student):
     print("正在提交, 项目一任务二")
     student.start_practice(student_task, 2, 2)
     sleep(5)
-    student.submit_and_confirm(student_task, (200, 80), (350, 80), (550, 80), (1200, 80), (1220, 180))
+    # student.submit_and_confirm(student_task, (200, 80), (350, 80), (550, 80), (1200, 80), (1220, 180))
+    student.confirm_commit_click(student_task, is_click_tab=True)
     print("完成 项目一任务二")
     
     student.close_current_and_return()
@@ -417,25 +419,26 @@ def task_6_4(student):
     print("完成!项目六任务四")
 
     student.close_current_and_return()
+    return 0
 
 if __name__ == "__main__":
     # student = Task(241438010104, 123456)
     # student = Task(231416100122, 123456)
     # student = Task(241537011123, 123456)
 
-    with Task(241438010104, 123456) as student:
-        task_1_1(student)
-        task_1_2(student)
-        task_2_1(student)
-        task_2_2(student)
-        task_2_3(student)
-        task_3_1(student)
-        task_3_2(student)
-        task_3_3(student)
-        task_4_3(student)
-        task_4_4(student)
-        task_5_1(student)
-        task_5_2(student)
-        task_6_1(student)
-        task_6_3(student)
-        task_6_4(student)
+    with Task(231416100122, 123456) as student:
+        # task_1_1(student)
+        # task_1_2(student)
+        # task_2_1(student)
+        # task_2_2(student)
+        # task_2_3(student)
+        # task_3_1(student)
+        # task_3_2(student)
+        # task_3_3(student)
+        # task_4_3(student)
+        # task_4_4(student)
+        # task_5_1(student)
+        # task_5_2(student)
+        # task_6_1(student)
+        # task_6_3(student)
+        # task_6_4(student)
