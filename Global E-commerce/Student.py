@@ -519,3 +519,51 @@ class Student:
             answer = json.load(f)
 
         self.response_post(answer, aim_url, headers)
+
+    # 作答711
+    def do_question_7112(self, headers_cookie):
+        data_name = "data_7112.json"
+        aim_url = r"https://bi.suitanglian.com:3012/api/bitools/apiSaveProcessNodes"
+
+        with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
+            answer = json.load(f)
+            # cross_border02-19520-241408030325"
+            answer['group_key'] = f"cross_border02-19520-{self.username}"
+            answer['student_id'] = f"{self.username}"
+
+        headers = {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/json; charset=utf-8",
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0",
+            "Origin": "https://bi.suitanglian.com:3012",
+            "Referer": "https://bi.suitanglian.com:3012/bi_tools.html",
+            "Host": "bi.suitanglian.com:3012",
+            "Cookie": headers_cookie["cookie"],
+            "Pasign": headers_cookie["pasign"]
+        }
+
+        self.response_post(answer, aim_url, headers)
+
+    # 作答731
+    def do_question_7312(self, headers_cookie):
+        data_name = "data_7312.json"
+        aim_url = r"https://bi.suitanglian.com:3012/api/bitools/apiSaveProcessNodes"
+
+        with open(f"./answer_bank/{data_name}", "r", encoding="utf-8") as f:
+            answer = json.load(f)
+            # cross_border03-19521-241408030325
+            answer['group_key'] = f"cross_border03-19521-{self.username}"
+            answer['student_id'] = f"{self.username}"
+
+        headers = {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/json; charset=utf-8",
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0",
+            "Origin": "https://bi.suitanglian.com:3012",
+            "Referer": "https://bi.suitanglian.com:3012/bi_tools.html",
+            "Host": "bi.suitanglian.com:3012",
+            "Cookie": headers_cookie["cookie"],
+            "Pasign": headers_cookie["pasign"]
+        }
+
+        self.response_post(answer, aim_url, headers)

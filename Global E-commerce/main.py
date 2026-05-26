@@ -406,6 +406,7 @@ def task_6_4(student):
 
     student.do_question_6412(cookie)
     student_task.reload()
+    sleep(5)
 
     # 提交模块1
     student.start_practice(student_task, 1, 2)
@@ -429,14 +430,83 @@ def task_6_4(student):
     student.close_current_and_return()
     return 0
 
+# ══════════════════════════════════════════
+#  项目七任务一
+# ══════════════════════════════════════════
+def task_7_1(student):
+    print("正在进入实验主页")
+    print("正在进入!项目七任务一")
+
+    # 作答模块1
+    student_task = student.choose_project_task(7, 1)
+    sleep(5)
+    student.start_practice(student_task, 1, 2)
+    sleep(5)
+    cookie = student.get_headers_cookie(page=student_task,
+                                        url_keyword="https://bi.suitanglian.com:3012/api/bitools/apiSaveProcessNodes")
+
+    if not cookie:
+        student.close_current_and_return()
+        return "项目七任务一可能已经作答或cookie获取失败"
+
+    student.do_question_7112(cookie)
+    student_task.reload()
+    sleep(5)
+
+    # 提交模块1
+    student.start_practice(student_task, 1, 2)
+    sleep(5)
+    student.save_click(student_task)
+    # student_task.reload()
+
+    print("提交完成!!!")
+    print("完成!项目七任务一")
+    student.close_current_and_return()
+    return 0
+
+# ══════════════════════════════════════════
+#  项目七任务三
+# ══════════════════════════════════════════
+def task_7_3(student):
+    print("正在进入实验主页")
+    print("正在进入!项目七任务三")
+
+    # 作答模块1
+    student_task = student.choose_project_task(7, 3)
+    sleep(5)
+    student.start_practice(student_task, 1, 2)
+    sleep(5)
+    cookie = student.get_headers_cookie(page=student_task,
+                                        url_keyword="https://bi.suitanglian.com:3012/api/bitools/apiSaveProcessNodes")
+
+    if not cookie:
+        student.close_current_and_return()
+        return "项目七任务三可能已经作答或cookie获取失败"
+
+    student.do_question_7312(cookie)
+    student_task.reload()
+    sleep(5)
+
+    # 提交模块1
+    student.start_practice(student_task, 1, 2)
+    sleep(5)
+    student.save_click(student_task)
+    # student_task.reload()
+
+    print("提交完成!!!")
+    print("完成!项目七任务三")
+    student.close_current_and_return()
+    return 0
+
+
 if __name__ == "__main__":
     # student = Task(241438010104, 123456)
     # student = Task(231416100122, 123456)
     # student = Task(241537011123, 123456)
 
-    with Task(241408030325, 123456) as student:
+    with Task(231416100122, 123456) as student:
         task_1_1(student)
-        task_1_2(student)
+        # task_1_2(student)
         # task_2_1(student)
         # task_2_2(student)
         # task_2_3(student)
@@ -445,8 +515,10 @@ if __name__ == "__main__":
         # task_3_3(student)
         # task_4_3(student)
         # task_4_4(student)
-        task_5_1(student)
-        task_5_2(student)
-        task_6_1(student)
-        task_6_3(student)
-        task_6_4(student)
+        # task_5_1(student)
+        # task_5_2(student)
+        # task_6_1(student)
+        # task_6_3(student)
+        # task_6_4(student)
+        # task_7_1(student)
+        # task_7_3(student)
